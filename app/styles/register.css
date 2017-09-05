@@ -1,0 +1,77 @@
+#container {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #F9F9F9;
+}
+
+#logo {
+    height: 70px;
+}
+
+#logo div {
+    background: url('../images/mi-logo.png') no-repeat center;
+    width: 50px;
+    height: 50px;
+    background-color: #F56702;
+    margin: 0 auto;
+}
+
+#res {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #F56702;
+    color: white;
+}
+
+#res:hover,#sendCode:hover{
+    background-color: #FF946B;
+}
+
+#xieyi {
+    margin-top: 10px;
+    color: darkgray;
+}
+
+#xieyi a {
+    text-decoration: none;
+    color: black;
+}
+
+.breadcrumb {
+    margin-bottom: 5px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #9E9E9E;
+}
+
+.breadcrumb a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #9E9E9E;
+    content: "|";
+}
+
+p a {
+    text-decoration: none;
+    color: #9E9E9E;
+}
+
+p a:hover {
+    text-decoration: none;
+    color: #9E9E9E;
+}
+#sendCode{
+  width: 158px;
+  height: 42px;
+  background-color: #FF6B00;
+  border: none;
+  color: white;
+}
