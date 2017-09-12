@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>小米账号-注册</title>
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../styles/register.css">
+  <script src="../../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../scripts/register.js"></script>
+  <script src="../scripts/xc.js"></script>
+  <script src="../scripts/drrz-store.js"></script>
+  <script src="../scripts/MD5.js"></script>
+  <script>
+    $(function () {
+      $.getJSON('../JSON/countryCode.json', function (data) {
+        var html = '';
+        var html2 = '';
+        for (category in data) {
+          html += '<p class="list-group">' + category + '</p>';
+          html += '<div class="list-group">';
+          for (var i = 0, len = data[category].length; i < len; i++) {
+            html += '<a class="list-group-item" href="#">' + data[category][i].C + '</a>'
+          }
+          html += '</div>'
+        }
+        $('#country').html(html);
+        for (category in data) {
+          html2 += '<p class="list-group">' + category + '</p>';
+          html2 += '<div class="list-group">';
+          for (var i = 0, len = data[category].length; i < len; i++) {
+            html2 += '<a class="list-group-item" href="#">' + data[category][i].C + '<span>' + data[category][i].N + '</span></a>'
+          }
+          html2 += '</div>'
+        }
+        $('#code').html(html2);
+      })
+      $('#code').on('click', 'a', function () {
+        $('#phoneCode button')[0].innerText = $(this).children()[0].innerText;
+      });
+    });
+  </script>
+</head>
+<body>
+<div>
+  <div id="shouJiK" class="tipsK">
+    手机号码不能为空！
+  </div>
+  <div id="shouJiF" class="tipsK">
+    手机号码格式有误！
+  </div>
+  <div id="sendT" class="tipsK">
+    发送成功~
+  </div>
+  <div id="sendF" class="tipsK">
+    后台发送失败！
+  </div>
+  <div id="codeK" class="tipsK">
+    请输入验证码！
+  </div>
+  <div id="codeF" class="tipsK">
+    验证码错误！
+  </div>
+  <div id="regSuccess" class="tipsK">
+    注册成功！跳转中...
+  </div>
+  <div id="inPass" class="row">
+    <div class="col-md-12 col-xs-12 h2">设置密码</div>
+    <div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
+      <label class="col-md-5 col-xs-5" for="password">请输入密码：</label>
+      <input id="password" class="col-md-6 col-xs-6" type="password"
+             minlength="8" maxlength="16" placeholder="6-18位，数字和英文字母">
+    </div>
+    <div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
+      <label class="col-md-5 col-xs-5" for="passwordS">请再次输入密码：</label>
+      <input id="passwordS" class="col-md-6 col-xs-6" type="password"
+             minlength="8" maxlength="16">
+    </div>
+    <div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2 text-center">
+      <button id="btnSave">保存</button>
+      <button id="btnCancel">取消</button>
+    </div>
+  </div>
+</div>
+<div id="container" class="row">
+  <div id="logo" class="col-md-12 col-xs-12">
+    <div></div>
+  </div>
+  <div class="col-md-12 col-xs-12 text-center">
+    <h1 style="font-family: 微软雅黑">注册小米账号</h1>
+  </div>
+  <form id="resSub" action="#123">
+    <div class="form-group col-md-12 col-xs-12 text-left">
+      <div style="width: 350px;height: 400px;margin: 10px auto;">
+        <label for="city">国家/地区</label>
+        <div id="city" class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="true" style="width: 350px;text-align: left">
+            中国
+          </button>
+          <div id="country" class="list-group dropdown-menu dropdown-menu-right"
+               style="width: 350px;height:240px;overflow-y: scroll;">
+
+          </div>
+          <!--                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                                      aria-haspopup="true" aria-expanded="true" style="width: 350px;text-align: left">
+                                  中国
+                              </button>
+                              <table class="dropdown-menu dropdown-menu-right table table-hover" style="width: 350px">
+                                  <tbody id="country">
+                                  </tbody>
+
+                              </table>-->
+        </div>
+        <p>成功注册账号后，国家/地区将不能被修改</p>
+        <label for="shouJi">手机号码</label>
+        <div class="clearfix"></div>
+        <div class="row">
+          <div id="phoneCode" class="btn-group col-md-4 col-xs-4" style="margin-right: -15px;padding-right: 0;">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="width: 64px">+86
+            </button>
+            <div id="code" class="list-group dropdown-menu dropdown-menu-right"
+                 style="min-width: 350px;height: 240px;overflow-y: scroll;position: absolute;left: 15px">
+            </div>
+          </div>
+          <input type="text" id="shouJi" class="col-md-8 col-xs-8 "
+                 style="width: 290px;height:34px;margin-left: -35px"
+                 placeholder="请输入手机号码" maxlength="11" minlength="11">
+          <div id="tip1" class="tipWord col-md-8 col-xs-8 col-md-offset-4 col-xs-offset-4">手机号不能为空！</div>
+          <div id="tip2" class="tipWord col-md-8 col-xs-8 col-md-offset-4 col-xs-offset-4">手机号格式错误！</div>
+        </div>
+        <label for="vCode" style="margin-top: 10px">短信验证码</label>
+        <div class="clearfix"></div>
+        <div class="row">
+          <div class="col-md-6 col-xs-6 ">
+            <input type="text" id="vCode" style="height:42px;"
+                   placeholder="点击获取短信验证码—→" maxlength="4">
+            <div id="tip3" class="tipWord">验证码不能为空！</div>
+            <div id="tip4" class="tipWord">验证码错误！</div>
+          </div>
+          <div class="col-md-6 col-xs-6">
+            <!--   <button id="" name="sendCode" onclick="showtime(30)">发送短信</button>-->
+            <input type="button" id="sendCode" value="发送短信"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <button id="res" type="button" class="btn btn-default">立即注册</button>
+          </div>
+        </div>
+        <div class="row">
+          <div id="xieyi" class="col-xs-12 col-md-12">
+            <p>注册帐号即表示您同意并愿意遵守小米
+              <strong><a href="http://www.miui.com/res/doc/eula/cn.html" target="_blank">用户协议</a></strong>
+              和<strong><a href="http://www.miui.com/res/doc/privacy/cn.html" target="_blank">隐私政策</a></strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="col-md-12 col-xs-12 text-center">
+  <ul class="breadcrumb" style="background-color: white;">
+    <li role="presentation"><a href="#">简体</a></li>
+    <li role="presentation"><a href="#">繁体</a></li>
+    <li role="presentation"><a href="#">English</a></li>
+    <li role="presentation"><a href="#">常见问题</a></li>
+  </ul>
+  <p style="color: #9E9E9E;">小米公司版权所有-京ICP备10046444-
+    <span class="glyphicon glyphicon-piggy-bank" style="color: #F56702;font-size: x-large"></span>
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134">京公网安备11010802020134号-京ICP证110507号</a>
+  </p>
+</div>
+<script>
+
+</script>
+</body>
+</html>

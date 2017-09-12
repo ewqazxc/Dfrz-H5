@@ -1,0 +1,169 @@
+.tipsK{
+  width: 200px;
+  height:40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: large;
+  font-family: 微软雅黑;
+  background-color: #FF6B00;
+  color: white;
+  position: fixed;
+  top:50%;left: 50%;
+  margin-top: -20px;
+  margin-left: -100px;
+  z-index: 22;
+  display: none;
+  border-radius: 50px;
+}
+header{
+  background-color: white;
+}
+#head{
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+/*  background-color: red;*/
+}
+#head h1{
+  font-size: 40px;
+}
+#logo{
+  background: url('../images/mi-logo.png') no-repeat center;
+  width: 58px;
+  height: 58px;
+  background-color: #FF6B00;
+  margin-top: 21px;
+}
+#logo+div{
+  margin-left: 22px;
+
+}
+#logo+div h1{
+  font-family: 黑体;
+  margin-bottom: 0;
+}
+#content{
+background: url("../images/loginBG.jpg") no-repeat center;
+  height: 580px;
+}
+#login{
+  background-color: white;
+  width: 400px;
+  height: 524px;
+  margin-top: 30px;
+}
+#login a+a:before{
+  padding: 0 20px;
+  color: #ccc;
+  content: "|";
+}
+#login a{
+  color: black;
+  text-decoration: none;
+  font-family: 黑体;
+}
+#login div.h5 a+a:before{
+  padding: 0 5px;
+  color: #ccc;
+  content: "|";
+}
+#login .h5 a{
+  color: #ccc;
+  text-decoration: none;
+  font-family: 黑体;
+  margin-top: 0;
+}
+#login a:hover{
+  color: #FF6B00;
+}
+#login a.now{
+  color: #FF6B00;
+}
+#login input , #btnLogin{
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+#btnLogin{
+  width: 340px;
+  color: white;
+  background-color: #F56600;
+  border: none;
+  margin-bottom: 0;
+}
+legend{
+font-size: 14px;
+  color: #ccc;
+}
+#zhangHaodl>div:last-child{
+  margin-top: 80px;
+}
+.breadcrumb{
+  background-color: white;
+  font-size: 12px;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.breadcrumb > li + li:before{
+  content:"|";
+}
+.breadcrumb a{
+  color: #757575;
+}
+.breadcrumb a:hover{
+  color: black;
+  text-decoration: none;
+}
+.img-logo{
+  width: 20px;
+  height: 20px;
+}
+#footer{
+  height: 100px;
+}
+#footer span{
+  font-size: 14px;
+  color: #757575;
+}
+#footer span>a{
+  color: #757575;
+}
+#footer span>a:hover{
+  color: black;
+  text-decoration: none;
+}
+#saoMadl{
+  font-size: 14px;
+}
+#saoMadl img{
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+#saoMadl span{
+  color: #FF6700;
+}
+#saoMadl p{
+  margin: 0;
+}
+#zhangHaodl i{
+  color: black;
+  font-size: 28px;
+}
+#zhangHaodl .fa-qq:hover{
+  color: #0288D1;
+}
+#zhangHaodl .fa-weibo:hover{
+  color: #D32F2F;
+}
+#zhangHaodl .fa-chrome:hover{
+  color: #FFCE44;
+}
+#zhangHaodl .fa-weixin:hover{
+  color: #00D20D;
+}
+#zhangHaodl fieldset{padding:0 .625em 0;margin:0 2px;border-top:1px solid silver;height: 30px}
+
+#zhangHaodl legend{padding:.5em;border:0;width:auto}
+.tipWord{display: none;color: red}
+.borderRed{border:1px solid red;}
+.borderGreen{border:1px solid green;}

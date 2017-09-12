@@ -1,0 +1,81 @@
+#bgf5{
+  width: 100%;
+  min-height: 300px;
+  background-color: #F5F5F5;
+}
+#moreTV{
+  width: 1225px;
+  background-color: #F5F5F5;
+  margin: 0 auto;
+}
+#moreTV>div>div{
+  margin-bottom: 20px;
+}
+#moreTV .breadcrumb a{
+  font-size: small;
+}
+.xgNav>div{
+  height: 100px;
+  line-height: 100px;
+  padding: 0;
+  background-color: white;
+}
+.xgNav>div:first-child>div:first-child{
+  border-bottom: 2px solid black;
+}
+.xgNav>div:nth-child(2) a{
+  color: #FF6B00;
+}
+.tvShow .thumbnail{
+  width: 49%;
+  height: 510px;
+  padding: 0;
+  border: none;
+}
+.tvShow strong{
+  color: #FF6B00;
+}
+.tvShow small{
+  color:#757575 ;
+}
+.tvShow button{
+   width: 160px;height: 40px;
+   border: 1px solid #FF6B00;
+   background-color: white;
+   color: #FF6B00;
+   position: relative;
+   bottom: 60px;right: 10px;
+ }
+.tvShow button:hover{
+  background-color: #FF6B00;
+  color: white;
+}
+#serverTV{
+  width: 1225px;
+  height: 600px;
+  margin: 0 auto 10px;
+  background: url("../shopping/images/TV-section-05.jpg") no-repeat center;
+  position: relative;
+}
+#serverTV>div{
+  height: 130px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;right: 15px;
+  background-color: rgba(0,0,0,0.7);
+}
+#serverTV>div div{
+  color: white;
+}
+#serverTV button{
+  width: 176px;height: 48px;
+  color: #FF6B00;
+  background-color: transparent;
+  border: 1px solid #FF6B00;
+  margin-top: 10px;
+  margin-left: 160px;
+}
+#serverTV button:hover{
+  color: white;
+  background-color: transparent;
+}

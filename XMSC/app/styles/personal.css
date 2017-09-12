@@ -1,0 +1,92 @@
+.hello{display: none}
+#contanier{
+    min-height: 500px;
+    background-color: #F5F5F5;
+}
+#content-1{
+    width: 1225px;
+    margin: 0 auto;
+}
+#nav-1{
+    font-size: small;
+    color: #767676;
+    margin-bottom: 0;
+}
+#nav-1 > li + li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: ">";
+}
+#per-aside{
+    padding-bottom: 40px;
+}
+#per-aside>div{
+    min-height: 600px;
+    background-color: white;
+}
+#per-main{
+    padding-left: 0;
+}
+
+#per-aside ul{
+    font-size: 20px ;
+    margin: 15px 20px ;
+}
+#per-aside li{
+    list-style: none;
+    font-size: 14px ;
+    margin: 10px 0 ;
+}
+#per-main>div{
+     min-height: 300px;
+     background-color: white;
+ }
+#person{
+    padding: 30px 15px 20px;
+    border-bottom: 1px solid #ccc;
+}
+#person img{
+    float: left;
+  width: 160px;
+  height: 160px;
+  border: 1px solid #ccc;
+  border-radius: 80px;
+  padding: 5px;
+  margin-right: 10px;
+}
+#person h3{
+  margin-top: 30px;
+}
+#person p{
+  color: #ccc;
+}
+#person span{
+  font-size: smaller;
+  color: #ccc;
+}
+#person strong{
+  color: #FF6709;
+}
+#person+div div{
+    padding: 30px 15px 20px;
+}
+#zhanghu{
+  margin-top: 30px;
+}
+#btn-bd{
+  position: relative;
+  left: 300px;
+  bottom: 35px;
+}
+#dingdan img{
+  margin-right: 10px;
+}
+#dingdan img+p{
+  margin-top: 25px;
+}
+#dingdan span{
+  color: #FF6709;
+}
+#dingdan a:hover{
+  color: #FF6709;
+}

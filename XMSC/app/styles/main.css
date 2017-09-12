@@ -1,0 +1,598 @@
+#isLogin {
+  display: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.site-ad-bar {
+  background: url("../images/AD1.jpg") no-repeat center;
+  height: 120px;
+  background-color: black;
+}
+
+.site-nav-bar {
+  width: 100%;
+  min-width: 1225px;
+  height: 40px;
+  color: #b0b0b0;
+  background: #333;
+}
+
+.nav > li > a:hover, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: white;
+}
+
+#nav {
+  width: 1225px;
+  line-height: 40px;
+  margin: 0 auto;
+  font-size: small;
+}
+
+#nav a {
+  color: #b0b0b0;
+  margin-right: 5px;
+}
+
+#nav a:visited {
+  text-decoration: none;
+}
+
+#nav a:hover {
+  text-decoration: none;
+  color: #F66802;
+}
+
+#nav a:active {
+  text-decoration: none;
+}
+
+.btn-default-x {
+  color: #F66802;
+  background-color: white;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #b0b0b0;;
+  float: right;
+  margin-right: 0;
+}
+
+.btn-default-x:focus {
+  color: white;
+  background-color: #F66802;
+}
+
+.btn-default-x:hover {
+  border: 1px solid #F66802;
+  color: white;
+  background-color: #F66802;
+}
+
+#content, #showJD, #showZN, #rePing, #neiRong, #xuanG {
+  width: 1225px;
+  margin: 0 auto;
+  font-size: large;
+}
+
+#adShow {
+  background-color: #F5F5F5;
+}
+
+#logo-1 {
+  margin: 20px 0;
+}
+
+#header {
+  margin: 25px 0 0;
+}
+
+#dropdownMenu1:hover {
+  background-color: white;
+  color: #F66802;
+}
+
+#header a {
+  color: #343434;
+  margin-right: 5px;
+  padding: 10px 5px;
+}
+
+#header a:visited {
+  text-decoration: none;
+}
+
+#header a:hover {
+  text-decoration: none;
+  color: #F66802;
+}
+
+#header a:active {
+  text-decoration: none;
+}
+
+.header a:hover {
+  text-decoration: none;
+}
+
+.header a:active {
+  text-decoration: none;
+}
+
+.header-search {
+  float: right;
+}
+
+.search-text {
+  width: 250px;
+  height: 50px;
+  border: 1px solid #b0b0b0;;
+}
+
+.search-btn {
+  width: 50px;
+  height: 50px;
+  float: right;
+  border: 1px solid #b0b0b0;
+  background-color: white;
+}
+
+.search-btn:hover {
+  background-color: #F66802;
+}
+
+a {
+  text-decoration: none;
+  color: #767676;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#aside {
+  text-align: left;
+  list-style: none;
+  text-indent: 1em;
+  padding-left: 0;
+}
+
+#aside a:link {
+  text-decoration: none;
+  color: white;
+  background-color: #767676;
+}
+
+#aside a:visited {
+  text-decoration: none;
+  color: white;
+  background-color: #767676;
+}
+
+#aside a:hover, #aside li:hover {
+  text-decoration: none;
+  background-color: #F66802;
+}
+
+#aside a:active {
+  text-decoration: none;
+  background-color: #767676;
+}
+
+#aside i {
+  color: white;
+  font-size: large;
+  position: absolute;
+  right: 20px;
+}
+
+#text-1 {
+  margin-left: 20px;
+  color: white;
+}
+
+#text-2 {
+  color: #F8F4F8;
+  padding-top: 20px;
+}
+
+#text-2 span {
+  font-size: 22px;
+}
+
+#text-2 a:hover {
+  color: white;
+}
+
+.text-3 {
+  line-height: 85px;
+}
+
+#shop-car {
+  line-height: normal;
+}
+
+tfoot {
+  display: none;
+}
+
+#noneShop {
+  line-height: 70px;
+}
+
+tfoot tr td strong {
+  color: #F66802;
+}
+
+#showJD p, #showZN p {
+  margin: 0;
+}
+
+#showJD p > small, #showZN p > small {
+  color: #c0c0c0;
+}
+
+#showJD p > strong, #showZN p > strong {
+  color: #F66802;
+}
+
+#showJD p > del, #showZN p > del {
+  color: #c0c0c0;
+}
+
+#showJD a:hover, #showZN a:hover {
+  color: #F66802;;
+}
+
+#showJD ul, #showZN ul {
+  border: none;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+#aside button {
+  background-color: #F66802;
+  width: 120px;
+  height: 44px;
+}
+
+#content-2, #content-3 {
+  width: 1225px;
+  min-height: 100px;
+  margin: 0 auto;
+  color: #ccc;
+}
+
+#content-2 li {
+  margin: 0;
+  line-height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+
+#content-2 i {
+  font-size: 30px;
+}
+
+#content-2 a:hover {
+  color: #F66802;
+}
+
+#foot {
+  background-color: #FAFAFA;
+}
+
+#content-3 img {
+  margin-top: 10px;
+  float: left;
+}
+
+#nav-foot li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+}
+
+#nav-foot li + li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "|";
+}
+
+#nav-foot li:nth-child(2):before {
+  content: ":";
+}
+
+#vlogo img {
+  float: none;
+}
+
+#Mtext {
+  font-size: 20px;
+  font-family: 楷体;
+}
+
+#help-nav ul {
+  font-size: 14px;
+  margin: 20px 0;
+  color: #1a1a1a;
+}
+
+#help-nav ul:last-child {
+  border-right: 1px solid #ccc;
+}
+
+#help-nav li {
+  border: none;
+  list-style: none;
+  margin: 0;
+  font-size: 12px;
+  line-height: 20px;
+
+}
+
+#content-2 div:last-child {
+  color: #1a1a1a;
+}
+
+#content-2 div:last-child h4 {
+  color: #F66802;
+}
+
+#content-2 div:last-child button {
+  width: 120px;
+  height: 34px;
+  color: #F66802;
+  border: 1px solid #F66802;
+  line-height: 34px;
+  background-color: white;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+#btn-bd {
+  width: 88px;
+  height: 28px;
+  color: white;
+  background-color: #F66802;
+  border: none;
+}
+
+#rePing .thumbnail {
+  padding: 0;
+}
+
+#rePing p {
+  font-size: xx-small;
+}
+
+#rePing p > small {
+  font-size: 10px;
+  color: #C2C2C2;
+}
+
+#rePing p > span {
+  font-size: 16px;
+  color: black;
+}
+
+#rePing p > strong {
+  font-size: 16px;
+  color: #F66802;
+  border-left: 1px solid black;
+  padding-left: 5px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+#carousel-NR1, #carousel-NR2, #carousel-NR3, #carousel-NR4 {
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+#carousel-NR1 {
+  border-top: 1px solid #FFAC13;
+}
+
+#carousel-NR1 h4 {
+  color: #FFAC13;
+}
+
+#carousel-NR1 button {
+  color: #FFAC13;
+  border: 1px solid #FFAC13;;
+  background-color: white;
+}
+
+#carousel-NR2 {
+  border-top: 1px solid #83C44E;
+}
+
+#carousel-NR2 h4 {
+  color: #83C44E;
+}
+
+#carousel-NR2 button {
+  color: #83C44E;
+  border: 1px solid #83C44E;
+  background-color: white;
+}
+
+#carousel-NR3 {
+  border-top: 1px solid #E53935;
+}
+
+#carousel-NR3 h4 {
+  color: #E53935;
+}
+
+#carousel-NR3 button {
+  color: #E53935;
+  border: 1px solid #E53935;
+  background-color: white;
+}
+
+#carousel-NR4 {
+  border-top: 1px solid #2196F3;
+}
+
+#carousel-NR4 h4 {
+  color: #2196F3;
+}
+
+#carousel-NR4 button {
+  color: #2196F3;
+  border: 1px solid #2196F3;
+  background-color: white;
+}
+
+#neiRong p {
+  color: #C2C2C2;
+  font-size: xx-small;
+}
+
+#neiRong a {
+  text-shadow: none;
+  background-image: none;
+  color: white;
+}
+
+#neiRong a:hover {
+  color: #8D8D8D;
+}
+
+#neiRong .carousel-indicators {
+  bottom: 0;
+}
+
+#neiRong .carousel-indicators li {
+  border-color: #8D8D8D;
+}
+
+#neiRong .carousel-indicators .active {
+  background-color: #FF6709;
+}
+
+#MXDP div.thumbnail {
+  border: none;
+  background-color: #FAFAFA;
+}
+
+#MXDP div.thumbnail:hover {
+  border-left: 1px solid #FAFAFA;
+  border-right: 1px solid #FAFAFA;
+  border-bottom: 2px solid #ccc;
+}
+
+#MXDP strong {
+  color: #FF6709;
+}
+
+#MXDP small {
+  font-size: xx-small;
+  color: #B0B0B0;
+}
+
+#dropD2 div.thumbnail {
+  border: none;
+}
+
+#dropD2 p {
+  margin-bottom: 0;
+}
+
+#rePing div.thumbnail:hover {
+  box-shadow: 4px 5px 6px 1px #888888;
+}
+
+#loginNav {
+  list-style: none;
+  font-size: 12px;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+#loginNav a:hover {
+  color: white;
+}
+
+#loginNav > a:before {
+  padding: 0 3px;
+  content: "|";
+}
+
+#dropdownMenuPer {
+  width: 40px;
+}
+
+#dropPer {
+  top: 38px;
+  width: 176px;
+  max-height: 200px;
+  text-align: center;
+}
+
+#dropPer a {
+  height: 24px;
+  width: 176px;
+  margin-right: 0;
+  display: block;
+}
+
+#dropPer a:hover {
+  background-color: #FF6700;
+  color: white;
+}
+
+#dropPer p {
+  height: 24px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+#dropPer p + p {
+  border-top: 1px solid silver;
+}
+
+#collM1 {
+  position: relative;
+  /*  background-color: #00b3ee;*/
+  top: -20px;
+}
+
+#dropD1 > a {
+  height: 72px;
+}
+
+#dropD1 > div {
+  border: 1px solid #FF6B00;
+}
+
+#dropD1 p, #dropD1 p > a {
+  width: 234px;
+  height: 42px;
+  line-height: 42px;
+  padding: 0;
+  margin: 0;
+}
+
+#dropD1 p > a {
+  display: block;
+  width: 234px;
+  height: 42px;
+  padding: 0 20px;
+}
+
+#dropD1 p a:hover {
+  background-color: #FF6B00;
+  color: white;
+}
+
+#isLogin, #noLogin, #dropdownMenu1 {
+  margin-bottom: 2px
+}

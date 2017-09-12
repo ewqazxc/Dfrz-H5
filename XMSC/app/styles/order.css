@@ -1,0 +1,33 @@
+#order{
+  background-color: white;
+  padding: 20px 30px;
+}
+#order div.h3 small{
+  font-size: 14px;
+}
+#order ul.breadcrumb{
+  background-color: white;
+  padding-left: 0;
+}
+#order ul.breadcrumb li+li:before{
+  padding: 0 10px;
+  content: "|";
+}
+#order a{
+  color: #ccc;
+  text-decoration: none;
+}
+#order a:hover{
+  color: #333;
+  text-decoration: none;
+}
+#order li.active a{
+  color: #FF6B00;
+}
+#order button:hover{
+  background-color: #FF6B00;
+  color: white;
+}
+#order h3{
+  color: #B7B0B7;
+}

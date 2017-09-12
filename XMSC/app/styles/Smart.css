@@ -1,0 +1,93 @@
+#bgf5{
+  width: 100%;
+  min-height: 300px;
+  background-color: #F5F5F5;
+}
+#moreSmart{
+  width: 1225px;
+  background-color: #F5F5F5;
+  margin: 0 auto;
+}
+#moreSmart>div>div{
+  margin-bottom: 20px;
+}
+#moreSmart .breadcrumb a{
+  font-size: small;
+}
+.xgNav>div{
+  height: 100px;
+  line-height: 100px;
+  padding: 0;
+  background-color: white;
+}
+.xgNav>div:first-child>div:first-child{
+  border-bottom: 2px solid black;
+}
+.xgNav>div:last-child>div:last-child a{
+  color: #FF6B00;
+}
+.smShow .thumbnail{
+  width: 49%;
+  height: 510px;
+  padding: 0;
+  border: none;
+}
+.smShow strong{
+  color: #FF6B00;
+}
+.smShow small{
+  color:#757575 ;
+}
+.smShow button{
+  width: 160px;height: 40px;
+  border: 1px solid #FF6B00;
+  background-color: white;
+  color: #FF6B00;
+  position: relative;
+  bottom: 60px;right: 10px;
+}
+.smShow button:hover{
+  background-color: #FF6B00;
+  color: white;
+}
+#footSmart{
+  font-family: 黑体;
+  font-size: larger;
+}
+#footSmart>div>img{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+#footSmart div.thumbnail{
+  width: 400px;
+  height: 380px;
+  border: none;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+#footSmart div.thumbnail:nth-child(2),
+#footSmart div.thumbnail:nth-child(5){
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+#footSmart h2{
+  margin-top: 72px;
+}
+#footSmart p{
+  color: #B0B0B0;
+  font-size: small;
+}
+#footSmart h4{
+  color: black;
+}
+#footSmart strong{
+  color: #FF6B00;
+  font-size: larger;
+}
+#footSmart a{
+  color: #FF6B00;
+}
+#footShow{
+  width: 1225px;
+  margin: 10px auto;
+}

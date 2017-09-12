@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "name": "张三",
+    "sex": "1",
+    "income": "1000",
+    "address": {
+      "province": "福建",
+      "city": "福州",
+      "address": "1XXX-XX-X"
+    }
+  },
+  {
+    "id": "2",
+    "name": "李四",
+    "sex": "1",
+    "income": "1400",
+    "address": {
+      "province": "福建",
+      "city": "漳州",
+      "address": "2XFF-XX3-X"
+    }
+  },
+  {
+    "id": "3",
+    "name": "小明",
+    "sex": "0",
+    "income": "2222",
+    "address": {
+      "province": "广东",
+      "city": "深圳",
+      "address": "3XXX-21XX-1X"
+    }
+  },
+  {
+    "id": "4",
+    "name": "小刚",
+    "sex": "1",
+    "income": "3000",
+    "address": {
+      "province": "湖南",
+      "city": "长沙",
+      "address": "4XXX-21XX-X3"
+    }
+  },
+  {
+    "id": "5",
+    "name": "小红",
+    "sex": "2",
+    "income": "2001",
+    "address": {
+      "province": "福建",
+      "city": "福州",
+      "address": "5123-XX-X1"
+    }
+  },
+  {
+    "id": "6",
+    "name": "小黑",
+    "sex": "2",
+    "income": "1926",
+    "address": {
+      "province": "福建",
+      "city": "福州",
+      "address": "5123-XX-X1"
+    }
+  },
+  {
+    "id": "7",
+    "name": "李四",
+    "sex": "1",
+    "income": "1400",
+    "address": {
+      "province": "福建",
+      "city": "漳州",
+      "address": "2XFF-XX3-X"
+    }
+  },
+  {
+    "id": "8",
+    "name": "小明",
+    "sex": "0",
+    "income": "2222",
+    "address": {
+      "province": "广东",
+      "city": "深圳",
+      "address": "3XXX-21XX-1X"
+    }
+  },
+  {
+    "id": "9",
+    "name": "小刚",
+    "sex": "1",
+    "income": "3000",
+    "address": {
+      "province": "湖南",
+      "city": "长沙",
+      "address": "4XXX-21XX-X3"
+    }
+  },
+  {
+    "id": "10",
+    "name": "小明",
+    "sex": "0",
+    "income": "2222",
+    "address": {
+      "province": "广东",
+      "city": "深圳",
+      "address": "3XXX-21XX-1X"
+    }
+  }
+]

@@ -1,0 +1,139 @@
+.tipsK{
+  width: 200px;
+  height:40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: large;
+  font-family: 微软雅黑;
+  background-color: #FF6B00;
+  color: white;
+  position: fixed;
+  top:50%;left: 50%;
+  margin-top: -20px;
+  margin-left: -100px;
+  z-index: 22;
+  display: none;
+  border-radius: 50px;
+}
+#inPass{
+  width: 600px;
+  height: 240px;
+  border: 1px solid #FF6B00;
+  background-color: white;
+  display: none;
+  position: fixed;
+  top:50%;left: 50%;
+  margin-top: -120px;
+  margin-left: -300px;
+  z-index: 22;
+}
+#inPass div+div{
+  margin-top: 20px;
+}
+#inPass button{
+  width: 120px;
+  height: 34px;
+  background-color: #FF6B00;
+  color: white;
+  border: none;
+  margin: 0 5px;
+}
+#inPass button:hover{
+  background-color: white;
+  color: #FF6B00;
+  border: 1px solid #FF6B00;
+}
+#container {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #F9F9F9;
+}
+
+#logo {
+    height: 70px;
+}
+
+#logo div {
+    background: url('../images/mi-logo.png') no-repeat center;
+    width: 50px;
+    height: 50px;
+    background-color: #F56702;
+    margin: 0 auto;
+}
+
+#res {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #FF6B00;
+    color: white;
+}
+
+#res:hover,#sendCode:hover{
+    background-color: #FF946B;
+}
+
+#xieyi {
+    margin-top: 10px;
+    color: darkgray;
+}
+
+#xieyi a {
+    text-decoration: none;
+    color: black;
+}
+
+.breadcrumb {
+    margin-bottom: 5px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #9E9E9E;
+}
+
+.breadcrumb a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #9E9E9E;
+    content: "|";
+}
+
+p a {
+    text-decoration: none;
+    color: #9E9E9E;
+}
+
+p a:hover {
+    text-decoration: none;
+    color: #9E9E9E;
+}
+#sendCode{
+  width: 158px;
+  height: 42px;
+  background-color: #FF6B00;
+  border: none;
+  color: white;
+}
+#code td,#country td{
+  width: 350px;
+}
+#country p,#code p{
+  background-color: #FCDECC;
+  color: #EF5B00;
+  font-size: 20px;
+  margin-bottom: 0;
+  padding-left: 5px;
+}
+#code span{
+  position: absolute;
+  right: 10px;
+}
+.tipWord{display: none;color: red}
+.borderRed{border:1px solid red;}
+.borderGreen{border:1px solid green;}
