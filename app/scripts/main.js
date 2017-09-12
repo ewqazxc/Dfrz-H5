@@ -52,11 +52,13 @@
     $('#a-tvBox').parent().on('mouseenter mouseleave',function () {
       $(this).toggleClass('open');
     });
-    /*        $('#a-tvBox').hover(function () {
-     $('#tvBox').show();
-     },function () {
-     $('#tvBox').hide();
-     });*/
+    $('#logout').on('click',function () {
+     $('#noLogin').show();
+      $('#isLogin').hide();
+      console.log(localStorage);
+      var ACCOUNT_KEY = 'login';
+      store.remove(ACCOUNT_KEY);
+    });
     function updateFoot(array) {
       var total1= $.xc.sum(array,function (item, index) {
         return item.quantity;
@@ -69,8 +71,43 @@
       console.log(total2);
       $('#tota2').text($.xc.toCurrency(total2));
     }
-  })
-})();
+    var enterTimeout=[],leaveTimeout = [];
+/*    $(document).off('click.bs.collapse.data-api','[data-toggle="collapse"]');*/
+    $('[data-collapse-trigger=hover]').hover(function () {
+      var i=$(this);
+      var index =Number(i.data('id'));
+      clearTimeout(leaveTimeout[index]);
+      clearTimeout(enterTimeout[index]);
+      enterTimeout[index]=setTimeout(function(){
+        var target = i.data('target');
+        $(target).collapse('show');
+        console.log(target);
+      },350);
+      //$(this).trigger('click');
+    },function(){
+      var i=$(this);
+      var index =Number(i.data('id'));
+      clearTimeout(enterTimeout[index]);
+      clearTimeout(leaveTimeout[index]);
+      leaveTimeout[index]=setTimeout(function(){
+        var target = i.data('target');
+        $(target).collapse('hide');
+      },350);
+    })
+
+  });
+  $(document).ready(function() {
+    var login=localStorage.getItem('login');
+    if(login=='true'){
+      $('#isLogin').show();
+      $('#noLogin').hide();
+    }
+    else{
+      $('#noLogin').show();
+      $('#isLogin').hide();
+    }
+  });
+  })();
 
 
 

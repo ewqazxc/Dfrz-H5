@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>智能硬件-小米商城</title>
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/moreSmart.css">
+  <script src="../../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/xc.js"></script>
+</head>
+<body>
+@@include('../include/TVheader.html')
+<div class="bgf5">
+  <div id="moreSmart">
+    <div class="row">
+      <div class=" col-md-12 col-xs-12">
+        <ul class="breadcrumb">
+          <li><a href="#">首页</a></li>
+          <li><a href="#">所有商品</a></li>
+          <li><a href="#">路由器/智能硬件</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div id="sortSmart" class="row">
+    <div class="col-md-11 col-xs-11">
+      <div class="col-md-1 col-xs-1">
+        <strong>分类：</strong>
+      </div>
+      <div class="col-md-1 col-xs-1">
+        <a href="">全部</a>
+      </div>
+      <div class="col-md-2 col-xs-2">
+        <a href="">路由器</a>
+      </div>
+      <div class="col-md-2 col-xs-2">
+        <a href="">路由器配件</a>
+      </div>
+      <div class="col-md-2 col-xs-2">
+        <a href="">净化器</a>
+      </div>
+      <div class="col-md-2 col-xs-2">
+        <a href="">净水器</a>
+      </div>
+      <div class="col-md-2 col-xs-2">
+        <a href="">摄像机</a>
+      </div>
+
+    </div>
+    <div class="col-md-1 col-xs-1">
+      <a href="#coll-1" data-toggle="collapse" aria-expanded="false" aria-controls="coll-1">更多
+        <span class="glyphicon glyphicon-chevron-down"></span></a>
+
+    </div>
+    <div id="coll-1" class="collapse">
+      <div class="well">
+        <div class="col-md-11 col-xs-11">
+          <div class="col-md-1 col-xs-1">
+          </div>
+          <div class="col-md-1 col-xs-1">
+            <a href="">相机</a>
+          </div>
+          <div class="col-md-2 col-xs-2">
+            <a href="">体重秤</a>
+          </div>
+          <div class="col-md-2 col-xs-2">
+            <a href="">血压计</a>
+          </div>
+          <div class="col-md-2 col-xs-2">
+            <a href="">床头灯</a>
+          </div>
+          <div class="col-md-2 col-xs-2">
+            <a href="">智能灯泡</a>
+          </div>
+          <div class="col-md-2 col-xs-2">
+            <a href="">智能家庭套装</a>
+          </div>
+        </div>
+        <div class="col-md-11 col-xs-11">
+          <div class="col-md-1 col-xs-1">
+          </div>
+          <div class="col-md-1 col-xs-1">
+            <a href="">智能插座</a>
+          </div>
+          <div class="col-md-2 col-xs-2">
+            <a href="">智能硬件配件</a>
+          </div>
+          <div class="col-md-2 col-xs-2">
+            <a href="">无人机</a>
+          </div>
+          <div class="col-md-2 col-xs-2">
+            <a href="">滑板车</a>
+          </div>
+          <div class="col-md-2 col-xs-2">
+            <a href="">定位电话</a>
+          </div>
+          <div class="col-md-2 col-xs-2">
+            <a href="">米家扫地机器人及配件</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  <div id="paiSmart" class="row">
+    <div class="col-md-11 col-xs-11">
+      <div class="col-md-1 col-xs-1">
+        <strong>品牌：</strong>
+      </div>
+      <div class="col-md-1 col-xs-1">
+        <p>全部</p>
+      </div>
+      <div class="col-md-2 col-xs-2">
+        <a href="">智米</a>
+      </div>
+      <div class="col-md-2 col-xs-2">
+        <a href="">小方</a>
+      </div>
+      <div class="col-md-2 col-xs-2">
+        <a href="">米家</a>
+      </div>
+      <div class="col-md-2 col-xs-2">
+        <a href="">小蚁</a>
+      </div>
+      <div class="col-md-2 col-xs-2">
+        <a href="">小米</a>
+      </div>
+    </div>
+    <div class="col-md-1 col-xs-1">
+      <a href="">更多 <span class="glyphicon glyphicon-chevron-down"></span></a>
+    </div>
+  </div>
+</div>
+@@include('../include/TVfooter.html')
+</body>
+</html>

@@ -1,0 +1,27 @@
+#orderPing{
+  background-color: white;
+  padding: 20px 30px;
+}
+#orderPing ul.breadcrumb{
+  background-color: white;
+  padding-left: 0;
+  border-bottom: 1px solid #ccc;
+}
+#orderPing ul.breadcrumb li+li:before{
+  padding: 0 10px;
+  content: "|";
+}
+#orderPing a{
+  color: #ccc;
+  text-decoration: none;
+}
+#orderPing a:hover{
+  color: #333;
+  text-decoration: none;
+}
+#orderPing li.active a{
+  color: #FF6B00;
+}
+#orderPing h3{
+  color: #B7B0B7;
+}

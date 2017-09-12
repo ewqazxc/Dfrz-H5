@@ -1,3 +1,20 @@
+.tipsK{
+  width: 200px;
+  height:40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: large;
+  font-family: 微软雅黑;
+  background-color: #FF6B00;
+  color: white;
+  position: fixed;
+  top:50%;left: 50%;
+  margin-top: -20px;
+  margin-left: -100px;
+  z-index: 22;
+  display: none;
+  border-radius: 50px;
+}
 header{
   background-color: white;
 }
@@ -6,6 +23,9 @@ header{
   height: 100px;
   margin: 0 auto;
 /*  background-color: red;*/
+}
+#head h1{
+  font-size: 40px;
 }
 #logo{
   background: url('../images/mi-logo.png') no-repeat center;
@@ -56,15 +76,15 @@ background: url("../images/loginBG.jpg") no-repeat center;
 #login a:hover{
   color: #FF6B00;
 }
-#login a.active{
+#login a.now{
   color: #FF6B00;
 }
-#login input{
+#login input , #btnLogin{
   height: 50px;
   margin-top: 20px;
   margin-bottom: 25px;
 }
-#login input:last-child{
+#btnLogin{
   width: 340px;
   color: white;
   background-color: #F56600;
@@ -114,7 +134,6 @@ font-size: 14px;
 }
 #saoMadl{
   font-size: 14px;
-  display: none;
 }
 #saoMadl img{
   margin-top: 100px;
@@ -126,3 +145,25 @@ font-size: 14px;
 #saoMadl p{
   margin: 0;
 }
+#zhangHaodl i{
+  color: black;
+  font-size: 28px;
+}
+#zhangHaodl .fa-qq:hover{
+  color: #0288D1;
+}
+#zhangHaodl .fa-weibo:hover{
+  color: #D32F2F;
+}
+#zhangHaodl .fa-chrome:hover{
+  color: #FFCE44;
+}
+#zhangHaodl .fa-weixin:hover{
+  color: #00D20D;
+}
+#zhangHaodl fieldset{padding:0 .625em 0;margin:0 2px;border-top:1px solid silver;height: 30px}
+
+#zhangHaodl legend{padding:.5em;border:0;width:auto}
+.tipWord{display: none;color: red}
+.borderRed{border:1px solid red;}
+.borderGreen{border:1px solid green;}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #carousel-adTv{
+      height: 610px;
+    }
+    #carousel-adTv img{
+      max-height: 610px;
+      overflow: hidden;
+    }
+    #adTv1{
+      background: url("../shopping/images/TVbg.jpg") center no-repeat ;
+      background-size: auto 610px;
+      height: 610px;
+      width: 100%;
+    }
+    #adTv2{
+      background: url("../shopping/images/TVbg2.jpg") center no-repeat ;
+      background-size: auto 610px;
+      height: 610px;
+      width: 100%;
+    }
+    .carousel-control{
+      background-image: none;
+    }
+    #reXd{
+      background-color: #F5F5F5;
+      padding: 10px 20px;
+    }
+    #reXd div.thumbnail{
+      border: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    #reXd div.thumbnail:hover{
+      box-shadow: silver 5px 5px 5px;
+    }
+    #reXd1 .caption{
+      padding: 60px 60px;
+      width: 30%;height:466px;
+      background-color: white;
+      font-family: 黑体;
+    }
+    #reXd a{
+      color: black;
+    }
+    #reXd small{
+      color: #333;
+      font-size: larger;
+    }
+    #reXd1 strong{
+      font-size: xx-large;
+      color: #FF6B00;
+      display: block;
+      margin: 50px 0;
+    }
+    #reXd strong{
+      font-size: xx-large;
+      color: #FF6B00;
+    }
+    #reXd2,#reXd3{
+      width: 640px;
+    }
+
+  </style>
+</head>
+<body>
+<div class=" col-md-12 col-xs-12">
+  <ul class="nav nav-tabs text-center" role="tablist">
+    <li role="presentation" class="active col-md-2 col-xs-2">
+      <a href="#adTv" aria-controls="adTv" role="tab" data-toggle="tab">热销TV</a>
+    </li>
+    <li role="presentation" class="col-md-2 col-xs-2">
+      <a href="#xgTV" aria-controls="profile" role="tab" data-toggle="tab">选购电视·盒子</a>
+    </li>
+    <li role="presentation" class="col-md-2 col-xs-2">
+      <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">选购XX</a>
+    </li>
+    <li role="presentation" class="col-md-2 col-xs-2">
+      <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">选购XX</a>
+    </li>
+    <li role="presentation" class="col-md-2 col-xs-2">
+      <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">选购XX</a>
+    </li>
+    <li role="presentation" class="col-md-2 col-xs-2">
+      <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">选购XX</a>
+    </li>
+  </ul>
+  <div class="tab-content row">
+    <div role="tabpanel" class="tab-pane active" id="adTv">
+      <div id="carousel-adTv" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-adTv" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-adTv" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <a href=""><div id="adTv1"></div></a>
+          </div>
+          <div class="item">
+            <a href=""><div id="adTv2"></div></a>
+          </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-adTv" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-adTv" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div id="reXd" class="col-md-12 col-xs-12">
+        <h3>热销单品</h3>
+        <div id="reXd1" class="thumbnail">
+          <a href="">
+            <img style="width: 70%" class="img-responsive pull-left" src="../shopping/images/reX1.jpg" alt="">
+          </a>
+          <div class="caption pull-right">
+            <a href=""><h2>小米电视4A 43英寸</h2>
+              <h2>标准版</h2></a>
+            <p><samll>全高清/HDR，64位处理器，2G+8G大存储</samll></p>
+            <p><strong>1999元</strong></p>
+            <p><a href=""><small>了解产品 ></small></a></p>
+          </div><div class="clearfix"></div>
+        </div>
+
+        <div id="reXd2" class="thumbnail pull-left">
+          <a href="">
+            <img class="img-responsive" src="../shopping/images/reX2.jpg" alt="">
+          </a>
+          <div class="caption">
+            <a href=""><h2>小米电视4 55英寸</h2></a>
+            <p><samll>极超薄高端旗舰电视</samll><strong class="pull-right">4499元</strong></p>
+          </div>
+        </div>
+        <div id="reXd3" class="thumbnail pull-right">
+          <a href="">
+            <img class="img-responsive" src="../shopping/images/reX3.jpg" alt="">
+          </a>
+          <div class="caption">
+            <a href=""><h2>小米电视4A 49英寸</h2></a>
+            <p><samll>全高清/HDR，64位处理器</samll><strong class="pull-right">2399元</strong></p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="xgTV">
+      <div>
+
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  </div>
+</div>
+</body>
+</html>

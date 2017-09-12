@@ -1,0 +1,61 @@
+#address{
+  background-color: white;
+  padding-top: 20px;
+}
+.borderRed{border: 2px solid red}
+.borderGreen{border: 2px solid green}
+#addressModal p,#addressChange p{color: red;margin-right: 20px}
+.addressAdd{
+  width: 270px;
+  height: 180px;
+  padding-top: 80px;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+.address{
+  width: 270px;
+  height: 180px;
+  padding-top: 10px;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #ccc;
+  margin-left: 20px;
+}
+.address h3{margin-top: 0}
+.address p{margin-bottom: 5px}
+.address a:hover{color: #FF6700;}
+.addressAdd:hover{
+  border: 1px solid #757575;
+  color: #757575;
+}
+.addressAdd strong{
+  font-size: x-large;
+}
+#addressModal div.modal-footer button,
+#addressChange div.modal-footer button{
+  width: 100px;
+  height: 34px;
+  background-color: #FF6700;
+  color: white;
+  font-weight: bold;border: none;
+}
+#addressModal div.modal-body>div,
+#addressChange div.modal-body>div{
+  margin-top: 20px;
+}
+#addressModal div.modal-body input[type=text],
+#addressChange div.modal-body input[type=text]{
+  width: 100%;height: 34px;
+}
+#addressModal textarea,
+#addressChange textarea{
+width: 100%;
+}
+#cmbProvince,#cmbCity,#cmbArea,
+#changeProvince,#changeCity,#changeArea{
+  width: 100%;
+  height: 30px;
+}

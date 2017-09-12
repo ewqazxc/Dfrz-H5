@@ -1,3 +1,9 @@
+#isLogin{
+  display: none;
+}
+a:active{
+  text-decoration: none;
+}
 .site-ad-bar{
   background: url("../images/AD1.jpg") no-repeat center;
   height: 120px;
@@ -9,6 +15,9 @@
   height: 40px;
   color: #b0b0b0;
   background: #333;
+}
+.nav > li > a:hover,.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+  background-color: white;
 }
 #nav{
   width: 1225px;
@@ -49,7 +58,7 @@
   color:white;
   background-color: #F66802;
 }
-#content,#showJD,#showZN,#rePing,#neiRong{
+#content,#showJD,#showZN,#rePing,#neiRong,#xuanG{
   width: 1225px;
   margin: 0 auto;
   font-size: large;
@@ -61,7 +70,7 @@
   margin: 20px 0px;
 }
 #header{
-  margin: 25px 0px;
+  margin: 25px 0 0;
 }
 #dropdownMenu1:hover{
   background-color: white;
@@ -70,6 +79,7 @@
 #header a{
   color:#343434;
   margin-right: 5px;
+  padding: 10px 5px;
 }
 #header a:visited{
   text-decoration: none;
@@ -142,26 +152,6 @@ a:hover{
   font-size: large;
   position: absolute;
   right: 20px;
-}
-.pinkBtn{
-  width: 45px;
-  height: 70px;
-  line-height: 70px;
-  font-size: 35px;
-  background-color: transparent;
-  color: #D5D5D5;
-  border: none;
-  position: relative;
-  top: 200px;
-  opacity: 0.2;
-}
-.pinkBtn:hover{
-  background-color: #636159;
-  opacity: 0.5;
-}
-#pinkBtn2{
-  position: absolute;
-  right: 15px;
 }
 #text-1{
   margin-left: 20px;
@@ -297,7 +287,7 @@ color: #F66802;;
 }
 #btn-bd{
   width: 88px;
-  height: 24px;
+  height: 28px;
   color: white;
   background-color: #F66802;
   border:none;
@@ -398,6 +388,11 @@ font-size: xx-small;
   border: none;
   background-color: #FAFAFA;
 }
+#MXDP div.thumbnail:hover{
+  border-left: 1px solid #FAFAFA;
+  border-right: 1px solid #FAFAFA;
+  border-bottom: 2px solid #ccc;
+}
 #MXDP strong{
   color: #FF6709;
 }
@@ -405,3 +400,81 @@ font-size: xx-small;
   font-size: xx-small;
   color:#B0B0B0;
 }
+#dropD2 div.thumbnail{
+  border: none;
+}
+#dropD2 p{
+  margin-bottom: 0;
+}
+#rePing div.thumbnail:hover{
+  box-shadow:  4px 5px 6px 1px #888888;
+}
+#loginNav{
+  list-style: none;
+  font-size: 12px;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+#loginNav a:hover{
+  color: white;
+}
+#loginNav>a:before{
+  padding: 0 3px;
+  content: "|";
+}
+#dropdownMenuPer{
+  width: 40px;
+}
+#dropPer{
+  top: 38px;
+  width: 176px;
+  max-height: 200px;
+  text-align: center;
+}
+#dropPer a{
+  height: 24px;
+  width: 176px;
+  margin-right: 0;
+  display: block;
+}
+#dropPer a:hover{
+  background-color: #FF6700;
+  color: white;
+}
+#dropPer p{
+  height: 24px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+#dropPer p+p{
+  border-top: 1px solid silver;
+}
+#collM1{
+  position: relative;
+/*  background-color: #00b3ee;*/
+  top: -20px;
+}
+#dropD1>a{
+  height: 72px;
+}
+#dropD1>div{
+  border: 1px solid #FF6B00;
+}
+#dropD1 p,#dropD1 p>a{
+  width: 234px;
+  height: 42px;
+  line-height: 42px;
+  padding: 0;
+  margin: 0;
+}
+#dropD1 p>a{
+  display: block;
+  width: 234px;
+  height: 42px;
+  padding: 0 20px;
+}
+#dropD1 p a:hover{
+  background-color: #FF6B00;
+  color: white;
+}
+
