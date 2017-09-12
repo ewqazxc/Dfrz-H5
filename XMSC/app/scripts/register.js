@@ -117,7 +117,6 @@
       $('#city').removeClass('open');
       return false;
     });
-
     $('#sendCode').on('click', function () {
       if (!$.xc.zShouji()) return;
       settime(this);

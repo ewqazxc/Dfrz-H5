@@ -17,8 +17,57 @@
   <script src="../scripts/address.js"></script>
   <script type="text/javascript">
     $(function () {
-      addressInit('cmbProvince', 'cmbCity', 'cmbArea');
       addressInit('changeProvince', 'changeCity', 'changeArea');
+    });
+  </script>
+  <script>
+    //省市区三级联动
+    $(function () {
+      var Area = [];
+      $.getJSON('../JSON/area.json', function (data) {
+        //console.log(data);
+        Area = data;
+        var html = '';
+        var html2 = '';
+        var html3 = '';
+        for (var i = 0, len = Area.length; i < len; i++) {
+          html += '<option value="' + i + '">' + Area[i].name + '</option>';
+        }
+        $('#cmbProvince').html(html);
+        var val = $('#cmbProvince')[0].value;
+        for (var i = 0, len = Area[val].cityList.length; i < len; i++) {
+          html2 += '<option value="' + i + '">' + Area[val].cityList[i].name + '</option>';
+        }
+        $('#cmbCity').html(html2);
+        var val2 = $('#cmbCity')[0].value;
+        for (var i = 0, len = Area[val].cityList[val2].areaList.length; i < len; i++) {
+          html3 += '<option value="' + i + '">' + Area[val].cityList[val2].areaList[i] + '</option>';
+        }
+        $('#cmbArea').html(html3);
+      });
+      $('#cmbProvince').on('change', function () {
+        var x = $('#cmbProvince')[0].value;
+        var html = '';
+        for (var i = 0, len = Area[x].cityList.length; i < len; i++) {
+          html += '<option value="' + i + '">' + Area[x].cityList[i].name + '</option>';
+        }
+        $('#cmbCity').html(html);
+        var y = $('#cmbCity')[0].value;
+        var html2 = '';
+        for (var i = 0, len = Area[x].cityList[y].areaList.length; i < len; i++) {
+          html2 += '<option value="' + i + '">' + Area[x].cityList[y].areaList[i] + '</option>';
+        }
+        $('#cmbArea').html(html2);
+      });
+      $('#cmbCity').on('change', function () {
+        var x = $('#cmbProvince')[0].value;
+        var y = $('#cmbCity')[0].value;
+        var html = '';
+        for (var i = 0, len = Area[x].cityList[y].areaList.length; i < len; i++) {
+          html += '<option value="' + i + '">' + Area[x].cityList[y].areaList[i] + '</option>';
+        }
+        $('#cmbArea').html(html);
+      })
     });
   </script>
 </head>
@@ -211,7 +260,6 @@
       </ul>
     </div>
     <div class="col-md-3 col-xs-3 header-search">
-
       <div class="input-group" style="width: 250px;height: 50px;left:30px;top:20px;">
         <input type="text" class="form-control" placeholder="Search for..."
                style="width: 200px;height: 50px">
@@ -340,7 +388,7 @@
           <p><strong class="glyphicon glyphicon-plus-sign"></strong></p>
           <p>添加新地址</p>
         </div>
-        <!--        <div class="address col-xs-3 col-md-3 btn ">
+        <!--<div class="address col-xs-3 col-md-3 btn ">
                   123
                 </div>-->
         <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="ModalLabel">
@@ -361,11 +409,20 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-md-4 col-xs-4 text-center">
-                  <select id="cmbProvince" name="cmbProvince"></select></div>
+                  <select id="cmbProvince" name="cmbProvince">
+                  </select>
+
+                </div>
                 <div class="col-md-4 col-xs-4 text-center">
-                  <select id="cmbCity" name="cmbCity"></select></div>
+                  <select id="cmbCity" name="cmbCity">
+                    <!--<option value="0">市辖区</option>
+                    <option value="1">县</option>-->
+                  </select></div>
                 <div class="col-md-4 col-xs-4 text-center">
-                  <select id="cmbArea" name="cmbArea"></select>
+                  <select id="cmbArea" name="cmbArea">
+                    <!--          <option value="0">东城区</option>
+                              <option value="1">西城区</option>-->
+                  </select>
                 </div>
                 <div class="col-md-12 col-xs-12">
                   <textarea name="" id="adrAddress" rows="6" placeholder="详细地址"></textarea>
