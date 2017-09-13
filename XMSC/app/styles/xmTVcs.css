@@ -1,0 +1,190 @@
+.fixednav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+#xmTvNav {
+  width: 100%;
+  height: 78px;
+  margin: 0 auto;
+  padding: 0 70px;
+  background-color: white;
+  z-index: 99;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  box-shadow: 0 3px 10px darkgray
+}
+
+#xmTvNav h3 > small:before {
+  padding: 0 5px;
+  content: '|'
+}
+
+#xmTvNav .breadcrumb {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+#xmTvNav .breadcrumb a {
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei",
+  "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif
+}
+
+#xmTvNav .breadcrumb a.active {
+  color: #FF6B00;
+}
+
+#xmTvNav .breadcrumb li + li:before {
+  padding: 0 5px;
+  content: '|'
+}
+
+#xmTvNav .breadcrumb button {
+  width: 120px;
+  height: 30px;
+  border: none;
+  background-color: #FF6B00;
+  color: white;
+}
+
+#xmTvNav .breadcrumb button:hover {
+  border: 1px solid #FF6B00;
+  background-color: white;
+  color: #FF6B00;
+}
+
+#tvCsTop {
+  width: 1225px;
+  margin: 0 auto;
+  padding-top: 40px;
+  border-bottom: 1px solid silver;
+  padding-bottom: 50px;
+  background-color: white
+}
+
+#tvCsTop p {
+  font-size: 20px;
+  padding-left: 40px
+}
+
+#tvCsTop p:first-child {
+  margin-top: 20px
+}
+
+#tvCsContent {
+  width: 1225px;
+  margin: 0 auto;
+}
+
+#tvCsContent .tvcs {
+  width: 1225px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid silver;
+}
+
+#tvCsContent .tvcs h3 {
+  font-weight: bold;
+  font-family: 黑体;
+  margin-top: 10px
+}
+
+#tvCsContent .tvcs h4 {
+  font-family: 黑体;
+}
+
+#tvCsContent .tvcs h4 small {
+  font-size: 90%
+}
+
+#tvCsContent .tvcs h4 + p {
+  color: #777;
+  padding-left: 106px;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 黑体;
+}
+
+#tvCsContent .tvcs .imgCpu {
+  width: 124px;
+  height: 124px;
+  color: #a4a4a4;
+  border: 1px solid #a4a4a4;
+  border-radius: 5px;
+}
+
+#tvCsContent .tvcs .imgCpu p {
+  font-size: 16px;
+  margin-top: 35px;
+  margin-left: 30px
+}
+
+#tvCsContent .imgApp {
+  float: left;
+  width: 170px;
+  height: 150px;
+  margin: 0;  text-align: center;
+}
+#tvCsContent .imgApp dd{
+  display: block;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 20px;
+  background-image: url('../shopping/images/xmTVapp.png');
+}
+#tvCsContent .imgApp .dd1{
+  background-position: 0 0;
+}
+#tvCsContent .imgApp .dd2{
+  background-position: -62px 0;
+}
+#tvCsContent .imgApp .dd3{
+  background-position: -124px 0;
+}
+#tvCsContent .imgApp .dd4{
+  background-position: -186px 0;
+}
+#tvCsContent .imgApp .dd5{
+  background-position: -248px 0;
+}
+#tvCsContent .imgApp .dd6{
+  background-position: -310px 0;
+}
+#tvCsContent .imgApp .dd7{
+  background-position: -372px 0;
+}
+#tvCsContent .imgApp .dd8{
+  background-position: -434px 0;
+}
+#tvCsContent .imgApp .dd9{
+  background-position: -496px 0;
+}
+#tvCsContent .imgApp .dd10{
+  background-position: 0 -62px;
+}
+#tvCsContent .imgApp .dd11{
+  background-position: -62px -62px;
+}
+#tvCsContent .imgApp .dd12{
+  background-position: -124px -62px;
+}
+#tvCsContent .imgApp .dd13{
+  background-position: -186px -62px;
+}
+#tvCsContent .imgApp .dd14{
+  background-position: -248px -62px;
+}
+#tvCsContent .imgApp .dd15{
+  background-position: -310px -62px;
+}
+#tvCsContent .imgApp .dd16{
+  background-position: -372px -62px;
+}
+#tvCsContent .tvcs span{
+  color: #ccc;
+  font-size: 12px;}

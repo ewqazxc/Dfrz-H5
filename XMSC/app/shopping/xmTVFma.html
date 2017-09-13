@@ -2,77 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>收货地址</title>
-  <link rel="stylesheet" href="../bowers/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css">
+  <title>小米F码购买通道</title>
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="../bowers/font-awesome/css/font-awesome.css"/>
   <link rel="stylesheet" href="../styles/main.css">
-  <link rel="stylesheet" href="../styles/personal.css">
-  <link rel="stylesheet" href="../styles/address.css">
+  <link rel="stylesheet" href="../styles/xmTVFma.css">
   <script src="../bowers/jquery/dist/jquery.js"></script>
   <script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
   <script src="../scripts/main.js"></script>
   <script src="../scripts/xc.js"></script>
   <script src="../scripts/drrz-store.js"></script>
-  <script src="../scripts/JSaddress.js"></script>
-  <script src="../scripts/address.js"></script>
   <script type="text/javascript">
     $(function () {
-      addressInit('changeProvince', 'changeCity', 'changeArea');
-    });
-  </script>
-  <script>
-    //省市区三级联动
-    $(function () {
-      var Area = [];
-      $.getJSON('../JSON/area.json', function (data) {
-        //console.log(data);
-        Area = data;
-        var html = '';
-        var html2 = '';
-        var html3 = '';
-        for (var i = 0, len = Area.length; i < len; i++) {
-          html += '<option value="' + i + '">' + Area[i].name + '</option>';
+      var nav = $("#xmTvNav"); //得到导航对象
+      var win = $(window); //得到窗口对象
+      var sc = $(document);//得到document文档对象。
+      win.scroll(function () {
+        if (sc.scrollTop() >= 220) {
+          nav.addClass("fixednav");
+          $("#xmTvNav").fadeIn();
+        } else {
+          nav.removeClass("fixednav");
+          //$("#xmTvNav").fadeOut();
         }
-        $('#cmbProvince').html(html);
-        var val = $('#cmbProvince')[0].value;
-        for (var i = 0, len = Area[val].cityList.length; i < len; i++) {
-          html2 += '<option value="' + i + '">' + Area[val].cityList[i].name + '</option>';
-        }
-        $('#cmbCity').html(html2);
-        var val2 = $('#cmbCity')[0].value;
-        for (var i = 0, len = Area[val].cityList[val2].areaList.length; i < len; i++) {
-          html3 += '<option value="' + i + '">' + Area[val].cityList[val2].areaList[i] + '</option>';
-        }
-        $('#cmbArea').html(html3);
-      });
-      $('#cmbProvince').on('change', function () {
-        var x = $('#cmbProvince')[0].value;
-        var html = '';
-        for (var i = 0, len = Area[x].cityList.length; i < len; i++) {
-          html += '<option value="' + i + '">' + Area[x].cityList[i].name + '</option>';
-        }
-        $('#cmbCity').html(html);
-        var y = $('#cmbCity')[0].value;
-        var html2 = '';
-        for (var i = 0, len = Area[x].cityList[y].areaList.length; i < len; i++) {
-          html2 += '<option value="' + i + '">' + Area[x].cityList[y].areaList[i] + '</option>';
-        }
-        $('#cmbArea').html(html2);
-      });
-      $('#cmbCity').on('change', function () {
-        var x = $('#cmbProvince')[0].value;
-        var y = $('#cmbCity')[0].value;
-        var html = '';
-        for (var i = 0, len = Area[x].cityList[y].areaList.length; i < len; i++) {
-          html += '<option value="' + i + '">' + Area[x].cityList[y].areaList[i] + '</option>';
-        }
-        $('#cmbArea').html(html);
       })
-    });
+    })
   </script>
 </head>
 <body>
 <header>
+  <!--  <div class="site-ad-bar container-fluid"></div>-->
   <div class="site-nav-bar container-fluid">
     <div id="nav" class="row">
       <div class="col-md-9 col-xs-9">
@@ -96,10 +56,10 @@
                  aria-haspopup="true" aria-expanded="true">
               <a href="">XM <span class="glyphicon glyphicon-triangle-bottom"></span></a></div>
             <div id="dropPer" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuPer">
-              <p><a href="personal.html">个人中心</a></p>
+              <p><a href="../account/personal.html">个人中心</a></p>
               <p><a href="../shopping/orderPing.html">评价晒单</a></p>
               <p><a href="#">我的喜欢</a></p>
-              <p><a href="account.html" target="_blank">小米账户</a></p>
+              <p><a href="../account/account.html" target="_blank">小米账户</a></p>
               <p><a id="logout" href="#">退出登录</a></p>
             </div>
           </div>
@@ -123,6 +83,7 @@
             <table>
               <tbody>
               </tbody>
+
               <tfoot>
               <tr>
                 <td class="col-md-7 col-xs-7 text-left">
@@ -342,168 +303,83 @@
       </div>
     </div>
   </div>
-  <div id="contanier" class="container-fluid">
-    <div id="content-1" class="row">
-      <ul id="nav-1" class="breadcrumb col-md-12 col-xs-12">
-        <li role="presentation"><a href="#">首页</a></li>
-        <li role="presentation"><a href="#">收货地址</a></li>
+  <div id="xmTvNav" class="row">
+    <div class="col-md-6 col-xs-6">
+      <h3>小米电视4A 32英寸
+        <small><a href="">小米电视4A 32英寸</a></small>
+      </h3>
+    </div>
+    <div class="col-md-6 col-xs-6 text-right">
+      <ul class="breadcrumb">
+        <li><a href="../shopping/xmTV.html">概述</a></li>
+        <li><a href="../shopping/xmTVcs.html">参数</a></li>
+        <li><a class="active" href="../shopping/xmTVFma.html">F码通道</a></li>
+        <li><a href="../shopping/xmTVfixServe.html">安装服务</a></li>
+        <li><a href="../shopping/xmTVuserPing.html">用户评价</a></li>
+        <button>立即购买</button>
       </ul>
-      <div id="per-aside" class="col-xs-3 col-md-3">
-        <div class="col-md-12 col-xs-12">
-          <ul class="col-md-12 col-xs-12">订单中心
-            <li><a href="../shopping/order.html">我的订单</a></li>
-            <li><a href="#">意外保</a></li>
-            <li><a href="#">团购订单</a></li>
-            <li><a href="../shopping/orderPing.html">评价晒单</a></li>
-            <li><a href="#">话费充值订单</a></li>
-            <li><a href="#">以旧换新订单</a></li>
-          </ul>
-          <ul class="col-md-12 col-xs-12">个人中心
-            <li><a href="../account/personal.html">我的个人中心</a></li>
-            <li><a href="#">消息通知</a></li>
-            <li><a href="#">购买资格</a></li>
-            <li><a href="#">现金账户</a></li>
-            <li><a href="#">小米礼品卡</a></li>
-            <li><a href="#">现金券</a></li>
-            <li><a href="#">喜欢的商品</a></li>
-            <li><a href="#">优惠券</a></li>
-            <li><a href="../account/address.html">收货地址</a></li>
-          </ul>
-          <ul class="col-md-12 col-xs-12">售后服务
-            <li><a href="#">服务记录</a></li>
-            <li><a href="#">申请服务</a></li>
-            <li><a href="#">领取快递报销</a></li>
-          </ul>
-          <ul class="col-md-12 col-xs-12">账户管理
-            <li><a href="../account/account.html">个人信息</a></li>
-            <li><a href="#">修改密码</a></li>
-            <li><a href="#">社区VIP认证</a></li>
-          </ul>
-        </div>
+    </div>
+  </div>
+  <div class="bgf5">
+    <div id="xmFnav" class="row">
+      <ul class="breadcrumb col-md-12 col-xs-12">
+        <li><a href="#">首页</a></li>
+        <li>F码购买通道</li>
+      </ul>
+    </div>
+    <div id="useFma" class="row text-center">
+      <div class="col-md-12 col-xs-12">
+        <h2>感谢你，亲爱的朋友！</h2>
+        <p>使用F码购买新品，可能会延迟发货时间</p>
+        <input type="text" placeholder="请输入F码"><br>
+        <button>使用F码</button>
       </div>
-      <div id="address" class="col-xs-9 col-md-9">
-        <h2>收货地址</h2>
-        <div class="addressAdd col-xs-3 col-md-3 text-center btn " data-toggle="modal"
-             data-target="#addressModal">
-          <p><strong class="glyphicon glyphicon-plus-sign"></strong></p>
-          <p>添加新地址</p>
-        </div>
-        <!--<div class="address col-xs-3 col-md-3 btn ">
-                  123
-                </div>-->
-        <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="ModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="ModalLabel">添加收货地址</h4>
-              </div>
-              <div class="modal-body row">
-                <div class="col-md-6 col-xs-6">
-                  <input id="adrName" class="" type="text" placeholder="* 姓名" maxlength="20">
-                </div>
-                <div class="col-md-6 col-xs-6">
-                  <input id="adrTel" type="text" placeholder="* 手机号" minlength="11" maxlength="11" required>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-md-4 col-xs-4 text-center">
-                  <select id="cmbProvince" name="cmbProvince">
-                  </select>
-
-                </div>
-                <div class="col-md-4 col-xs-4 text-center">
-                  <select id="cmbCity" name="cmbCity">
-
-                  </select></div>
-                <div class="col-md-4 col-xs-4 text-center">
-                  <select id="cmbArea" name="cmbArea">
-
-                  </select>
-                </div>
-                <div class="col-md-12 col-xs-12">
-                  <textarea name="" id="adrAddress" rows="6" placeholder="* 详细地址"></textarea>
-                </div>
-                <div class="col-md-6 col-xs-6">
-                  <input id="adrCode" type="text" placeholder="邮政编码" maxlength="6">
-                </div>
-                <div class="col-md-6 col-xs-6">
-                  <input id="adrTip" type="text" placeholder="地址标签" maxlength="20">
-                </div>
-              </div>
-              <div class="modal-footer">
-                <div class="col-md-6 col-xs-6 text-right">
-                  <button id="adrBtnSave">保存</button>
-                </div>
-                <div class="col-md-6 col-xs-6 text-left">
-                  <button data-dismiss="modal" aria-label="close">取消</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal fade" id="addressChange" tabindex="-1" aria-labelledby="ModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="ModalLabe2">修改收货地址</h4>
-              </div>
-              <div class="modal-body row">
-                <div class="col-md-6 col-xs-6">
-                  <input id="changeName" class="" type="text" placeholder="* 姓名" maxlength="20">
-                </div>
-                <div class="col-md-6 col-xs-6">
-                  <input id="changeTel" type="text" placeholder="* 手机号" minlength="11" maxlength="11" required>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-md-4 col-xs-4 text-center">
-                  <select id="changeProvince" name="changeProvince"></select></div>
-                <div class="col-md-4 col-xs-4 text-center">
-                  <select id="changeCity" name="changeCity"></select></div>
-                <div class="col-md-4 col-xs-4 text-center">
-                  <select id="changeArea" name="changeArea"></select>
-                </div>
-                <div class="col-md-12 col-xs-12">
-                  <textarea name="" id="changeAddress" rows="6" placeholder="详细地址"></textarea>
-                </div>
-                <div class="col-md-6 col-xs-6">
-                  <input id="changeCode" type="text" placeholder="邮政编码" maxlength="6">
-                </div>
-                <div class="col-md-6 col-xs-6">
-                  <input id="changeTip" type="text" placeholder="地址标签" maxlength="20">
-                </div>
-              </div>
-              <div class="modal-footer">
-                <div class="col-md-6 col-xs-6 text-right">
-                  <button id="changeBtnSave">保存</button>
-                </div>
-                <div class="col-md-6 col-xs-6 text-left">
-                  <button data-dismiss="modal" aria-label="close">取消</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div id="whatFma" class="row text-center">
+      <div class="col-md-4 col-xs-4">
+        <h3>F码就是朋友特权</h3>
+        <p>F码是小米产品优先购买码，无需预约排队，直接购买热门商品。
+          F = Friend，它是为小米的好朋友提供的“友情特权”。
+          部分商品的特权购买，无法保证7天内发货。</p>
+        <img class="img-responsive center-block" src="../shopping/images/xmFmaFriend.jpg" alt="">
       </div>
+      <div class="col-md-4 col-xs-4">
+        <h3>谁会有F码</h3>
+        <p>我们将F码赠与小米社区和MIUI论坛的版主、
+          顾问团、荣誉开发组、同城会会长等为小米提供热心帮助的好朋友们。</p>
+        <img class="img-responsive center-block" src="../shopping/images/xmFmaWho.jpg" alt="">
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <h3>让我们做朋友吧</h3>
+        <p>关注小米官方微博、微信，或参与社区讨论，
+          也有机会获得 F码，欢迎关注小米。</p>
+        <a href=""> <span class="fa fa-weibo"></span>官方微博</a><br>
+        <a href=""> <span class="fa fa-weixin"></span>关注微信</a><br>
+        <a href=""> <span class="fa fa-commenting"></span> 小米社区</a>
+      </div>
+    </div>
+  </div>
+</content>
+<footer style="background-color: white">
+  <div id="">
+    <div class="row">
     </div>
   </div>
   <div class="container-fluid">
     <div id="content-2" class="row">
       <ul class="col-md-12 col-xs-12 nav nav-pills">
-        <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i class="fa fa-wrench"></i>
+        <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
+          class="glyphicon glyphicon-wrench"></i>
           预约维修服务</a></li>
-        <li class="col-md-2 col-xs-2 text-center" role="presentation"><a href="#"><i
-          class="glyphicon glyphicon-retweet"></i> 7天无理由退换货</a></li>
-        <li class="col-md-2 col-xs-2 text-center" role="presentation"><a href="#"><i class="fa fa-refresh"></i>
-          15天免费换货</a></li>
-        <li class="col-md-2 col-xs-2 text-center" role="presentation"><a href="#"><i class="fa fa-gift"></i>
+        <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
+          class="glyphicon glyphicon-repeat"></i> 7天无理由退换货</a></li>
+        <!--          <li class="col-md-2 col-xs-2 text-center" role="presentation"><a href="#"><i class="glyphicon glyphicon-refresh"></i>
+                    15天免费换货</a></li>-->
+        <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
+          class="glyphicon glyphicon-gift"></i>
           满150元包邮</a></li>
         <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
-          class="fa fa-map-marker"></i> 520余家售后网点</a></li>
+          class="glyphicon glyphicon-map-marker"></i> 520余家售后网点</a></li>
       </ul>
       <div class="col-md-9 col-xs-9">
         <div id="help-nav" class="row text-center">
@@ -543,7 +419,7 @@
         <h4>400-100-5678</h4>
         <p>周一至周日 8：00-18:00</p>
         <p>（仅收市话费）</p>
-        <button><span class="glyphicon glyphicon-bell">24小时在线客服</span></button>
+        <button><span class="glyphicon glyphicon-bell"></span>24小时在线客服</button>
       </div>
     </div>
   </div>
@@ -574,7 +450,7 @@
         <small>违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</small>
       </div>
       <div id="vlogo" class="col-xs-12 col-md-12 text-right">
-        <img src="../images/Foot1.png" alt="">
+        <img style="width: 85px;height: 28px" src="../images/Foot1.png" alt="">
         <img src="../images/Foot2.png" alt="">
         <img src="../images/Foot3.png" alt="">
         <img src="../images/Foot4.png" alt="">
@@ -584,6 +460,6 @@
       </div>
     </div>
   </div>
-</content>
+</footer>
 </body>
 </html>

@@ -5,8 +5,10 @@
   $(function () {
     $(document).ready(function() {
       var t=localStorage.getItem('accountInfo');
+      var t2=localStorage.getItem('account');
       console.log(localStorage.getItem('accountInfo'));
       var jsonObj=eval('('+t+')');
+      var jsonObj2=eval('('+t2+')');
       console.log(jsonObj);
       var nameAcc=jsonObj.name;
       console.log(nameAcc);
@@ -14,9 +16,11 @@
       console.log(dateAcc);
       var sexAcc=jsonObj.sex;
       console.log(dateAcc);
+      var userID=jsonObj2.userID;
       $('#nameAcc').html('姓名：'+ ' ' +nameAcc);
       $('#dateAcc').html('生日：'+ ' ' +dateAcc);
       $('#sexAcc').html('性别：'+ ' ' +sexAcc);
+      $('#safeTel').html('安全手机'+ ' ' +$.xc.cutTel(userID));
     });
   $('#btnSave').on('click',function () {
     console.log($('#changeName')[0].value);

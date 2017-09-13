@@ -1,10 +1,13 @@
 /**
  * Created by Administrator on 2017/8/28.
+ *  account {"userID":"15860525235","password":"123456"}
  */
 (function () {
   'use strict';
   var products = [];
   $(function () {
+    var ACCOUNT_KEY = 'accounts';
+    var accounts=store.get(ACCOUNT_KEY,[]);
     var countdown = 60;
     var t = '';
     function settime(obj) {
@@ -120,7 +123,7 @@
     $('#sendCode').on('click', function () {
       if (!$.xc.zShouji()) return;
       settime(this);
-      var name = 'H5锐智XC';
+      var name = 'H5锐智HXC';
       function randomNum(n) {
         for (var i = 0; i < n; i++) {
           t += Math.floor(Math.random() * 10);
@@ -178,8 +181,8 @@
       if(!$.xc.zPasswordS()) return;
       $('#inPass').hide();
       var account = {userID:$('#shouJi').val(),password:$('#password').val()};
-      var ACCOUNT_KEY = 'account';
-      store.update(ACCOUNT_KEY,account);
+      accounts.push(account);
+      store.update(ACCOUNT_KEY,accounts);
       $('#regSuccess').show();
       setTimeout('$("#regSuccess").hide()',3000);
       window.location.href="../account/login.html"
