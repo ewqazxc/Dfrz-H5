@@ -5,109 +5,122 @@
   'use strict';
   var products = [];
   $(function () {
-    var subTotal="";
-    /*$.getJSON('JSON/shopping.json',function (data) {
-      products=data;
-      if(products!=[]){
-        $('#noneShop').remove();
-        $('tfoot').show();
+    /**
+     * 页面加载时，验证是否登录
+     * 登录时，改变导航栏信息
+     * */
+    $(document).ready(function () {
+      var ACCOUNT_KEY2 = 'loginUser';
+      var userID = store.get(ACCOUNT_KEY2, []);
+      console.log(userID);
+      if(userID==''){
+        return;
       }
-
-      console.log(data);
-      var html = '';
-      for(var i=0,len=products.length;i<len;i++){
-        products[i].subTotal=products[i].quantity * products[i].price;
-        products[i].fullName=products[i].name+" "+products[i].key;
+      var html = $.xc.cutTel(userID) + '<span class="glyphicon glyphicon-triangle-bottom"></span>';
+      $('#navTel').html(html);
+      var login = localStorage.getItem('login');
+      if (login == 'true') {
+        $('#isLogin').show();
+        $('#noLogin').hide();
       }
-      for(var i=0,len=products.length;i<len;i++){
-        html+='<tr>';
-        html+='<td class="col-md-3 col-xs-3 text-center"><img class="img-responsive" src="'+ products[i].image +'" alt=""></td>';
-        html+='<td class="col-md-6 col-xs-6 text-left">'+ '<small>' + products[i].fullName + '</small>' +'</td>';
-        html+='<td class="col-md-3 col-xs-3 text-right">'+ $.xc.toCurrency(products[i].price)+' x '+  products[i].quantity  +'</td>';
-        html+='</tr>'
+      else {
+        $('#noLogin').show();
+        $('#isLogin').hide();
       }
-      $('#shop-car tbody').html(html);
-      updateFoot(products);
-
-      console.log(products[0].subTotal);
-      console.log(products[0].fullName);
-    });*/
-    /*        $('#dropdownMenu1').on('mouseover',function () {
-     $('#shop-car').show();
-     /!*  $('#btn-car').addClass('open');
-     $('#btn-car').attr('aria-expanded',function () {
-     return true;
-     });*!/
-     });
-     $('#dropdownMenu1').on('mouseout',function () {
-     $('#shop-car').hide();
-     /!* $('#btn-car').removeClass('open');
-     $('#btn-car').attr('aria-expanded',function () {
-     return false;
-     });*!/
-     });*/
-    $('[data-toggle=hover]').parent().on('mouseenter mouseleave',function () {
+    });
+    
+    /**
+     * 下拉菜单，悬停触发
+     * */
+    $('[data-toggle=hover]').parent().on('mouseenter mouseleave', function () {
       $(this).toggleClass('open');
     });
-    $('#a-tvBox').parent().on('mouseenter mouseleave',function () {
+    $('#a-tvBox').parent().on('mouseenter mouseleave', function () {
       $(this).toggleClass('open');
     });
-    $('#logout').on('click',function () {
-     $('#noLogin').show();
+   
+   /**
+    * 退出时清除登录状态
+    * */
+    $('#logout').on('click', function () {
+      $('#noLogin').show();
       $('#isLogin').hide();
-      console.log(localStorage);
       var ACCOUNT_KEY = 'login';
       store.remove(ACCOUNT_KEY);
+      var ACCOUNT_KEY2 = 'loginUser';
+      store.remove(ACCOUNT_KEY2);
     });
-    function updateFoot(array) {
-      var total1= $.xc.sum(array,function (item, index) {
-        return item.quantity;
-      });
-      var total2=$.xc.sum(array,function (item, index) {
-        return item.subTotal;
-      });
-      console.log(total1);
-      $('tfoot tr td strong:nth-child(1)').text(total1);
-      console.log(total2);
-      $('#tota2').text($.xc.toCurrency(total2));
-    }
-    var enterTimeout=[],leaveTimeout = [];
-/*    $(document).off('click.bs.collapse.data-api','[data-toggle="collapse"]');*/
+
+    /**
+     * 折叠菜单，悬停触发
+     * */
+    var enterTimeout = [], leaveTimeout = [];
+    /*  $(document).off('click.bs.collapse.data-api','[data-toggle="collapse"]');*/
     $('[data-collapse-trigger=hover]').hover(function () {
-      var i=$(this);
-      var index =Number(i.data('id'));
+      var i = $(this);
+      var index = Number(i.data('id'));
       clearTimeout(leaveTimeout[index]);
       clearTimeout(enterTimeout[index]);
-      enterTimeout[index]=setTimeout(function(){
+      enterTimeout[index] = setTimeout(function () {
         var target = i.data('target');
         $(target).collapse('show');
         console.log(target);
-      },350);
+      }, 350);
       //$(this).trigger('click');
-    },function(){
-      var i=$(this);
-      var index =Number(i.data('id'));
+    }, function () {
+      var i = $(this);
+      var index = Number(i.data('id'));
       clearTimeout(enterTimeout[index]);
       clearTimeout(leaveTimeout[index]);
-      leaveTimeout[index]=setTimeout(function(){
+      leaveTimeout[index] = setTimeout(function () {
         var target = i.data('target');
         $(target).collapse('hide');
-      },350);
-    })
+      }, 400);
+    });
 
+    var subTotal = "";
+    /**
+     * 获取购物车数据，暂不使用
+     * */
+    /*  $.getJSON('0/XMSC/app/JSON/shopping.json',function (data) {
+     products=data;
+     console.log(products)
+     if(products!=''){
+     $('#noneShop').remove();
+     $('tfoot').show();
+     }
+     console.log(data);
+     var html = '';
+     for(var i=0,len=products.length;i<len;i++){
+     products[i].subTotal=products[i].quantity * products[i].price;
+     products[i].fullName=products[i].name+" "+products[i].key;
+     }
+     for(var i=0,len=products.length;i<len;i++){
+     html+='<tr>';
+     html+='<td class="col-md-3 col-xs-3 text-center"><img class="img-responsive" src="'+ products[i].image +'" alt=""></td>';
+     html+='<td class="col-md-6 col-xs-6 text-left">'+ '<small>' + products[i].fullName + '</small>' +'</td>';
+     html+='<td class="col-md-3 col-xs-3 text-right">'+ $.xc.toCurrency(products[i].price)+' x '+  products[i].quantity  +'</td>';
+     html+='</tr>'
+     }
+     $('#shop-car tbody').html(html);
+     updateFoot(products);
+     });*/
+    
+    /**
+     * 更新购物车底部数据，暂不使用
+     * */ 
+    /*    function updateFoot(array) {
+      var total1 = $.xc.sum(array, function (item, index) {
+        return item.quantity;
+      });
+      var total2 = $.xc.sum(array, function (item, index) {
+        return item.subTotal;
+      });
+      $('tfoot tr td strong:nth-child(1)').text(total1);
+      $('#tota2').text($.xc.toCurrency(total2));
+    }*/
   });
-  $(document).ready(function() {
-    var login=localStorage.getItem('login');
-    if(login=='true'){
-      $('#isLogin').show();
-      $('#noLogin').hide();
-    }
-    else{
-      $('#noLogin').show();
-      $('#isLogin').hide();
-    }
-  });
-  })();
+})();
 
 
 

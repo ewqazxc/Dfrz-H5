@@ -16,17 +16,17 @@ var store = (function () {
         val = defaultValue;
       }
       return val;
-    },
+    },  //获取本地存储的数据
     update: function (key, value) {
       if(value){
         localStorage.setItem(key,JSON.stringify(value));
       }
-    },
+    },      //更新本地存储的数据
     add:function (key, value) {
       this.update(key,value);
-    },
+    },          //添加数据
     remove:function (key) {
       localStorage.removeItem(key);
-    }
+    }               //删除数据
   };
 })();

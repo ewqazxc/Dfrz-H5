@@ -10,15 +10,12 @@
   <script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
   <script src="../scripts/drrz-store.js"></script>
   <script src="../scripts/account.js"></script>
-<!--  <script>
+  <script src="../scripts/xc.js"></script>
+  <script>
     $(function () {
-      $('#signOut').on('click', function () {
-        console.log(localStorage);
-        var ACCOUNT_KEY = 'accountInfo';
-        store.remove(ACCOUNT_KEY);
-      });
+
     })
-  </script>-->
+  </script>
 </head>
 <body>
 <header>
@@ -33,6 +30,11 @@
     </div>
   </div>
 </header>
+<div>
+  <div class="noLoginK">
+    跳转至登录页中。。。
+  </div>
+</div>
 <content>
   <div id="content" class="container">
     <div id="editInfo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editInfoMoal">
@@ -134,7 +136,7 @@
                   <i class="fa fa-mobile"></i>
                 </div>
                 <div class="col-md-7 col-xs-7">
-                  <h4 id="safeTel">安全手机 158******35</h4>
+                  <h4 id="safeTel">安全手机 ***********</h4>
                   <small>用于保护账户信息和登录安全</small>
                 </div>
                 <div class="col-md-4 col-xs-4 text-right">

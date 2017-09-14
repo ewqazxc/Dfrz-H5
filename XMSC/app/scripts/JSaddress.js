@@ -1,6 +1,7 @@
 /**
- * Created by Administrator on 2017/9/11.
+ * Created by 网络 on 2017/9/11.
  */
+
 var addressInit = function(_cmbProvince, _cmbCity, _cmbArea, defaultProvince, defaultCity, defaultArea)
 {
   var cmbProvince = document.getElementById(_cmbProvince);

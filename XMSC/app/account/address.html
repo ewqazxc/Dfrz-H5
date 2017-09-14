@@ -16,14 +16,19 @@
   <script src="../scripts/JSaddress.js"></script>
   <script src="../scripts/address.js"></script>
   <script type="text/javascript">
+    //省市区三级联动，JS数据
     $(function () {
       addressInit('changeProvince', 'changeCity', 'changeArea');
     });
   </script>
   <script>
-    //省市区三级联动
+    //省市区三级联动，本地JSON数据
     $(function () {
       var Area = [];
+
+      /**
+       * 获取地区数据
+       * */
       $.getJSON('../JSON/area.json', function (data) {
         //console.log(data);
         Area = data;
@@ -45,6 +50,10 @@
         }
         $('#cmbArea').html(html3);
       });
+
+      /**
+       * 改变省份时，后续联动
+       * */
       $('#cmbProvince').on('change', function () {
         var x = $('#cmbProvince')[0].value;
         var html = '';
@@ -59,6 +68,10 @@
         }
         $('#cmbArea').html(html2);
       });
+
+      /**
+       * 改变城市时，后续联动
+       * */
       $('#cmbCity').on('change', function () {
         var x = $('#cmbProvince')[0].value;
         var y = $('#cmbCity')[0].value;
@@ -75,8 +88,8 @@
 <header>
   <div class="site-nav-bar container-fluid">
     <div id="nav" class="row">
-      <div class="col-md-9 col-xs-9">
-        <ul class="nav nav-tabs" style="position: relative;top: 1px">
+      <div class="col-md-6 col-xs-6">
+        <ul>
           <li><a href="../account/XMSC.html" target="_blank">小米商城</a></li>
           <li><a href="#">MIUI</a></li>
           <li><a href="#">米聊</a></li>
@@ -89,13 +102,13 @@
           <li><a href="#">Select Region</a></li>
         </ul>
       </div>
-      <div id="isLogin" class="col-md-2 col-xs-2 text-right">
+      <div id="isLogin" class="col-md-5 col-xs-5 text-right">
         <div id="loginNav">
-          <div class="dropdown pull-left">
+          <div class="dropdown pull-right">
             <div id="dropdownMenuPer" class="dropdown-toggle" data-toggle="hover"
                  aria-haspopup="true" aria-expanded="true">
-              <a href="">XM <span class="glyphicon glyphicon-triangle-bottom"></span></a></div>
-            <div id="dropPer" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuPer">
+              <a id="navTel" href="">XM <span class="glyphicon glyphicon-triangle-bottom"></span></a></div>
+            <div  id="dropPer" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuPer">
               <p><a href="personal.html">个人中心</a></p>
               <p><a href="../shopping/orderPing.html">评价晒单</a></p>
               <p><a href="#">我的喜欢</a></p>
@@ -107,7 +120,7 @@
           <a href="../shopping/order.html">我的订单</a>
         </div>
       </div>
-      <div id="noLogin" class="col-md-2 col-xs-2 text-right">
+      <div id="noLogin" class="col-md-5 col-xs-5 text-right">
         <a href="../account/login.html" target="_blank">登陆</a>
         <a href="../account/register.html" target="_blank">注册</a>
       </div>
@@ -117,20 +130,17 @@
           <span class="glyphicon glyphicon-shopping-cart"></span>
           购物车<span class="caret"></span>
         </div>
-        <div id="shop-car" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1"
-             style="right: 10px;top:38px;width: 360px;">
-          <div class="row" style="max-height: 360px;">
+        <div id="shop-car" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+          <div class="row">
             <table>
               <tbody>
               </tbody>
               <tfoot>
               <tr>
-                <td class="col-md-7 col-xs-7 text-left">
+                <td colspan="2" class="text-center">
                   <small>共有<strong>6</strong>件商品</small>
                   <strong id="tota2">1</strong></td>
-                <td colspan="2" class="col-md-5 col-xs-5 text-center btn"
-                    style="background-color:#F66802;height: 25px;color:white; ">马上结算
-                </td>
+                <td class="text-center">马上结算</td>
               </tr>
               </tfoot>
             </table>
@@ -375,7 +385,7 @@
             <li><a href="#">领取快递报销</a></li>
           </ul>
           <ul class="col-md-12 col-xs-12">账户管理
-            <li><a href="../account/account.html">个人信息</a></li>
+            <li><a href="../account/account.html" target="_blank">个人信息</a></li>
             <li><a href="#">修改密码</a></li>
             <li><a href="#">社区VIP认证</a></li>
           </ul>

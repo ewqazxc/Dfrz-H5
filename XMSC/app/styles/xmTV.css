@@ -30,3 +30,36 @@
 #xmTvFoot>div{margin-right: 20px}
 #xmTvFoot h2{margin-top: 30px}
 #xmTvFoot h2 span{color: red}
+#xmTvSort{padding: 100px 0;}
+#xmTvSort h2,#xmTvEye h2{font-family:黑体;font-size: 40px;}
+#xmTvSort h4{font-size: 26px;margin-top: 20px;margin-bottom: 30px}
+#xmTvGq{width: 100%;height: 1200px;background: url("../shopping/images/xmTvGQ.jpg") no-repeat center;padding-top: 100px;}
+#xmTvGq h2{font-family:黑体;font-size: 40px;color:white;}
+#xmTvGq h4{font-size: 26px;margin-top: 20px;color:white;margin-bottom: 580px}
+#xmTvGq div.row{width: 1225px;margin: 0 auto;}
+#xmTvGq div.row>div>div{border: 1px solid white;border-radius: 5px;height: 100px;margin-bottom: 30px}
+#xmTvGq p{font-size: 36px;color: white;line-height: 100px}
+#xmTvGq span{font-size: 36px;color: white;}
+#xmTvEye{width: 100%;height: 1100px;background: url("../shopping/images/xmTvEye.jpg")no-repeat center;padding: 100px;}
+#xmTvEye h4{font-family:黑体;font-size: 20px;}
+#xmTvRam{width: 100%;height: 1100px;background: url("../shopping/images/xmTvRam.jpg")no-repeat center;padding: 100px;}
+#xmTvRam div.row{width: 1225px;height: 850px;padding-top:250px;}
+#xmTvRam h2{font-family:黑体;font-size: 46px;color: white;}
+#xmTvRam h2 small{color: white;}
+#xmTvRam h3{font-family:黑体;font-size: 34px;color: white;}
+#xmTvRam h4{font-family:黑体;font-size: 26px;color: white;margin-bottom: 70px;}
+#xmTvRam h5{font-family:黑体;font-size: 24px;color: white;}
+.borderWhite{border: 1px solid white;border-radius: 5px;text-align: center;margin-top: 22px;}
+#xmTvLink div.tab-pane{width: 100%;height: 1200px;background: url("../shopping/images/xmTvLink1.jpg")no-repeat center;}
+#xmTvLink div.tab-pane:nth-child(2){background: url("../shopping/images/xmTvLink2.jpg")no-repeat center;}
+#xmTvLink {position: relative;}#xmTvLink div.row{position: absolute;top:30px;color: white;font-family:黑体;}
+#xmTvLink ul{font-family:黑体;width:300px;position: absolute;bottom: 50px;left: 50%;margin-left: -150px;border: none;}
+#xmTvLink ul li{width: 150px;height: 40px;background-color:transparent;font-size: 22px;color: #f5f5f5;opacity: 0.7;text-align: center}
+#xmTvLink ul li a{background-color:transparent;font-size: 22px;color: #f5f5f5;opacity: 0.7}
+#xmTvLink ul li.active>a{background-color:transparent;color: white;opacity:1;border: none}
+#xmTvLink ul li a:hover{color: #FF6B00;opacity: 1;border: none}
+#xmTvLink ul li.active>a{border-bottom: 3px solid white}
+#xmTvLink h2{font-size: 46px;margin-top: 140px}
+#xmTvLink h3{font-size: 36px;}
+#xmTvLink h4{font-size: 26px;margin-top: 10px;margin-bottom: 30px;}
+#xmTvLink h5{font-size: 20px;}

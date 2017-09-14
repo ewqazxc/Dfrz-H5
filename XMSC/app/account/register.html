@@ -13,6 +13,9 @@
   <script src="../scripts/MD5.js"></script>
   <script>
     $(function () {
+      /**
+       * 获取地区代码
+       * */
       $.getJSON('../JSON/countryCode.json', function (data) {
         console.log(data);
         var html = '';
@@ -35,7 +38,11 @@
           html2 += '</div>'
         }
         $('#code').html(html2);
-      })
+      });
+
+      /**
+       * 选择手机区号
+       * */
       $('#code').on('click', 'a', function () {
         $('#phoneCode button')[0].innerText = $(this).children()[0].innerText;
       });
@@ -49,6 +56,18 @@
   </div>
   <div id="shouJiF" class="tipsK">
     手机号码格式有误！
+  </div>
+  <div id="mimaK" class="tipsK">
+    密码不能为空！
+  </div>
+  <div id="mimaF" class="tipsK">
+    密码格式有误！
+  </div>
+  <div id="mimaSK" class="tipsK">
+    确认密码不能为空！
+  </div>
+  <div id="mimaSF" class="tipsK">
+    两次密码不一致！
   </div>
   <div id="sendT" class="tipsK">
     发送成功~

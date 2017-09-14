@@ -12,6 +12,9 @@
   <script src="../scripts/drrz-store.js"></script>
   <script>
     $(function () {
+      /**
+       * 改变标签颜色
+       * */
       $("#zhDL").on('click',function () {
         $("#smDL").removeClass('now');
         $("#zhDL").addClass('now');
@@ -52,6 +55,7 @@
   <div id="logSuccess" class="tipsK" >
     登录成功！跳转中...
   </div>
+  </div>
 <header>
   <div id="head" class="row">
     <div id="logo" class="pull-left"></div>
@@ -75,12 +79,11 @@
         <form id="zhangHaodl" class="tab-pane active col-md-12 col-xs-12">
         <div class="form-group">
           <input id="userID" class="form-control" type="text" placeholder="手机号码" maxlength="11">
-          <div id="tip1" class="tipWord">请输入相应账号！</div>
-          <div id="tip2" class="tipWord">账号格式错误！</div>
+          <div id="tip1" class="tipWord"><span class="glyphicon glyphicon-exclamation-sign"></span> 请输入相应账号！</div>
+          <div id="tip2" class="tipWord"><span class="glyphicon glyphicon-exclamation-sign"></span> 账号格式错误！</div>
           <input id="password" class="form-control" type="password" placeholder="密码" minlength="6" maxlength="18">
-          <!--<input id="btnLogin" type="submit" value="立即登录">-->
-          <div id="tip3" class="tipWord">密码不能为空！</div>
-          <div id="tip4" class="tipWord">密码格式错误！</div>
+          <div id="tip3" class="tipWord"><span class="glyphicon glyphicon-exclamation-sign"></span> 密码不能为空！</div>
+          <div id="tip4" class="tipWord"><span class="glyphicon glyphicon-exclamation-sign"></span> 密码格式错误！</div>
           <button id="btnLogin">立即登录</button>
         </div>
         <div id="noLogin" class="col-md-12 col-xs-12 text-center h5">

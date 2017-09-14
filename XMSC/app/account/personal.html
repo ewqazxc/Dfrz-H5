@@ -15,17 +15,25 @@
   <script>
     ((function () {
       $(document).ready(function() {
-          var t=localStorage.getItem('accountInfo');
-          var x=localStorage.getItem('account');
-          console.log(localStorage.getItem('accountInfo'));
-          console.log(localStorage.getItem('account'));
-          var jsonObj=eval('('+t+')');
-          var jsonObj2=eval('('+x+')');
-          console.log(jsonObj);
-          var userName=jsonObj.name;
-          var userTel=jsonObj2.userID;
-          $('#userName').html(userName);
+        var ACCOUNT_KEY2 = 'loginUser';
+        var userTel=store.get(ACCOUNT_KEY2,[]);
+        console.log(userTel);
+        if(userTel==''){
+          return;
+        }
+        else{
           $('#userTel').html('绑定手机：'+$.xc.cutTel(userTel));
+          $('#userName').html($.xc.cutTel(userTel));
+        }
+        var t=localStorage.getItem('accountInfo');
+        if(t==null){
+          return;
+        }
+        else{
+          var jsonObj=eval('('+t+')');
+          var userName=jsonObj.name;
+          $('#userName').html(userName);
+        }
       });
       $(function () {
         now = new Date(),hour = now.getHours();
@@ -45,8 +53,8 @@
 <header>
   <div class="site-nav-bar container-fluid">
     <div id="nav" class="row">
-      <div class="col-md-9 col-xs-9">
-        <ul class="nav nav-tabs" style="position: relative;top: 1px">
+      <div class="col-md-6 col-xs-6">
+        <ul>
           <li><a href="../account/XMSC.html" target="_blank">小米商城</a></li>
           <li><a href="#">MIUI</a></li>
           <li><a href="#">米聊</a></li>
@@ -59,13 +67,13 @@
           <li><a href="#">Select Region</a></li>
         </ul>
       </div>
-      <div id="isLogin" class="col-md-2 col-xs-2 text-right">
+      <div id="isLogin" class="col-md-5 col-xs-5 text-right">
         <div id="loginNav">
-          <div class="dropdown pull-left">
+          <div class="dropdown pull-right">
             <div id="dropdownMenuPer" class="dropdown-toggle" data-toggle="hover"
                  aria-haspopup="true" aria-expanded="true">
-              <a href="">XM <span class="glyphicon glyphicon-triangle-bottom"></span></a></div>
-            <div id="dropPer" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuPer">
+              <a id="navTel" href="">XM <span class="glyphicon glyphicon-triangle-bottom"></span></a></div>
+            <div  id="dropPer" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuPer">
               <p><a href="personal.html">个人中心</a></p>
               <p><a href="../shopping/orderPing.html">评价晒单</a></p>
               <p><a href="#">我的喜欢</a></p>
@@ -77,7 +85,7 @@
           <a href="../shopping/order.html">我的订单</a>
         </div>
       </div>
-      <div id="noLogin" class="col-md-2 col-xs-2 text-right">
+      <div id="noLogin" class="col-md-5 col-xs-5 text-right">
         <a href="../account/login.html" target="_blank">登陆</a>
         <a href="../account/register.html" target="_blank">注册</a>
       </div>
@@ -87,21 +95,17 @@
           <span class="glyphicon glyphicon-shopping-cart"></span>
           购物车<span class="caret"></span>
         </div>
-        <div id="shop-car" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1"
-             style="right: 10px;top:38px;width: 360px;">
-          <div class="row" style="max-height: 360px;">
+        <div id="shop-car" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+          <div class="row">
             <table>
               <tbody>
               </tbody>
-
               <tfoot>
               <tr>
-                <td class="col-md-7 col-xs-7 text-left">
+                <td colspan="2" class="text-center">
                   <small>共有<strong>6</strong>件商品</small>
                   <strong id="tota2">1</strong></td>
-                <td colspan="2" class="col-md-5 col-xs-5 text-center btn"
-                    style="background-color:#F66802;height: 25px;color:white; ">马上结算
-                </td>
+                <td class="text-center">马上结算</td>
               </tr>
               </tfoot>
             </table>
@@ -109,6 +113,7 @@
           </div>
         </div>
       </div>
+      <div class="clearfix"></div>
     </div>
   </div>
 </header>
@@ -345,7 +350,7 @@
             <li><a href="#">领取快递报销</a></li>
           </ul>
           <ul class="col-md-12 col-xs-12">账户管理
-            <li><a href="../account/account.html">个人信息</a></li>
+            <li><a href="../account/account.html" target="_blank">个人信息</a></li>
             <li><a href="#">修改密码</a></li>
             <li><a href="#">社区VIP认证</a></li>
           </ul>

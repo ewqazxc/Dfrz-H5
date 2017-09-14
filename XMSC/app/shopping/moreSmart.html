@@ -18,8 +18,8 @@
   <!--  <div class="site-ad-bar container-fluid"></div>-->
   <div class="site-nav-bar container-fluid">
     <div id="nav" class="row">
-      <div class="col-md-9 col-xs-9">
-        <ul class="nav nav-tabs" style="position: relative;top: 1px">
+      <div class="col-md-6 col-xs-6">
+        <ul>
           <li><a href="../account/XMSC.html" target="_blank">小米商城</a></li>
           <li><a href="#">MIUI</a></li>
           <li><a href="#">米聊</a></li>
@@ -32,12 +32,12 @@
           <li><a href="#">Select Region</a></li>
         </ul>
       </div>
-      <div id="isLogin" class="col-md-2 col-xs-2 text-right">
+      <div id="isLogin" class="col-md-5 col-xs-5 text-right">
         <div id="loginNav">
-          <div class="dropdown pull-left">
+          <div class="dropdown pull-right">
             <div id="dropdownMenuPer" class="dropdown-toggle" data-toggle="hover"
                  aria-haspopup="true" aria-expanded="true">
-              <a href="">XM <span class="glyphicon glyphicon-triangle-bottom"></span></a></div>
+              <a id="navTel" href="">XM <span class="glyphicon glyphicon-triangle-bottom"></span></a></div>
             <div  id="dropPer" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuPer">
               <p><a href="../account/personal.html">个人中心</a></p>
               <p><a href="../shopping/orderPing.html">评价晒单</a></p>
@@ -50,7 +50,7 @@
           <a href="../shopping/order.html">我的订单</a>
         </div>
       </div>
-      <div id="noLogin" class="col-md-2 col-xs-2 text-right">
+      <div id="noLogin" class="col-md-5 col-xs-5 text-right">
         <a href="../account/login.html" target="_blank">登陆</a>
         <a href="../account/register.html" target="_blank">注册</a>
       </div>
@@ -60,21 +60,17 @@
           <span class="glyphicon glyphicon-shopping-cart"></span>
           购物车<span class="caret"></span>
         </div>
-        <div id="shop-car" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1"
-             style="right: 10px;top:38px;width: 360px;">
-          <div class="row" style="max-height: 360px;">
+        <div id="shop-car" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+          <div class="row">
             <table>
               <tbody>
               </tbody>
-
               <tfoot>
               <tr>
-                <td class="col-md-7 col-xs-7 text-left">
+                <td colspan="2" class="text-center">
                   <small>共有<strong>6</strong>件商品</small>
                   <strong id="tota2">1</strong></td>
-                <td colspan="2" class="col-md-5 col-xs-5 text-center btn"
-                    style="background-color:#F66802;height: 25px;color:white; ">马上结算
-                </td>
+                <td class="text-center">马上结算</td>
               </tr>
               </tfoot>
             </table>
@@ -88,9 +84,9 @@
 </header>
 <content>
   <div id="content" class="row">
-    <div id="logo-1" class="text-left col-md-1 col-xs-1"><a href="https://www.mi.com/index.html"
-                                                            target="_blank"><img
-      src="../images/logo-XM.png" alt=""></a></div>
+    <div id="logo-1" class="text-left col-md-1 col-xs-1">
+      <a href="https://www.mi.com/index.html" target="_blank">
+        <img src="../images/logo-XM.png" alt=""></a></div>
     <div id="header" class="col-md-8 col-xs-8">
       <ul class="nav nav-pills pull-right">
         <li id="dropD1" class="dropdown">
@@ -288,7 +284,6 @@
     </div>
   </div>
 </content>
-
 <div class="bgf5">
   <div id="moreSmart">
     <div class="row">
@@ -438,9 +433,9 @@
       </div>
       <div class="col-md-6 col-xs-6">
         <ul class="typeNav text-right">
-          <li><a href=""><input type="radio" name="type"> 查看评价</a></li>
-          <li><a href=""><input type="radio" name="type"> 仅显示特惠商品</a></li>
-          <li><a href=""><input type="radio" name="type"> 仅显示有货商品</a></li>
+          <li><a href=""><span class="radioZ glyphicon glyphicon-ok"></span> 查看评价</a></li>
+          <li><a href=""><span class="radioZ glyphicon glyphicon-ok"></span> 仅显示特惠商品</a></li>
+          <li><a href=""><span class="radioZ glyphicon glyphicon-ok"></span> 仅显示有货商品</a></li>
         </ul>
       </div>
     </div>
@@ -459,6 +454,7 @@
           </a>
         </div>
       </div>
+      <div class="bottomT bgGreen">新品上架</div>
     </div>
   </div>
   <div class="col-md-3 col-xs-3">
@@ -474,6 +470,7 @@
           </a>
         </div>
       </div>
+      <div class="bottomT bgGreen">新品上架</div>
     </div>
   </div>
   <div class="col-md-3 col-xs-3">
@@ -489,6 +486,7 @@
           </a>
         </div>
       </div>
+      <div class="bottomT bgGreen">新品上架</div>
     </div>
   </div>
   <div class="col-md-3 col-xs-3">
@@ -504,6 +502,7 @@
           </a>
         </div>
       </div>
+      <div class="bottomT bgGreen">新品上架</div>
     </div>
   </div>
   <div class="col-md-3 col-xs-3">
@@ -519,6 +518,7 @@
           </a>
         </div>
       </div>
+      <div class="bottomT bgYellow">包邮</div>
     </div>
   </div>
   <div class="col-md-3 col-xs-3">
@@ -534,6 +534,7 @@
           </a>
         </div>
       </div>
+      <div class="bottomT bgRed">9折促销</div>
     </div>
   </div>
   <div class="col-md-3 col-xs-3">
@@ -549,6 +550,7 @@
           </a>
         </div>
       </div>
+      <div class="bottomT bgRed">9折促销</div>
     </div>
   </div>
   <div class="col-md-3 col-xs-3">
@@ -564,6 +566,7 @@
           </a>
         </div>
       </div>
+      <div class="bottomT bgRed">9折促销</div>
     </div>
   </div>
 </div>
@@ -627,11 +630,6 @@
         </div>
       </div>
     </div>
-<!--    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>-->
   </div>
 </div>
 <footer style="background-color: white">
