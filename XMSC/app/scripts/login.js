@@ -24,6 +24,10 @@
       else if(x!=userID){
         $("#shouJiF").show();
         setTimeout('$("#shouJiF").hide()',3000);
+        $("#tip5").show();
+        setTimeout('$("#tip5").hide()',5000);
+        $('#userID').removeClass('borderGreen');
+        $('#userID').addClass('borderRed');
         return false;
       }
       else if(y!=password){
@@ -35,8 +39,8 @@
         $("#logSuccess").show();
       setTimeout('$("#logSuccess").hide()',3000);
       return true;
-    }  
-    
+    }
+
     /**
      * 获取本地存储信息，验证用户名，密码
      * 登录成功时，保存登录状态、登录用户至本地存储
@@ -44,7 +48,13 @@
     $('#btnLogin').on('click',function () {
       var ACCOUNT_KEY='accounts';
       var accounts=store.get(ACCOUNT_KEY,[]);
-      console.log(accounts);
+      if(accounts==''){
+        $("#shouJiF").show();
+        $('#userID').removeClass('borderGreen');
+        $('#userID').addClass('borderRed');
+        setTimeout('$("#shouJiF").hide()',3000);
+        return false;
+      }
       for(var i=0,len=accounts.length;i<len;i++){
         var userID=accounts[i].userID;
         var password=accounts[i].password;
@@ -66,12 +76,13 @@
       }
       return false;
     });
-    
+
     /**
      * 用户名、密码
      * 焦点验证
      * */
     $('#userID').blur(function () {
+      $("#tip5").hide();
       var x=$('#userID').val();
       var phone=/^1[3578]\d{9}$/;
       if(x==null||x=="") {
@@ -118,7 +129,7 @@
         $('#password').addClass('borderGreen');
         return true;
       }
-    }); 
+    });
 
   })
 })();

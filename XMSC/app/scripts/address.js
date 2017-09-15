@@ -15,11 +15,11 @@
       for(var i=0,len=addresses.length;i<len;i++){
         html+='<div id="userAddress'+ i +'"'+' class="newAddress address col-xs-3 col-md-3 btn ">' +
           '<h3>'+addresses[i].adrName+'</h3>' +
-          '<p><tel>'+$.xc.cutTel(addresses[i].adrTel)+'</tel></p>' +
+          '<p><tel>'+addresses[i].adrTel+'</tel></p>' +
           '<p><span>'+addresses[i].cmbProvince+'</span><span>'+addresses[i].cmbCity+'</span><span>'+addresses[i].cmbArea+'</span></p>' +
           '<p>'+addresses[i].adrAddress+'</p>' +
           '<p>邮编：'+addresses[i].adrCode+'  标签：'+addresses[i].adrTip+'</p>' +
-          '<div class="text-right">' +
+          '<div class="text-right" data-id="'+ addresses[i].id +'">' +
           '<a class="changeAdr" data-id="'+ i +'" href="" data-toggle="modal" data-target="#addressChange">修改</a>' +
           '<a class="delAdr" data-id="'+ i +'" href="#">删除</a></div></div>';
       }
@@ -42,28 +42,33 @@
       var area = $('#cmbArea')[0].value;
       var cmbArea = $('#cmbArea')[0][area].text;
       var adrAddress = $('#adrAddress')[0].value;
-      var i=addresses.length;console.log(i);
+      var id = 1;//数组中没有地址数据时，添加的地址数据id的值为1
+      console.log(addresses.length);
+      if(addresses.length > 0){
+        id = Number(addresses[addresses.length - 1].id )+1;
+        console.log(id);
+      }
       if(!zName('#adrName')) return;
       if(!zTel('#adrTel')) return;
       if(!zAddress('#adrAddress')) return;
       if(!zCode('#adrCode')) return;
       var html = '';
-      html = '<div id="userAddress'+ i +'"'+' class="newAddress address col-xs-3 col-md-3 btn ">' +
+      html = '<div id="userAddress'+ id +'"'+' class="newAddress address col-xs-3 col-md-3 btn ">' +
         '<h3>'+adrName+'</h3>' +
         '<p><tel>'+$.xc.cutTel(adrTel)+'</tel></p>' +
         '<p><span>'+cmbProvince+'</span><span>'+cmbCity+'</span><span>'+cmbArea+'</span></p>' +
         '<p>'+adrAddress+'</p>' +
         '<p>邮编：'+adrCode+'  标签：'+adrTip+'</p>' +
         '<div class="text-right">' +
-        '<a data-id="'+ i +'"  href="" data-toggle="modal" data-target="#addressChange">修改</a>' +
-        '<a data-id="'+ i +'"  class="delAdr" href="#">删除</a></div></div>';
+        '<a data-id="'+ id +'"  href="" data-toggle="modal" data-target="#addressChange">修改</a>' +
+        '<a data-id="'+ id +'"  class="delAdr" href="#">删除</a></div></div>';
       $('#address h2').after(html);
-      var address = {adrName:adrName,adrTel:adrTel,adrCode:adrCode,
+      var address = {id:id,adrName:adrName,adrTel:adrTel,adrCode:adrCode,
         adrTip:adrTip,cmbProvince:cmbProvince,cmbCity:cmbCity,cmbArea:cmbArea,adrAddress:adrAddress};
       addresses.push(address);
       store.update(ACCOUNT_KEY,addresses);
       $('#addressModal').modal('hide');
-      //window.location.reload();
+     window.location.reload();
     });
 
     /**
@@ -87,28 +92,27 @@
       var html = '';
       html =
         '<h3>'+changeName+'</h3>' +
-        '<p><tel>'+$.xc.cutTel(changeTel)+'</tel></p>' +
+        '<p><tel>'+changeTel+'</tel></p>' +
         '<p><span>'+changeProvince+'</span><span>'+changeCity+'</span><span>'+changeArea+'</span></p>' +
         '<p>'+changeAddress+'</p>' +
         '<p>邮编：'+changeCode+'  标签：'+changeTip+'</p>' +
         '<div class="text-right">' +
         '<a href="" data-id="'+ dataId +'" data-toggle="modal" data-target="#addressChange">修改</a>' +
         '<a class="delAdr" data-id="'+ dataId +'" href="#">删除</a></div>';
-      var userAddress='#userAddress'+ dataId;
+      var userAddress='#userAddress'+ dataId-1;
       $(userAddress).html(html);
-      var address = {adrName:changeName,adrTel:changeTel,adrCode:changeCode,
+      var address = {id:dataId,adrName:changeName,adrTel:changeTel,adrCode:changeCode,
         adrTip:changeTip,cmbProvince:changeProvince,cmbCity:changeCity,cmbArea:changeArea,adrAddress:changeAddress};
-      addresses.splice(dataId,1,address);
+      addresses.splice(dataId-1,1,address);
       store.update(ACCOUNT_KEY,addresses);
       $('#addressChange').modal('hide');
-      //window.location.reload();
+      window.location.reload();
     });
 
     /**
      * 弹出确认框，是否删除地址卡，删除后更新本地数据
      * */
     $('#address').on('click','.delAdr', function () {
-      console.log(localStorage);
       console.log($(this).attr('data-id'));
       var i=$(this).attr('data-id');
       var ACCOUNT_KEY = 'addresses';
@@ -133,8 +137,24 @@
      * 点击修改，弹出修改地址
      * */
     $('#address').on('click','.changeAdr',function () {
-      var dataId=$(this).attr('data-id');
+      var dataId=$(this).parent().attr('data-id');
+      console.log(dataId);
       $('#changeBtnSave').attr('data-id',dataId);
+
+      var index = addresses.findIndex(function(item){
+        return item.id == dataId;
+      });
+      if(index != -1){
+        var address = addresses[index];
+        $('#changeName').val(address.adrName);
+        $('#changeTel').val(address.adrTel);
+        $('#changeTip').val(address.adrTip);
+        $('#changeCity').val(address.cmbCity);
+        $('#changeProvince').val(address.cmbProvince);
+        $('#changeArea').val(address.cmbArea);
+        $('#changeCode').val(address.adrCode);
+        $('#changeAddress').val(address.adrAddress);
+      }
     });
 
     /**

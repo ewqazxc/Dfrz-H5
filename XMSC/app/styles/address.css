@@ -103,6 +103,7 @@
   margin-left: -165px;
   z-index: 999;
   display: none;
+  border-radius: 5px;
 }
 
 .sureK h3 {
