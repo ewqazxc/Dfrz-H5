@@ -85,6 +85,15 @@
   </script>
 </head>
 <body>
+<div> <!--弹出框-->
+  <div id="delSure" class="sureK">
+    <h3>是否删除当前地址信息？</h3>
+    <div class="text-center">
+      <button id="sureDel">删除</button>
+      <button id="sureCel">取消</button>
+    </div>
+  </div>
+</div>
 <header>
   <div class="site-nav-bar container-fluid">
     <div id="nav" class="row">
@@ -108,7 +117,7 @@
             <div id="dropdownMenuPer" class="dropdown-toggle" data-toggle="hover"
                  aria-haspopup="true" aria-expanded="true">
               <a id="navTel" href="">XM <span class="glyphicon glyphicon-triangle-bottom"></span></a></div>
-            <div  id="dropPer" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuPer">
+            <div id="dropPer" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuPer">
               <p><a href="personal.html">个人中心</a></p>
               <p><a href="../shopping/orderPing.html">评价晒单</a></p>
               <p><a href="#">我的喜欢</a></p>
@@ -271,7 +280,7 @@
     </div>
     <div class="col-md-3 col-xs-3 header-search">
       <div class="input-group" style="width: 250px;height: 50px;left:30px;top:20px;">
-        <input type="text" class="form-control" placeholder="Search for..."
+        <input type="text" class="form-control" placeholder="查找商品..."
                style="width: 200px;height: 50px">
                         <span class="input-group-btn">
                             <button class="btn btn-default btn-default-x" type="button"

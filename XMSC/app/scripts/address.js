@@ -6,7 +6,7 @@
   $(function () {
     var ACCOUNT_KEY = 'addresses';
     var addresses=store.get(ACCOUNT_KEY,[]);
-    
+
     /**
      * 页面加载时，载入本地存有的地址信息
      * */
@@ -65,7 +65,7 @@
       $('#addressModal').modal('hide');
       //window.location.reload();
     });
-    
+
     /**
      * 修改地址确认按键，改变原地址卡信息，更新本地数据
      * */
@@ -103,23 +103,32 @@
       $('#addressChange').modal('hide');
       //window.location.reload();
     });
-    
+
     /**
-     * 删除地址卡
+     * 弹出确认框，是否删除地址卡，删除后更新本地数据
      * */
     $('#address').on('click','.delAdr', function () {
       console.log(localStorage);
       console.log($(this).attr('data-id'));
       var i=$(this).attr('data-id');
       var ACCOUNT_KEY = 'addresses';
-      addresses.splice(i,1);
-      store.update(ACCOUNT_KEY,addresses);
-      var userAddress='#userAddress'+ i;
-      $(userAddress).remove();
+      $('#delSure').show();
+      $('#sureCel').on('click',function () {
+        $('#delSure').hide();
+        return ;
+      });
+      $('#sureDel').on('click',function () {
+        $('#delSure').hide();
+        addresses.splice(i,1);
+        store.update(ACCOUNT_KEY,addresses);
+        var userAddress='#userAddress'+ i;
+        $(userAddress).remove();
+        return ;
+      });
       //window.location.reload();
       return false;
     });
-    
+
     /**
      * 点击修改，弹出修改地址
      * */
@@ -127,7 +136,7 @@
       var dataId=$(this).attr('data-id');
       $('#changeBtnSave').attr('data-id',dataId);
     });
-    
+
     /**
      * 电话，姓名，地址，邮编
      * 离开焦点时验证
@@ -155,8 +164,8 @@
     });
     $('#changeCode').blur(function () {
       zCode($('#changeCode'));
-    });  
-    
+    });
+
     /**
      * 电话、姓名、地址、邮编
      * 验证函数
@@ -203,7 +212,7 @@
     }
     function zCode(code) {
       var x=$(code)[0].value;
-      var patrn=/^[a-zA-Z0-9 ]{3,12}$/;
+      var patrn=/^[a-zA-Z0-9 ]{6,12}$/;
       if(x==''||x==null){
         $(code).addClass('borderRed');
         $(code).removeClass('borderGreen');

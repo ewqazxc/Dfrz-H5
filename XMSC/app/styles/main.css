@@ -3,6 +3,10 @@
   height: 40px;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 a:active {
   text-decoration: none;
 }
@@ -32,8 +36,16 @@ a:active {
   font-size: small;
 
 }
-#nav ul{list-style: none;  padding-left: 0;}
-#nav li{display: inline-block;}
+
+#nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#nav li {
+  display: inline-block;
+}
+
 #nav a {
   color: #b0b0b0;
   margin-right: 5px;
@@ -215,17 +227,24 @@ a:hover {
 
 #shop-car {
   line-height: normal;
-  right: 10px;top:38px;
+  right: 10px;
+  top: 38px;
   width: 380px;
   padding: 0;
   min-height: 80px;
   max-height: 400px;
- /* overflow-y: scroll;*/
+  /* overflow-y: scroll;*/
 }
-#shop-car div.row{width: 370px;padding: 0}
+
+#shop-car div.row {
+  width: 370px;
+  padding: 0
+}
+
 #noneShop {
   line-height: 70px;
 }
+
 tfoot tr td strong {
   color: #F66802;
 }
@@ -488,7 +507,7 @@ tfoot tr td strong {
 }
 
 #MXDP div.thumbnail:hover {
-box-shadow: 0 5px 5px #ccc;
+  box-shadow: 0 5px 5px #ccc;
 }
 
 #MXDP strong {
@@ -523,7 +542,7 @@ box-shadow: 0 5px 5px #ccc;
   color: white;
 }
 
-#loginNav > a:after{
+#loginNav > a:after {
   padding: 0 3px;
   content: "|";
 }
@@ -598,12 +617,49 @@ box-shadow: 0 5px 5px #ccc;
 #isLogin, #noLogin, #dropdownMenu1 {
   margin-bottom: 10px
 }
-.adXiao{height: 163px;background-color: white;margin-bottom: 10px;padding-top: 53px}
-.adxiaoimg{width: 120px;height: 120px;margin-top: -35px}
-.adXiao span{font-size: 100px;color:#FF6B00;margin-top: -20px; }
-.list-group-item:first-child{border-radius: 0;}
-tfoot>tr{height: 34px;}
-tfoot>tr>td:nth-child(2){background-color: #FF6B00;color: white}
-tfoot>tr>td:nth-child(2):hover{background-color: white;color: #FF6B00;border: 1px solid #FF6B00;}
-tfoot>tr>td:nth-child(2)>a:link{color: white;}
-tfoot{display: none;}
+
+.adXiao {
+  height: 163px;
+  background-color: white;
+  margin-bottom: 10px;
+  padding-top: 53px
+}
+
+.adxiaoimg {
+  width: 120px;
+  height: 120px;
+  margin-top: -35px
+}
+
+.adXiao span {
+  font-size: 100px;
+  color: #FF6B00;
+  margin-top: -20px;
+}
+
+.list-group-item:first-child {
+  border-radius: 0;
+}
+
+tfoot > tr {
+  height: 34px;
+}
+
+tfoot > tr > td:nth-child(2) {
+  background-color: #FF6B00;
+  color: white
+}
+
+tfoot > tr > td:nth-child(2):hover {
+  background-color: white;
+  color: #FF6B00;
+  border: 1px solid #FF6B00;
+}
+
+tfoot > tr > td:nth-child(2) > a:link {
+  color: white;
+}
+
+tfoot {
+  display: none;
+}

@@ -28,7 +28,7 @@
         $('#isLogin').hide();
       }
     });
-    
+
     /**
      * 下拉菜单，悬停触发
      * */
@@ -38,7 +38,7 @@
     $('#a-tvBox').parent().on('mouseenter mouseleave', function () {
       $(this).toggleClass('open');
     });
-   
+
    /**
     * 退出时清除登录状态
     * */
@@ -49,6 +49,7 @@
       store.remove(ACCOUNT_KEY);
       var ACCOUNT_KEY2 = 'loginUser';
       store.remove(ACCOUNT_KEY2);
+      window.location.reload();
     });
 
     /**
@@ -105,10 +106,10 @@
      $('#shop-car tbody').html(html);
      updateFoot(products);
      });*/
-    
+
     /**
      * 更新购物车底部数据，暂不使用
-     * */ 
+     * */
     /*    function updateFoot(array) {
       var total1 = $.xc.sum(array, function (item, index) {
         return item.quantity;
