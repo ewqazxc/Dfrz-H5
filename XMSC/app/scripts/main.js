@@ -35,8 +35,8 @@
     $('[data-toggle=hover]').parent().on('mouseenter mouseleave', function () {
       $(this).toggleClass('open');
     });
-    $('#a-tvBox').parent().on('mouseenter mouseleave', function () {
-      $(this).toggleClass('open');
+     $('#a-tvBox').parent().on('mouseenter mouseleave', function () {
+       $(this).toggleClass('open');
     });
 
    /**

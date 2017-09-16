@@ -129,7 +129,7 @@
         $(userAddress).remove();
         return ;
       });
-      //window.location.reload();
+     // window.location.reload();
       return false;
     });
 
@@ -138,7 +138,9 @@
      * */
     $('#address').on('click','.changeAdr',function () {
       var dataId=$(this).parent().attr('data-id');
+      var dataId2=$(this).attr('data-id');
       console.log(dataId);
+      console.log(dataId2);
       $('#changeBtnSave').attr('data-id',dataId);
 
       var index = addresses.findIndex(function(item){

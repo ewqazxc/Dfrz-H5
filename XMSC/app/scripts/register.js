@@ -124,6 +124,7 @@
     /**
      * 验证手机号，生成验证码，后台发送
      * 需取消Authorization 的注释
+     * 后台可查看验证码
      * */
     $('#sendCode').on('click', function () {
       if (!$.xc.zShouji()) return;
@@ -220,7 +221,13 @@
       store.update(ACCOUNT_KEY,accounts);
       $('#regSuccess').show();
       setTimeout('$("#regSuccess").hide()',3000);
-      window.location.href="../account/login.html"
+      var ACCOUNT_KEY2 = 'login';
+      var login=true;
+      store.update(ACCOUNT_KEY2,login);
+      var ACCOUNT_KEY3 = 'loginUser';
+      var loginUser=$('#shouJi').val();
+      store.update(ACCOUNT_KEY3,loginUser);
+      window.location.href="../account/XMSC.html"
     });
 
     /**

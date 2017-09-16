@@ -31,6 +31,8 @@
         return false;
       }
       else if(y!=password){
+        $('#password').removeClass('borderGreen');
+        $('#password').addClass('borderRed');
         $("#passwordF").show();
         setTimeout('$("#passwordF").hide()',3000);
         return false;
