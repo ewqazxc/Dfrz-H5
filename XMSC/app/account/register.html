@@ -50,6 +50,7 @@
   </script>
 </head>
 <body>
+<!--弹出的提示框-->
 <div>
   <div id="shouJiK" class="tipsK">
     手机号码不能为空！
@@ -103,34 +104,27 @@
   </div>
 </div>
 <div id="container" class="row">
+  <!--Logo-->
   <div id="logo" class="col-md-12 col-xs-12">
     <div></div>
   </div>
+  <!--标题-->
   <div class="col-md-12 col-xs-12 text-center">
     <h1 style="font-family: 微软雅黑">注册小米账号</h1>
   </div>
-  <form id="resSub" action="#123">
+  <!--注册表单-->
+  <form id="resSub" action="#">
     <div class="form-group col-md-12 col-xs-12 text-left">
       <div style="width: 350px;height: 400px;margin: 10px auto;">
         <label for="city">国家/地区</label>
         <div id="city" class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="true" style="width: 350px;text-align: left">
-            中国
+          <button id="dropdownMenu1" class="btn btn-default dropdown-toggle" type="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                  style="width: 350px;text-align: left">中国
           </button>
           <div id="country" class="list-group dropdown-menu dropdown-menu-right"
                style="width: 350px;height:240px;overflow-y: scroll;">
-
           </div>
-          <!--                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                                      aria-haspopup="true" aria-expanded="true" style="width: 350px;text-align: left">
-                                  中国
-                              </button>
-                              <table class="dropdown-menu dropdown-menu-right table table-hover" style="width: 350px">
-                                  <tbody id="country">
-                                  </tbody>
-
-                              </table>-->
         </div>
         <p>成功注册账号后，国家/地区将不能被修改</p>
         <label for="shouJi">手机号码</label>
@@ -160,7 +154,6 @@
             <div id="tip4" class="tipWord">验证码错误！</div>
           </div>
           <div class="col-md-6 col-xs-6">
-            <!--   <button id="" name="sendCode" onclick="showtime(30)">发送短信</button>-->
             <input type="button" id="sendCode" value="发送短信"/>
           </div>
         </div>
@@ -181,6 +174,7 @@
     </div>
   </form>
 </div>
+<!--底部导航和版权信息-->
 <div class="col-md-12 col-xs-12 text-center">
   <ul class="breadcrumb" style="background-color: white;">
     <li role="presentation"><a href="#">简体</a></li>
@@ -193,8 +187,5 @@
     <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134">京公网安备11010802020134号-京ICP证110507号</a>
   </p>
 </div>
-<script>
-
-</script>
 </body>
 </html>

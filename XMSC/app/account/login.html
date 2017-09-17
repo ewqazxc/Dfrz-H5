@@ -27,7 +27,8 @@
   </script>
 </head>
 <body>
-<div> <!--弹出提示框-->
+<!--弹出的提示框-->
+<div>
   <div id="shouJiK" class="tipsK" >
     手机号码不能为空！
   </div>
@@ -56,6 +57,7 @@
     登录成功！跳转中...
   </div>
   </div>
+<!--头部Logo和标题-->
 <header>
   <div id="head" class="row">
     <div id="logo" class="pull-left"></div>
@@ -67,15 +69,17 @@
     </div>
   </div>
 </header>
+<!--主要内容区域-->
 <div class="container-fluid">
   <div id="content" class="row">
-    <!--<img class="img-responsive" src="../images/loginBG.jpg" alt="">-->
     <div id="login" class="col-md-6 col-xs-6 col-md-offset-8 col-xs-offset-2">
+      <!--登录方式选择-->
       <div class="col-md-12 text-center h2">
         <a id="zhDL" class="active now" href="#zhangHaodl" data-toggle="tab">账号登录</a>
         <a id="smDL" href="#saoMadl" data-toggle="tab">扫码登录</a>
       </div>
       <div class="tab-content">
+        <!--账号登录-->
         <form id="zhangHaodl" class="tab-pane active col-md-12 col-xs-12">
         <div class="form-group">
           <input id="userID" class="form-control" type="text" placeholder="手机号码" maxlength="11">
@@ -113,6 +117,7 @@
           </div>
         </div>
       </form>
+        <!--扫码登录-->
         <form id="saoMadl" class="tab-pane col-md-12 col-xs-12 text-center">
           <div class="col-md-8 col-md-offset-2">
             <img src="../images/saoma.png" alt="">
@@ -123,22 +128,24 @@
       </div>
     </div>
   </div>
-  <footer>
-    <div id="footer" class="row">
-      <div class="col-md-12 col-xs-12 text-center">
-        <ol class="breadcrumb">
-          <li><a href="#">简体</a></li>
-          <li><a href="#">繁体</a></li>
-          <li><a href="#">English</a></li>
-          <li><a href="#">常见问题</a></li>
-        </ol>
-      </div>
-      <div class="col-md-12 col-xs-12 text-center">
+</div>
+<footer class="container-fluid">
+  <div id="footer" class="row">
+    <!--底部导航-->
+    <div class="col-md-12 col-xs-12 text-center">
+      <ol class="breadcrumb">
+        <li><a href="#">简体</a></li>
+        <li><a href="#">繁体</a></li>
+        <li><a href="#">English</a></li>
+        <li><a href="#">常见问题</a></li>
+      </ol>
+    </div>
+    <!--版权信息-->
+    <div class="col-md-12 col-xs-12 text-center">
         <span>小米公司版权所有-京ICP备10046444-<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134">
           <img class="img-logo" src="../images/gongan.png">京公网安备11010802020134号</a>-京ICP证110507号</span>
-      </div>
     </div>
-  </footer>
-</div>
+  </div>
+</footer>
 </body>
 </html>

@@ -14,7 +14,7 @@
       if (login == '') {
         $('.noLoginK').show();
         setTimeout('window.location.href="../account/login.html"', 1000);
-        // window.location.href="../account/login.html";
+        window.location.href="../account/login.html";
       }
       var ACCOUNT_KEY2 = 'loginUser';
       var userID = store.get(ACCOUNT_KEY2, []);

@@ -11,13 +11,9 @@
   <script src="../scripts/dfrz-store.js"></script>
   <script src="../scripts/account.js"></script>
   <script src="../scripts/xc.js"></script>
-  <script>
-    $(function () {
-
-    })
-  </script>
 </head>
 <body>
+<!--头部Logo和退出-->
 <header>
   <div id="header" class="container">
     <div class="row">
@@ -30,6 +26,7 @@
     </div>
   </div>
 </header>
+<!--弹出的提示框-->
 <div>
   <div class="noLoginK">
     跳转至登录页中。。。
@@ -37,6 +34,7 @@
 </div>
 <content>
   <div id="content" class="container">
+    <!--修改信息模态框-->
     <div id="editInfo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editInfoMoal">
       <div id="editInfoMoal" class="modal-dialog" role="document">
         <div class="modal-header">
@@ -77,16 +75,22 @@
       </div>
     </div>
     <div class="row">
+      <!--标签页标题-->
       <div id="nav" class="col-md-8 col-xs-8">
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#accSecurity" aria-controls="home" role="tab"
-                                                    data-toggle="tab">账号安全</a></li>
-          <li role="presentation"><a href="#perInfo" aria-controls="profile" role="tab" data-toggle="tab">个人信息</a></li>
-          <li role="presentation"><a href="#accBind" aria-controls="messages" role="tab" data-toggle="tab">绑定授权</a></li>
-          <li role="presentation"><a href="#xmServe" aria-controls="settings" role="tab" data-toggle="tab">小米服务</a></li>
+          <li role="presentation" class="active">
+            <a href="#accSecurity" aria-controls="home" role="tab" data-toggle="tab">账号安全</a></li>
+          <li role="presentation">
+            <a href="#perInfo" aria-controls="profile" role="tab" data-toggle="tab">个人信息</a></li>
+          <li role="presentation">
+            <a href="#accBind" aria-controls="messages" role="tab" data-toggle="tab">绑定授权</a></li>
+          <li role="presentation">
+            <a href="#xmServe" aria-controls="settings" role="tab" data-toggle="tab">小米服务</a></li>
         </ul>
       </div>
+      <!--标签页内容-->
       <div class="tab-content col-md-12 col-xs-12">
+        <!--安全等级-->
         <div role="tabpanel" class="tab-pane active" id="accSecurity">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -96,9 +100,8 @@
               </div>
               <div class="col-xs-4 col-md-4">
                 <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                       style="width: 40%;">
-                    40%
+                  <div class="progress-bar" role="progressbar" aria-valuenow="40"
+                       aria-valuemin="0" aria-valuemax="100" style="width: 40%;"> 40%
                   </div>
                 </div>
               </div>
@@ -181,6 +184,7 @@
             </div>
           </div>
         </div>
+        <!--个人信息-->
         <div role="tabpanel" class="tab-pane" id="perInfo">
           <div class="panel panel-default">
             <div class="panel-body">
@@ -232,6 +236,7 @@
             </div>
           </div>
         </div>
+        <!--绑定授权-->
         <div role="tabpanel" class="tab-pane" id="accBind">
           <div class="panel panel-default">
             <div class="panel-body">
@@ -279,6 +284,7 @@
             </div>
           </div>
         </div>
+        <!--小米服务-->
         <div role="tabpanel" class="tab-pane" id="xmServe">
           <div class="panel panel-default">
             <div class="panel-body">
@@ -376,6 +382,7 @@
   </div>
 </content>
 <footer>
+  <!--底部导航和版权信息-->
   <div id="footer" class="row">
     <div class="col-md-12 col-xs-12 text-center">
       <ol class="breadcrumb">

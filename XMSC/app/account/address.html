@@ -85,7 +85,8 @@
   </script>
 </head>
 <body>
-<div> <!--弹出框-->
+<!--弹出框-->
+<div>
   <div id="delSure" class="sureK">
     <h3>是否删除当前地址信息？</h3>
     <div class="text-center">
@@ -97,6 +98,7 @@
 <header>
   <div class="site-nav-bar container-fluid">
     <div id="nav" class="row">
+      <!--头部左侧导航栏-->
       <div class="col-md-6 col-xs-6">
         <ul>
           <li><a href="../account/XMSC.html" target="_blank">小米商城</a></li>
@@ -111,6 +113,7 @@
           <li><a href="#">Select Region</a></li>
         </ul>
       </div>
+      <!--头部右侧导航-->
       <div id="isLogin" class="col-md-5 col-xs-5 text-right">
         <div id="loginNav">
           <div class="dropdown pull-right">
@@ -163,9 +166,11 @@
 </header>
 <content>
   <div id="content" class="row">
+    <!--Logo-->
     <div id="logo-1" class="text-left col-md-1 col-xs-1">
       <a href="https://www.mi.com/index.html" target="_blank">
         <img src="../images/logo-XM.png" alt=""></a></div>
+    <!--商品类别导航-->
     <div id="header" class="col-md-8 col-xs-8">
       <ul class="nav nav-pills pull-right">
         <li id="dropD1" class="dropdown">
@@ -278,18 +283,20 @@
         <li><a href="#">社区</a></li>
       </ul>
     </div>
+    <!--搜索框-->
     <div class="col-md-3 col-xs-3 header-search">
       <div class="input-group" style="width: 250px;height: 50px;left:30px;top:20px;">
         <input type="text" class="form-control" placeholder="查找商品..."
                style="width: 200px;height: 50px">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default btn-default-x" type="button"
-                                    style="width: 50px;height: 50px">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-default-x" type="button"
+                  style="width: 50px;height: 50px">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
       </div>
     </div>
+    <!--折叠下拉框-->
     <div class="collapse col-md-12 col-xs-12 " id="collM1">
       <div class="row text-center">
         <div class="col-md-2 col-xs-2">
@@ -363,10 +370,12 @@
   </div>
   <div id="contanier" class="container-fluid">
     <div id="content-1" class="row">
+      <!--路径导航-->
       <ul id="nav-1" class="breadcrumb col-md-12 col-xs-12">
         <li role="presentation"><a href="#">首页</a></li>
         <li role="presentation"><a href="#">收货地址</a></li>
       </ul>
+      <!--左侧导航-->
       <div id="per-aside" class="col-xs-3 col-md-3">
         <div class="col-md-12 col-xs-12">
           <ul class="col-md-12 col-xs-12">订单中心
@@ -400,6 +409,7 @@
           </ul>
         </div>
       </div>
+      <!--右侧主内容-->
       <div id="address" class="col-xs-9 col-md-9">
         <h2>收货地址</h2>
         <div class="addressAdd col-xs-3 col-md-3 text-center btn " data-toggle="modal"
@@ -407,9 +417,7 @@
           <p><strong class="glyphicon glyphicon-plus-sign"></strong></p>
           <p>添加新地址</p>
         </div>
-        <!--<div class="address col-xs-3 col-md-3 btn ">
-                  123
-                </div>-->
+        <!--添加地址-模态框-->
         <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="ModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -462,6 +470,7 @@
             </div>
           </div>
         </div>
+        <!--修改地址-模态框-->
         <div class="modal fade" id="addressChange" tabindex="-1" aria-labelledby="ModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -511,6 +520,7 @@
     </div>
   </div>
   <div class="container-fluid">
+    <!--底部服务信息-->
     <div id="content-2" class="row">
       <ul class="col-md-12 col-xs-12 nav nav-pills">
         <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i class="fa fa-wrench"></i>
@@ -567,6 +577,7 @@
     </div>
   </div>
   <div id="foot" class="container-fluid">
+    <!--底部导航和版权信息-->
     <div id="content-3" class="row">
       <div class="col-xs-12 col-md-12">
         <img src="../images/logo-XM.png" alt="">

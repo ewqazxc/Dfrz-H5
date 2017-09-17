@@ -14,6 +14,9 @@
   <script src="../scripts/dfrz-store.js"></script>
   <script>
     ((function () {
+      /**
+       * 载入本地存储的信息
+       * */
       $(document).ready(function() {
         var ACCOUNT_KEY2 = 'loginUser';
         var userTel=store.get(ACCOUNT_KEY2,[]);
@@ -35,6 +38,9 @@
           $('#userName').html(userName);
         }
       });
+      /**
+       * 根据不同时间显示不同问候语
+       * */
       $(function () {
         now = new Date(),hour = now.getHours();
         if(hour < 6){$('#hello').text("凌晨好!")}
@@ -51,6 +57,7 @@
 </head>
 <body>
 <header>
+  <!--头部导航-->
   <div class="site-nav-bar container-fluid">
     <div id="nav" class="row">
       <div class="col-md-6 col-xs-6">
@@ -89,6 +96,7 @@
         <a href="../account/login.html" target="_blank">登陆</a>
         <a href="../account/register.html" target="_blank">注册</a>
       </div>
+      <!--购物车-->
       <div class="dropdown col-md-1 col-xs-1 text-right">
         <div class="dropdown-toggle" id="dropdownMenu1" data-toggle="hover"
              aria-haspopup="true" aria-expanded="true">
@@ -119,9 +127,11 @@
 </header>
 <content>
   <div id="content" class="row">
-    <div id="logo-1" class="text-left col-md-1 col-xs-1"><a href="https://www.mi.com/index.html"
-                                                            target="_blank"><img
-      src="../images/logo-XM.png" alt=""></a></div>
+    <!--Logo-->
+    <div id="logo-1" class="text-left col-md-1 col-xs-1">
+      <a href="https://www.mi.com/index.html" target="_blank">
+        <img src="../images/logo-XM.png" alt=""></a></div>
+    <!--商品类别导航-->
     <div id="header" class="col-md-8 col-xs-8">
       <ul class="nav nav-pills pull-right">
         <li id="dropD1" class="dropdown">
@@ -234,18 +244,20 @@
         <li><a href="#">社区</a></li>
       </ul>
     </div>
+    <!--搜索框-->
     <div class="col-md-3 col-xs-3 header-search">
       <div class="input-group" style="width: 250px;height: 50px;left:30px;top:20px;">
         <input type="text" class="form-control" placeholder="查找商品..."
                style="width: 200px;height: 50px">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default btn-default-x" type="button"
-                                    style="width: 50px;height: 50px">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-default-x" type="button"
+                          style="width: 50px;height: 50px">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
       </div>
     </div>
+    <!--折叠下拉框-->
     <div class="collapse col-md-12 col-xs-12 " id="collM1">
       <div class="row text-center">
         <div class="col-md-2 col-xs-2">
@@ -319,10 +331,12 @@
   </div>
   <div id="contanier" class="container-fluid">
     <div id="content-1" class="row">
+      <!--路径导航-->
       <ul id="nav-1" class="breadcrumb col-md-12 col-xs-12">
         <li role="presentation"><a href="#">首页</a></li>
         <li role="presentation"><a href="#">个人中心</a></li>
       </ul>
+      <!--左侧导航-->
       <div id="per-aside" class="col-xs-3 col-md-3">
         <div class="col-md-12 col-xs-12">
           <ul class="col-md-12 col-xs-12">订单中心
@@ -356,8 +370,10 @@
           </ul>
         </div>
       </div>
+      <!--右侧内容-->
       <div id="per-main" class="col-xs-9 col-md-9">
         <div class="col-md-12 col-xs-12">
+          <!--个人信息-->
           <div id="person" class="col-md-12 col-xs-12">
             <div class="col-md-6 col-xs-6 text-left">
               <img class="img-responsive img-circle" src="../images/per-photo.jpg" alt="">
@@ -372,6 +388,7 @@
               <button id="btn-bd">绑定</button>
             </div>
           </div>
+          <!--订单、收货信息-->
           <div id="dingdan" class="row">
             <div class="col-md-5 col-xs-5">
               <img class="pull-left" src="../images/portal-icon-1.png" alt="">
@@ -405,11 +422,11 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
   <div class="container-fluid">
+    <!--底部服务信息-->
     <div id="content-2" class="row">
       <ul class="col-md-12 col-xs-12 nav nav-pills">
         <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i class="fa fa-wrench"></i>
@@ -466,6 +483,7 @@
     </div>
   </div>
   <div id="foot" class="container-fluid">
+    <!--底部导航和版权信息-->
     <div id="content-3" class="row">
       <div class="col-xs-12 col-md-12">
         <img src="../images/logo-XM.png" alt="">
