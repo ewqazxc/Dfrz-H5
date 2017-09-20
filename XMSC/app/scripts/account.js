@@ -28,8 +28,11 @@
         var nameAcc = accountInfo.name;
         var dateAcc = accountInfo.birthDate;
         var sexAcc = accountInfo.sex;
+        if(dateAcc=='year-month-day'){
+          $('#dateAcc').html('生日：');
+        }
+        else {$('#dateAcc').html('生日：' + ' ' + dateAcc);}
         $('#nameAcc').html('姓名：' + ' ' + nameAcc);
-        $('#dateAcc').html('生日：' + ' ' + dateAcc);
         $('#sexAcc').html('性别：' + ' ' + sexAcc);
       }
     });
@@ -39,10 +42,13 @@
      * */
     $('#btnSave').on('click', function () {
       var changeName = $('#changeName')[0].value;
-      var changeDate = $('#changeDate')[0].value;
+      var changeY = $('#sel1')[0].value;
+      var changeM = $('#sel2')[0].value;
+      var changeD = $('#sel3')[0].value;
       var changeSexM = $('#changeSex')[0].children[0].checked;
       var changeSexW = $('#changeSex')[0].children[2].checked;
       var sex = '';
+      var changeDate=changeY+ '-'+ changeM +'-'+ changeD;
       $('#nameAcc').html('姓名：' + ' ' + changeName);
       $('#dateAcc').html('生日：' + ' ' + changeDate);
       if (changeSexM == true) {
@@ -70,5 +76,25 @@
       window.location.reload();
       //return false;
     });
+
+    $('#edit').on('click', function (event){
+      var ACCOUNT_KEY = 'accountInfo';
+      var accountInfo = store.get(ACCOUNT_KEY, accountInfo);
+      var nameAcc = accountInfo.name;
+      var dateAcc = accountInfo.birthDate;
+      var sexAcc = accountInfo.sex;
+      $('#changeName')[0].value=nameAcc;
+      if(sexAcc=='男'){
+        $('#changeSex')[0].children[0].checked=true;
+      }
+      else if(sexAcc=='女'){
+        $('#changeSex')[0].children[2].checked=true;
+      }
+      var arrStr=dateAcc.split('-');
+      console.log(arrStr);
+      $('#sel1')[0].value=arrStr[0];
+      $('#sel2')[0].value=arrStr[1];
+      $('#sel3')[0].value=arrStr[2];
+    })
   })
 })();

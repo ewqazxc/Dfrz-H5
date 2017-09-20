@@ -13,6 +13,26 @@
   <script src="../scripts/main.js"></script>
   <script src="../scripts/xc.js"></script>
   <script src="../scripts/dfrz-store.js"></script>
+  <style>
+    #MXDP button{width: 50px;height:20px;border: none;font-size: 14px;background-color: aqua;color:white}
+    div.v_content{
+      position:relative;overflow:hidden;width:1195px;height: 340px;margin: 0 auto;
+    }
+    ul.v_content_list{
+      position:absolute; width:3000px;top:0; left:0;
+      height: 340px;
+      list-style: none;
+      padding-left: 0;
+      overflow: hidden;
+    }
+    li.v_show_v{
+      width: 195px;
+      display:inline; float:left;
+    }
+    li.v_show_v+li.v_show_v{
+      margin-left: 5px;
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -274,8 +294,7 @@
     </div>
     <div class="clearfix"></div>
     <!--商品类别列表页-->
-    <div class="col-md-3 col-xs-3" style="margin-bottom: 10px;">
-      <div style="background-color: #1a1a1a ;height: 460px;">
+    <div class="col-md-3 col-xs-3" style="margin-bottom: 10px;position: absolute;z-index: 99;padding-right: 45px">
         <div id="aside" class="list-group">
           <div class="dropdown">
             <a id="a-tvBox" href="../shopping/TV.html" class="list-group-item dropdown-toggle"
@@ -284,7 +303,7 @@
               电视 盒子<i><span class="glyphicon glyphicon-menu-right"></span></i>
             </a>
             <div class="dropdown-menu" aria-labelledby="a-tvBox"
-                 style="position: absolute;left: 275px;top: -3px;width: 922px;height: 463px">
+                 style="position: absolute;left: 275px;top: -3px;width: 922px;height: 463px;">
               <div class="row">
                 <div class="col-md-3 col-xs-3 text-center">
                   <div class="thumbnail">
@@ -380,7 +399,7 @@
               智能 硬件<i><span class="glyphicon glyphicon-menu-right"></span></i>
             </a>
             <div class="dropdown-menu" aria-labelledby="a-tvBox2"
-                 style="position: absolute;left: 275px;top: -418px;width: 922px;height: 463px">
+                 style="position: absolute;left: 275px;top: -418px;width: 922px;height: 463px;">
               <div class="row">
                 <div class="col-md-3 col-xs-3 text-center">
                   <div class="thumbnail">
@@ -447,11 +466,9 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
     <!--轮播-->
-    <div class="col-md-9 col-xs-9" style="margin-bottom: 10px;">
-      <div style="background-color: pink;height: 460px;margin-left: -30px">
+    <div class="col-md-12 col-xs-12" style="margin-bottom: 10px;height: 460px">
         <div id="carousel-lunBo" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carousel-lunBo" data-slide-to="0" class="active"></li>
@@ -461,16 +478,16 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <a href="#"><img src="../images/LunBo1.jpg" alt="..." style="height: 460px"></a>
+              <a href="#"><img class="img-responsive" src="../images/LunBo1.jpg" alt="..." style="height: 460px;"></a>
             </div>
             <div class="item">
-              <a href="#"><img src="../images/LunBo2.jpg" alt="..." style="height: 460px"></a>
+              <a href="#"><img class="img-responsive"  src="../images/LunBo2.jpg" alt="..." style="height: 460px;"></a>
             </div>
             <div class="item">
-              <a href="#"><img src="../images/LunBo3.jpg" alt="..." style="height: 460px"></a>
+              <a href="#"><img class="img-responsive"  src="../images/LunBo3.jpg" alt="..." style="height: 460px;"></a>
             </div>
             <div class="item">
-              <a href="#"><img src="../images/LunBo4.jpg" alt="..." style="height:460px;"></a>
+              <a href="#"><img class="img-responsive"  src="../images/LunBo4.jpg" alt="..." style="height: 460px;"></a>
             </div>
           </div>
           <a class="left carousel-control" href="#carousel-lunBo" role="button" data-slide="prev">
@@ -482,7 +499,6 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-      </div>
     </div>
     <!--两行三列图标-->
     <div class="col-md-3 col-xs-3 mb10">
@@ -559,82 +575,165 @@
     <!--小米明星单品-->
     <div class="col-md-12 col-xs-12">
       <h3>小米明星单品</h3>
-      <div id="MXDP" class="row">
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid #FFAC13;">
-            <img class="" src="../images/MXDP1.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
+      <div id="MXDP" class="row v_show">
+        <div class="col-md-12 col-xs-12 v_caption">
+          <div class="change_btn pull-right">
+            <button class="prev"><span class="glyphicon glyphicon-menu-left"></span></button>
+            <button class="next"><span class="glyphicon glyphicon-menu-right"></span></button>
           </div>
         </div>
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid #83C44E;">
-            <img class="" src="../images/MXDP2.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid #2196F3;">
-            <img class="" src="../images/MXDP3.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid #E53935;">
-            <img class="" src="../images/MXDP4.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid #00C0A5;">
-            <img class="" src="../images/MXDP5.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid aqua;">
-            <img class="" src="../images/MXDP6.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
-          </div>
+        <div class="v_content">
+          <ul class="v_content_list">
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #FFAC13;">
+                <img class="" src="../images/MXDP1.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #83C44E;">
+                <img class="" src="../images/MXDP2.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #2196F3;">
+                <img class="" src="../images/MXDP3.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #E53935;">
+                <img class="" src="../images/MXDP4.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #00C0A5;">
+                <img class="" src="../images/MXDP5.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid aqua;">
+                <img class="" src="../images/MXDP6.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #00C0A5;">
+                <img class="" src="../images/MXDP5.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid aqua;">
+                <img class="" src="../images/MXDP6.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #FFAC13;">
+                <img class="" src="../images/MXDP1.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #83C44E;">
+                <img class="" src="../images/MXDP2.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #2196F3;">
+                <img class="" src="../images/MXDP3.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #E53935;">
+                <img class="" src="../images/MXDP4.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+  <div class="clearfix"></div>
   <div id="adShow">
     <!--家电栏目展示-->
     <div id="showJD" class="row">
@@ -2111,5 +2210,51 @@
     </div>
   </div>
 </footer>
+<script>
+  $(function () {
+    var page = 1;
+    var i=6;  //每版放4张图片
+    $("button.next").click(function (){
+      var $parent = $(this).parents("div.v_show");
+      var $v_show = $parent.find("ul.v_content_list");
+      var $v_content = $parent.find("div.v_content");
+      console.log($v_show);
+      var v_width = $v_content.width();
+      console.log(v_width);
+      var len = $v_show.find("li").length;
+      console.log(len);
+      var page_count = Math.ceil(len/i);
+      if(!$v_show.is(":animated")) {
+        if (page == page_count) {
+          $v_show.animate({left: '0px'}, "slow");
+          page = 1;
+        }
+        else {
+          $v_show.animate({left: '-=' + v_width}, "slow");
+          page++;
+        }
+      }
+    });
+    $("button.prev").click(function () { //绑定上一页click事件
+      var $parent = $(this).parents("div.v_show");  //根据当前单击的元素获取到父元素
+      var $v_show = $parent.find("ul.v_content_list");  //找到内容展示区域
+      var $v_content = $parent.find("div.v_content");  //找到内容展示区域的外围div
+
+      var v_width = $v_content.width();  //内容展示区域容器宽度
+      var len = $v_show.find("li").length;  //内容宗长度，图片总张数
+      var page_count = Math.ceil(len/i);  //数学方法取整数，只要不是整数就往大的方向取最小整数
+      if(!$v_show.is(":animated")){ //判断展示内容是否处于动画状态
+        if(page == 1){  //第一个版面往则跳到最后一个面版
+          $v_show.animate({left:'-='+v_width*(page_count-1)},"slow");  //left减去除最后一个版面的宽度，跳到最后一个版面
+          page = page_count;
+        }
+        else{
+          $v_show.animate({left:'+='+v_width},"slow");  //left加上一个容器宽度，回到上一个版面
+          page--;
+        }
+      }
+    });
+  })
+</script>
 </body>
 </html>

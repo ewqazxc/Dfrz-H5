@@ -243,14 +243,15 @@ line-height: 130px;
   width: 200px;
   height: 40px;
 }
-#editInfo input[type=date]{
-  width: 200px;
+#sel1,#sel2,#sel3{
   height: 40px;
-  padding: 7px 0;
 }
-#editInfo form div{
+#sel1{width: 80px;}
+#sel2,#sel3{width: 53px}
+#editInfo form>div{
   margin-top: 20px;
 }
+#box{margin-top: 0}
 #editInfo span{
   font-size: larger;
   line-height: 40px;
