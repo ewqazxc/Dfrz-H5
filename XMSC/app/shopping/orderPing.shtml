@@ -2,12 +2,12 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>我的订单</title>
+  <title>商品评价</title>
   <link rel="stylesheet" href="../bowers/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/personal.css">
-  <link rel="stylesheet" href="../styles/order.css">
+  <link rel="stylesheet" href="../styles/orderPing.css">
   <script src="../bowers/jquery/dist/jquery.js"></script>
   <script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
   <script src="../scripts/main.js"></script>
@@ -16,73 +16,7 @@
 </head>
 <body>
 <header>
-  <div id="adTop" class="site-ad-bar container-fluid"></div>
-<div class="site-nav-bar container-fluid">
-  <div id="nav" class="row">
-    <div class="col-md-6 col-xs-6">
-      <ul style="margin-bottom: 0">
-        <li><a href="/XMSC/app/account/XMSC.html" target="_blank">小米商城</a></li>
-        <li><a href="#">MIUI</a></li>
-        <li><a href="#">米聊</a></li>
-        <li><a href="#">游戏</a></li>
-        <li><a href="#">多看阅读</a></li>
-        <li><a href="#">云服务</a></li>
-        <li><a href="#">金融</a></li>
-        <li><a href="#">小米商城手机版</a></li>
-        <li><a href="#">问题反馈</a></li>
-        <li><a href="#">Select Region</a></li>
-      </ul>
-    </div>
-    <div id="isLogin" class="col-md-5 col-xs-5 text-right">
-      <div id="loginNav">
-        <div class="dropdown pull-right">
-          <div id="dropdownMenuPer" class="dropdown-toggle" data-toggle="hover"
-               aria-haspopup="true" aria-expanded="true">
-            <a id="navTel" href="">XM <span class="glyphicon glyphicon-triangle-bottom"></span></a></div>
-          <div id="dropPer" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuPer">
-            <p><a href="/XMSC/app/account/personal.html">个人中心</a></p>
-            <p><a href="/XMSC/app/shopping/orderPing.html">评价晒单</a></p>
-            <p><a href="#">我的喜欢</a></p>
-            <p><a href="/XMSC/app/account/account.html" target="_blank">小米账户</a></p>
-            <p><a id="logout" href="#">退出登录</a></p>
-          </div>
-        </div>
-        <a href="">消息通知</a>
-        <a href="/XMSC/app/shopping/order.html">我的订单</a>
-      </div>
-    </div>
-    <div id="noLogin" class="col-md-5 col-xs-5 text-right">
-      <a href="/XMSC/app/account/login.html" target="_blank">登陆</a>
-      <a href="/XMSC/app/account/register.html" target="_blank">注册</a>
-    </div>
-    <div class="dropdown col-md-1 col-xs-1 text-right">
-      <div class="dropdown-toggle" id="dropdownMenu1" data-toggle="hover"
-           aria-haspopup="true" aria-expanded="true">
-        <span class="glyphicon glyphicon-shopping-cart"></span>
-        购物车<span class="caret"></span>
-      </div>
-      <div id="shop-car" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-        <div class="row">
-          <table>
-            <tbody>
-            </tbody>
-            <tfoot>
-            <tr>
-              <td colspan="2" class="text-center">
-                <small>共有<strong>6</strong>件商品</small>
-                <strong id="tota2">1</strong></td>
-              <td id="goToCart" class="text-center">马上结算</td>
-            </tr>
-            </tfoot>
-          </table>
-          <div id="noneShop" class="text-center">购物车中还没有商品，赶紧选购吧！</div>
-        </div>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-</div>
-
+  @@include('/XMSC/app/include/header.html')
 </header>
 <content>
   <div id="content" class="row">
@@ -111,7 +45,7 @@
           </div>
         </li>
         <li id="collD1">
-          <a href="#collM1" data-id="0"  data-target="#collM1" data-collapse-trigger="hover"
+          <a href="#collM1" data-id="0" data-target="#collM1" data-collapse-trigger="hover"
              aria-expanded="true" aria-controls="collM1">小米手机</a>
         </li>
         <li id="dropD2" class="dropdown">
@@ -294,7 +228,7 @@
       <!--路径导航-->
       <ul id="nav-1" class="breadcrumb col-md-12 col-xs-12">
         <li role="presentation"><a href="#">首页</a></li>
-        <li role="presentation"><a href="../shopping/order.html">我的订单</a></li>
+        <li role="presentation"><a href="#">商品评价</a></li>
       </ul>
       <!--左侧导航-->
       <div id="per-aside" class="col-xs-3 col-md-3">
@@ -331,47 +265,33 @@
         </div>
       </div>
       <!--右侧内容-->
-      <div id="order" class="col-xs-9 col-md-9">
+      <div id="orderPing" class="col-xs-9 col-md-9">
         <div class="h3">
-          我的订单  <small>请谨防钓鱼链接或诈骗电话，<a href="#">了解更多></a></small>
+          商品评价
         </div>
-        <div class="col-xs-7 col-md-7 row">
+        <div class="col-xs-12 col-md-12 row">
           <ul class="breadcrumb" role="tablist">
-            <li role="presentation"  class="active"><a href="#allDD" aria-controls="allDD" role="tab" data-toggle="tab">全部有效订单</a></li>
-            <li role="presentation" ><a href="#daiDD" aria-controls="daiDD" role="tab" data-toggle="tab">待支付</a></li>
-            <li role="presentation" ><a href="#daiSH" aria-controls="daiSH" role="tab" data-toggle="tab">待收货</a></li>
-            <li role="presentation" ><a href="#closeDD" aria-controls="closeDD" role="tab" data-toggle="tab">已关闭</a></li>
+            <li role="presentation" class="active"><a href="#daiPing" aria-controls="allDD" role="tab"
+                                                      data-toggle="tab">待评价商品</a></li>
+            <li role="presentation"><a href="#yiPing" aria-controls="daiDD" role="tab" data-toggle="tab">已评价商品</a></li>
+            <li role="presentation"><a href="#failPing" aria-controls="daiSH" role="tab" data-toggle="tab">评价失效商品</a>
+            </li>
           </ul>
         </div>
-        <div class="col-xs-5 col-md-5">
-          <div class="col-md-12 col-xs-12">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="输入商品名称、商品编号、订单号">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
-              </span>
-            </div>
-          </div>
-        </div>
         <div class="tab-content col-md-12 col-xs-12">
-          <div role="tabpanel" class="tab-pane fade in active" id="allDD">
+          <div role="tabpanel" class="tab-pane fade in active" id="daiPing">
             <div class="col-md-12 col-xs-12 text-center">
-              <h3>当前没有交易订单。</h3>
+              <h3>暂时没有符合条件的商品。</h3>
             </div>
           </div>
-          <div role="tabpanel" class="tab-pane fade" id="daiDD">
+          <div role="tabpanel" class="tab-pane fade" id="yiPing">
             <div class="col-md-12 col-xs-12 text-center">
-              <h3>当前没有待支付订单。</h3>
+              <h3>暂时没有符合条件的商品。</h3>
             </div>
           </div>
-          <div role="tabpanel" class="tab-pane fade" id="daiSH">
+          <div role="tabpanel" class="tab-pane fade" id="failPing">
             <div class="col-md-12 col-xs-12 text-center">
-              <h3>当前没有待收货订单。</h3>
-            </div>
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="closeDD">
-            <div class="col-md-12 col-xs-12 text-center">
-              <h3>当前没有已关闭订单。</h3>
+              <h3>暂时没有符合条件的商品。</h3>
             </div>
           </div>
         </div>
@@ -380,102 +300,7 @@
   </div>
 </content>
 <footer>
-  <div class="container-fluid">
-  <div id="content-2" class="row">
-    <ul class="col-md-12 col-xs-12 nav nav-pills">
-      <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
-        class="glyphicon glyphicon-wrench"></i>
-        预约维修服务</a></li>
-      <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
-        class="glyphicon glyphicon-repeat"></i> 7天无理由退换货</a></li>
-      <!--          <li class="col-md-2 col-xs-2 text-center" role="presentation"><a href="#"><i class="glyphicon glyphicon-refresh"></i>
-                  15天免费换货</a></li>-->
-      <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
-        class="glyphicon glyphicon-gift"></i>
-        满150元包邮</a></li>
-      <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
-        class="glyphicon glyphicon-map-marker"></i> 520余家售后网点</a></li>
-    </ul>
-    <div class="col-md-9 col-xs-9">
-      <div id="help-nav" class="row text-center">
-        <ul class="col-md-2">帮助中心
-          <li><a href="#">账户管理</a></li>
-          <li><a href="#">购物指南</a></li>
-          <li><a href="#">订单操作</a></li>
-        </ul>
-        <ul class="col-md-2">服务支持
-          <li><a href="#">售后政策</a></li>
-          <li><a href="#">订单操作</a></li>
-          <li><a href="#">订单操作</a></li>
-        </ul>
-        <ul class="col-md-2">线下门店
-          <li><a href="#">售后政策</a></li>
-          <li><a href="#">订单操作</a></li>
-          <li><a href="#">订单操作</a></li>
-        </ul>
-        <ul class="col-md-2">关于小米
-          <li><a href="#">售后政策</a></li>
-          <li><a href="#">订单操作</a></li>
-          <li><a href="#">订单操作</a></li>
-        </ul>
-        <ul class="col-md-2">关注我们
-          <li><a href="#">售后政策</a></li>
-          <li><a href="#">订单操作</a></li>
-          <li><a href="#">订单操作</a></li>
-        </ul>
-        <ul class="col-md-2">特色服务
-          <li><a href="#">售后政策</a></li>
-          <li><a href="#">订单操作</a></li>
-          <li><a href="#">订单操作</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-md-3 col-xs-3 text-center">
-      <h4>400-100-5678</h4>
-      <p>周一至周日 8：00-18:00</p>
-      <p>（仅收市话费）</p>
-      <button><span class="glyphicon glyphicon-bell"></span>24小时在线客服</button>
-    </div>
-  </div>
-</div>
-<div id="foot" class="container-fluid">
-  <div id="content-3" class="row">
-    <div class="col-xs-12 col-md-12">
-      <img src="/XMSC/app/images/logo-XM.png" alt="">
-      <small>
-        <ul id="nav-foot">
-          <li>小米旗下网站</li>
-          <li><a href="#">小米商城</a></li>
-          <li><a href="#">MIUI</a></li>
-          <li><a href="#">米聊</a></li>
-          <li><a href="#">多看书城</a></li>
-          <li><a href="#">小米路由器</a></li>
-          <li><a href="#">视频电话</a></li>
-          <li><a href="#">小米天猫店</a></li>
-          <li><a href="#">小米淘宝直营店</a></li>
-          <li><a href="#">小米网盟</a></li>
-          <li><a href="#">小米移动</a></li>
-          <li><a href="#">隐私政策</a></li>
-          <li><a href="#">Select Region</a></li>
-        </ul>
-      </small>
-      <br>
-      <small>©mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2014]0059-0009号</small>
-      <br>
-      <small>违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</small>
-    </div>
-    <div id="vlogo" class="col-xs-12 col-md-12 text-right">
-      <img style="width: 85px;height: 28px" src="/XMSC/app/images/Foot1.png" alt="">
-      <img src="/XMSC/app/images/Foot2.png" alt="">
-      <img src="/XMSC/app/images/Foot3.png" alt="">
-      <img src="/XMSC/app/images/Foot4.png" alt="">
-    </div>
-    <div id="Mtext" class="col-xs-12 col-md-12 text-center">
-      探索黑科技,小米为发烧而生!
-    </div>
-  </div>
-</div>
-
+  @@include('/XMSC/app/include/footer.html')
 </footer>
 </body>
 </html>

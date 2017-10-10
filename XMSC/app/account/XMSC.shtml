@@ -1,93 +1,50 @@
-<!doctype html>
-<html lang="">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>小米商城</title>
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="bowers/bootstrap/dist/css/bootstrap.css"/>
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="bowers/jquery/dist/jquery.js"></script>
-  <script src="bowers/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="scripts/main.js"></script>
-  <script src="scripts/xc.js"></script>
-  <script src="scripts/dfrz-store.js"></script>
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script src="../bowers/jquery/dist/jquery.js"></script>
+  <script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/xc.js"></script>
+  <script src="../scripts/dfrz-store.js"></script>
+  <style>
+    #MXDP button{width: 50px;height:20px;border: none;font-size: 14px;background-color: aqua;color:white}
+    div.v_content{
+      position:relative;overflow:hidden;width:1195px;height: 340px;margin: 0 auto;
+    }
+    ul.v_content_list{
+      position:absolute; width:3000px;top:0; left:0;
+      height: 340px;
+      list-style: none;
+      padding-left: 0;
+      overflow: hidden;
+    }
+    li.v_show_v{
+      width: 195px;
+      display:inline; float:left;
+    }
+    li.v_show_v+li.v_show_v{
+      margin-left: 5px;
+    }
+  </style>
 </head>
 <body>
 <header>
-  <div id="adTop" class="site-ad-bar container-fluid"></div>
-  <div class="site-nav-bar container-fluid">
-    <div id="nav" class="row">
-      <div class="col-md-6 col-xs-6">
-        <ul style="margin-bottom: 0">
-          <li><a href="/XMSC/app/account/XMSC.html" target="_blank">小米商城</a></li>
-          <li><a href="#">MIUI</a></li>
-          <li><a href="#">米聊</a></li>
-          <li><a href="#">游戏</a></li>
-          <li><a href="#">多看阅读</a></li>
-          <li><a href="#">云服务</a></li>
-          <li><a href="#">金融</a></li>
-          <li><a href="#">小米商城手机版</a></li>
-          <li><a href="#">问题反馈</a></li>
-          <li><a href="#">Select Region</a></li>
-        </ul>
-      </div>
-      <div id="isLogin" class="col-md-5 col-xs-5 text-right">
-        <div id="loginNav">
-          <div class="dropdown pull-right">
-            <div id="dropdownMenuPer" class="dropdown-toggle" data-toggle="hover"
-                 aria-haspopup="true" aria-expanded="true">
-              <a id="navTel" href="">XM <span class="glyphicon glyphicon-triangle-bottom"></span></a></div>
-            <div id="dropPer" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuPer">
-              <p><a href="/XMSC/app/account/personal.html">个人中心</a></p>
-              <p><a href="/XMSC/app/shopping/orderPing.html">评价晒单</a></p>
-              <p><a href="#">我的喜欢</a></p>
-              <p><a href="account/account.html" target="_blank">小米账户</a></p>
-              <p><a id="logout" href="#">退出登录</a></p>
-            </div>
-          </div>
-          <a href="">消息通知</a>
-          <a href="/XMSC/app/shopping/order.html">我的订单</a>
-        </div>
-      </div>
-      <div id="noLogin" class="col-md-5 col-xs-5 text-right">
-        <a href="/XMSC/app/account/login.html" target="_blank">登陆</a>
-        <a href="/XMSC/app/account/register.html" target="_blank">注册</a>
-      </div>
-      <div class="dropdown col-md-1 col-xs-1 text-right">
-        <div class="dropdown-toggle" id="dropdownMenu1" data-toggle="hover"
-             aria-haspopup="true" aria-expanded="true">
-          <span class="glyphicon glyphicon-shopping-cart"></span>
-          购物车<span class="caret"></span>
-        </div>
-        <div id="shop-car" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-          <div class="row">
-            <table>
-              <tbody>
-              </tbody>
-              <tfoot>
-              <tr>
-                <td colspan="2" class="text-center">
-                  <small>共有<strong>6</strong>件商品</small>
-                  <strong id="tota2">1</strong></td>
-                <td id="goToCart" class="text-center">马上结算</td>
-              </tr>
-              </tfoot>
-            </table>
-            <div id="noneShop" class="text-center">购物车中还没有商品，赶紧选购吧！</div>
-          </div>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-    </div>
-  </div>
+  @@include('/XMSC/app/include/header.html')
 </header>
 <content>
   <div id="content" class="row">
-    <div id="logo-1" class="text-left col-md-1 col-xs-1"><a href="https://www.mi.com/index.html"
-                                                            target="_blank"><img
-      src="images/logo-XM.png" alt=""></a></div>
+    <!--Logo-->
+    <div id="logo-1" class="text-left col-md-1 col-xs-1">
+      <a href="https://www.mi.com/index.html" target="_blank">
+        <img src="../images/logo-XM.png" alt=""></a></div>
+    <!--重要商品类别导航-->
     <div id="header" class="col-md-8 col-xs-8">
       <ul class="nav nav-pills pull-right">
         <li id="collD1">
@@ -101,7 +58,7 @@
             <div class="row text-center">
               <div class="col-md-2 col-xs-2">
                 <div class="thumbnail">
-                  <img src="images/HM4.jpg" alt="">
+                  <img src="../images/HM4.jpg" alt="">
                   <div class="caption">
                     <p>红米4</p>
                     <p>
@@ -113,7 +70,7 @@
               </div>
               <div class="col-md-2 col-xs-2">
                 <div class="thumbnail">
-                  <img src="images/HM4.jpg" alt="">
+                  <img src="../images/HM4.jpg" alt="">
                   <div class="caption">
                     <p>红米4</p>
                     <p>
@@ -125,7 +82,7 @@
               </div>
               <div class="col-md-2 col-xs-2">
                 <div class="thumbnail">
-                  <img src="images/HM4.jpg" alt="">
+                  <img src="../images/HM4.jpg" alt="">
                   <div class="caption">
                     <p>红米4</p>
                     <p>
@@ -137,7 +94,7 @@
               </div>
               <div class="col-md-2 col-xs-2">
                 <div class="thumbnail">
-                  <img src="images/HM4.jpg" alt="">
+                  <img src="../images/HM4.jpg" alt="">
                   <div class="caption">
                     <p>红米4</p>
                     <p>
@@ -149,7 +106,7 @@
               </div>
               <div class="col-md-2 col-xs-2">
                 <div class="thumbnail">
-                  <img src="images/HM4.jpg" alt="">
+                  <img src="../images/HM4.jpg" alt="">
                   <div class="caption">
                     <p>红米4</p>
                     <p>
@@ -161,7 +118,7 @@
               </div>
               <div class="col-md-2 col-xs-2">
                 <div class="thumbnail">
-                  <img src="images/HM4.jpg" alt="">
+                  <img src="../images/HM4.jpg" alt="">
                   <div class="caption">
                     <p>红米4</p>
                     <p>
@@ -175,13 +132,14 @@
           </div>
         </li>
         <li><a href="#">平板·笔记本</a></li>
-        <li><a href="shopping/TV.html">电视·盒子</a></li>
-        <li><a href="shopping/Smart.html">硬件</a></li>
-        <li><a href="shopping/Smart.html">路由器</a></li>
+        <li><a href="../shopping/TV.html">电视·盒子</a></li>
+        <li><a href="../shopping/Smart.html">路由器</a></li>
+        <li><a href="../shopping/Smart.html">硬件</a></li>
         <li><a href="#">服务</a></li>
         <li><a href="#">社区</a></li>
       </ul>
     </div>
+    <!--搜索框-->
     <div class="col-md-3 col-xs-3 header-search">
       <div class="input-group" style="width: 250px;height: 50px;left:30px;top:20px;">
         <input type="text" class="form-control" placeholder="查找商品..."
@@ -194,11 +152,12 @@
                         </span>
       </div>
     </div>
+    <!--折叠下拉框，商品展示-->
     <div class="collapse col-md-12 col-xs-12 " id="collM1">
       <div class="row text-center">
         <div class="col-md-2 col-xs-2">
           <div class="thumbnail">
-            <img src="images/XM6.png" alt="">
+            <img src="../images/XM6.png" alt="">
             <div class="caption">
               <p>小米6</p>
               <p>
@@ -209,7 +168,7 @@
         </div>
         <div class="col-md-2 col-xs-2">
           <div class="thumbnail">
-            <img src="images/XM6.png" alt="">
+            <img src="../images/XM6.png" alt="">
             <div class="caption">
               <p>小米6</p>
               <p>
@@ -220,7 +179,7 @@
         </div>
         <div class="col-md-2 col-xs-2">
           <div class="thumbnail">
-            <img src="images/XM6.png" alt="">
+            <img src="../images/XM6.png" alt="">
             <div class="caption">
               <p>小米6</p>
               <p>
@@ -231,7 +190,7 @@
         </div>
         <div class="col-md-2 col-xs-2">
           <div class="thumbnail">
-            <img src="images/XM6.png" alt="">
+            <img src="../images/XM6.png" alt="">
             <div class="caption">
               <p>小米6</p>
               <p>
@@ -242,7 +201,7 @@
         </div>
         <div class="col-md-2 col-xs-2">
           <div class="thumbnail">
-            <img src="images/XM6.png" alt="">
+            <img src="../images/XM6.png" alt="">
             <div class="caption">
               <p>小米6</p>
               <p>
@@ -253,7 +212,7 @@
         </div>
         <div class="col-md-2 col-xs-2">
           <div class="thumbnail">
-            <img src="images/XM6.png" alt="">
+            <img src="../images/XM6.png" alt="">
             <div class="caption">
               <p>小米6</p>
               <p>
@@ -265,212 +224,214 @@
       </div>
     </div>
     <div class="clearfix"></div>
+    <!--商品类别列表页-->
     <div class="col-md-3 col-xs-3" style="margin-bottom: 10px;position: absolute;z-index: 99;padding-right: 45px">
-      <div id="aside" class="list-group">
-        <div class="dropdown">
-          <a id="a-tvBox" href="shopping/TV.html" class="list-group-item dropdown-toggle"
-             aria-haspopup="true"
-             aria-expanded="true">
-            电视 盒子<i><span class="glyphicon glyphicon-menu-right"></span></i>
+        <div id="aside" class="list-group">
+          <div class="dropdown">
+            <a id="a-tvBox" href="../shopping/TV.html" class="list-group-item dropdown-toggle"
+               aria-haspopup="true"
+               aria-expanded="true">
+              电视 盒子<i><span class="glyphicon glyphicon-menu-right"></span></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="a-tvBox"
+                 style="position: absolute;left: 275px;top: -3px;width: 922px;height: 463px;">
+              <div class="row">
+                <div class="col-md-3 col-xs-3 text-center">
+                  <div class="thumbnail">
+                    <img class=" " src="../images/JiaDian1.jpg" alt="">
+                    <div class="caption">
+                      <h4>小米XXX</h4>
+                      <p>
+                        <small>2017-08-30</small>
+                      </p>
+                      <p><strong>¥666元</strong>
+                        <del>6666元</del>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-xs-3 text-center">
+                  <div class="thumbnail">
+                    <img class=" " src="../images/TV-1.jpg" alt="">
+                    <div class="caption">
+                      <h4>小米XXX</h4>
+                      <p>
+                        <small>2017-08-30</small>
+                      </p>
+                      <p><strong>¥666元</strong>
+                        <del>6666元</del>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-xs-3 text-center">
+                  <div class="thumbnail">
+                    <img class=" " src="../images/JiaDian2.jpg" alt="">
+                    <div class="caption">
+                      <h4>小米XXX</h4>
+                      <p>
+                        <small>2017-08-30</small>
+                      </p>
+                      <p><strong>¥666元</strong>
+                        <del>6666元</del>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-xs-3 text-center">
+                  <div class="thumbnail">
+                    <img class=" " src="../images/JiaDian3.jpg" alt="">
+                    <div class="caption">
+                      <h4>小米XXX</h4>
+                      <p>
+                        <small>2017-08-30</small>
+                      </p>
+                      <p><strong>¥666元</strong>
+                        <del>6666元</del>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-xs-12 text-right">
+                  <a href="../shopping/TV.html">
+                    <button>更多</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="list-group-item" href="#">
+            XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
           </a>
-          <div class="dropdown-menu" aria-labelledby="a-tvBox"
-               style="position: absolute;left: 275px;top: -3px;width: 922px;height: 463px;">
-            <div class="row">
-              <div class="col-md-3 col-xs-3 text-center">
-                <div class="thumbnail">
-                  <img class=" " src="images/JiaDian1.jpg" alt="">
-                  <div class="caption">
-                    <h4>小米XXX</h4>
-                    <p>
-                      <small>2017-08-30</small>
-                    </p>
-                    <p><strong>¥666元</strong>
-                      <del>6666元</del>
-                    </p>
+          <a class="list-group-item" href="#">
+            XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
+          </a>
+          <a class="list-group-item" href="#">
+            XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
+          </a>
+          <a class="list-group-item" href="#">
+            XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
+          </a>
+          <a class="list-group-item" href="#">
+            XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
+          </a>
+          <a class="list-group-item" href="#">
+            XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
+          </a>
+          <a class="list-group-item" href="#">
+            XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
+          </a>
+          <a class="list-group-item" href="#">
+            XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
+          </a>
+          <div class="dropdown">
+            <a href="../shopping/Smart.html" class="list-group-item dropdown-toggle" aria-haspopup="true"
+               aria-expanded="true" data-toggle="hover">
+              智能 硬件<i><span class="glyphicon glyphicon-menu-right"></span></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="a-tvBox2"
+                 style="position: absolute;left: 275px;top: -418px;width: 922px;height: 463px;">
+              <div class="row">
+                <div class="col-md-3 col-xs-3 text-center">
+                  <div class="thumbnail">
+                    <img class=" " src="../images/JiaDian2.jpg" alt="">
+                    <div class="caption">
+                      <h4>小米XXX</h4>
+                      <p>
+                        <small>2017-08-30</small>
+                      </p>
+                      <p><strong>¥666元</strong>
+                        <del>6666元</del>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-3 col-xs-3 text-center">
-                <div class="thumbnail">
-                  <img class=" " src="images/TV-1.jpg" alt="">
-                  <div class="caption">
-                    <h4>小米XXX</h4>
-                    <p>
-                      <small>2017-08-30</small>
-                    </p>
-                    <p><strong>¥666元</strong>
-                      <del>6666元</del>
-                    </p>
+                <div class="col-md-3 col-xs-3 text-center">
+                  <div class="thumbnail">
+                    <img class=" " src="../images/TV-1.jpg" alt="">
+                    <div class="caption">
+                      <h4>小米XXX</h4>
+                      <p>
+                        <small>2017-08-30</small>
+                      </p>
+                      <p><strong>¥666元</strong>
+                        <del>6666元</del>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-3 col-xs-3 text-center">
-                <div class="thumbnail">
-                  <img class=" " src="images/JiaDian2.jpg" alt="">
-                  <div class="caption">
-                    <h4>小米XXX</h4>
-                    <p>
-                      <small>2017-08-30</small>
-                    </p>
-                    <p><strong>¥666元</strong>
-                      <del>6666元</del>
-                    </p>
+                <div class="col-md-3 col-xs-3 text-center">
+                  <div class="thumbnail">
+                    <img class=" " src="../images/JiaDian2.jpg" alt="">
+                    <div class="caption">
+                      <h4>小米XXX</h4>
+                      <p>
+                        <small>2017-08-30</small>
+                      </p>
+                      <p><strong>¥666元</strong>
+                        <del>6666元</del>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-3 col-xs-3 text-center">
-                <div class="thumbnail">
-                  <img class=" " src="images/JiaDian3.jpg" alt="">
-                  <div class="caption">
-                    <h4>小米XXX</h4>
-                    <p>
-                      <small>2017-08-30</small>
-                    </p>
-                    <p><strong>¥666元</strong>
-                      <del>6666元</del>
-                    </p>
+                <div class="col-md-3 col-xs-3 text-center">
+                  <div class="thumbnail">
+                    <img class=" " src="../images/JiaDian3.jpg" alt="">
+                    <div class="caption">
+                      <h4>小米XXX</h4>
+                      <p>
+                        <small>2017-08-30</small>
+                      </p>
+                      <p><strong>¥666元</strong>
+                        <del>6666元</del>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-12 col-xs-12 text-right">
-                <a href="shopping/TV.html">
-                  <button>更多</button>
-                </a>
+                <div class="col-md-12 col-xs-12 text-right">
+                  <a href="../shopping/TV.html">
+                    <button>更多</button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <a class="list-group-item" href="#">
-          XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
-        </a>
-        <a class="list-group-item" href="#">
-          XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
-        </a>
-        <a class="list-group-item" href="#">
-          XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
-        </a>
-        <a class="list-group-item" href="#">
-          XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
-        </a>
-        <a class="list-group-item" href="#">
-          XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
-        </a>
-        <a class="list-group-item" href="#">
-          XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
-        </a>
-        <a class="list-group-item" href="#">
-          XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
-        </a>
-        <a class="list-group-item" href="#">
-          XXX<i><span class="glyphicon glyphicon-menu-right"></span></i>
-        </a>
-        <div class="dropdown">
-          <a href="shopping/Smart.html" class="list-group-item dropdown-toggle" aria-haspopup="true"
-             aria-expanded="true" data-toggle="hover">
-            智能 硬件<i><span class="glyphicon glyphicon-menu-right"></span></i>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="a-tvBox2"
-               style="position: absolute;left: 275px;top: -418px;width: 922px;height: 463px;">
-            <div class="row">
-              <div class="col-md-3 col-xs-3 text-center">
-                <div class="thumbnail">
-                  <img class=" " src="images/JiaDian2.jpg" alt="">
-                  <div class="caption">
-                    <h4>小米XXX</h4>
-                    <p>
-                      <small>2017-08-30</small>
-                    </p>
-                    <p><strong>¥666元</strong>
-                      <del>6666元</del>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-xs-3 text-center">
-                <div class="thumbnail">
-                  <img class=" " src="images/TV-1.jpg" alt="">
-                  <div class="caption">
-                    <h4>小米XXX</h4>
-                    <p>
-                      <small>2017-08-30</small>
-                    </p>
-                    <p><strong>¥666元</strong>
-                      <del>6666元</del>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-xs-3 text-center">
-                <div class="thumbnail">
-                  <img class=" " src="images/JiaDian2.jpg" alt="">
-                  <div class="caption">
-                    <h4>小米XXX</h4>
-                    <p>
-                      <small>2017-08-30</small>
-                    </p>
-                    <p><strong>¥666元</strong>
-                      <del>6666元</del>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-xs-3 text-center">
-                <div class="thumbnail">
-                  <img class=" " src="images/JiaDian3.jpg" alt="">
-                  <div class="caption">
-                    <h4>小米XXX</h4>
-                    <p>
-                      <small>2017-08-30</small>
-                    </p>
-                    <p><strong>¥666元</strong>
-                      <del>6666元</del>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-xs-12 text-right">
-                <a href="shopping/TV.html">
-                  <button>更多</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <!--轮播-->
     <div class="col-md-12 col-xs-12" style="margin-bottom: 10px;height: 460px">
-      <div id="carousel-lunBo" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-lunBo" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-lunBo" data-slide-to="1"></li>
-          <li data-target="#carousel-lunBo" data-slide-to="2"></li>
-          <li data-target="#carousel-lunBo" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <a href="#"><img class="img-responsive" src="images/LunBo1.jpg" alt="..." style="height: 460px;"></a>
+        <div id="carousel-lunBo" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-lunBo" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-lunBo" data-slide-to="1"></li>
+            <li data-target="#carousel-lunBo" data-slide-to="2"></li>
+            <li data-target="#carousel-lunBo" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <a href="#"><img class="img-responsive" src="../images/LunBo1.jpg" alt="..." style="height: 460px;"></a>
+            </div>
+            <div class="item">
+              <a href="#"><img class="img-responsive"  src="../images/LunBo2.jpg" alt="..." style="height: 460px;"></a>
+            </div>
+            <div class="item">
+              <a href="#"><img class="img-responsive"  src="../images/LunBo3.jpg" alt="..." style="height: 460px;"></a>
+            </div>
+            <div class="item">
+              <a href="#"><img class="img-responsive"  src="../images/LunBo4.jpg" alt="..." style="height: 460px;"></a>
+            </div>
           </div>
-          <div class="item">
-            <a href="#"><img class="img-responsive" src="images/LunBo2.jpg" alt="..." style="height: 460px;"></a>
-          </div>
-          <div class="item">
-            <a href="#"><img class="img-responsive" src="images/LunBo3.jpg" alt="..." style="height: 460px;"></a>
-          </div>
-          <div class="item">
-            <a href="#"><img class="img-responsive" src="images/LunBo4.jpg" alt="..." style="height: 460px;"></a>
-          </div>
+          <a class="left carousel-control" href="#carousel-lunBo" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-lunBo" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-        <a class="left carousel-control" href="#carousel-lunBo" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-lunBo" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
     </div>
+    <!--两行三列图标-->
     <div class="col-md-3 col-xs-3 mb10">
       <div style="background-color:#5F5750;height: 170px;">
         <div id="text-2" class="row text-center">
@@ -520,106 +481,192 @@
         </div>
       </div>
     </div>
+    <!--重要商品展示-->
     <div class="col-md-3 col-xs-3 mb10">
       <div style="background-color:#F66802;height: 170px;">
         <div class="text-3 text-center">
-          <a href="#"><img src="images/xmad_1.jpg" alt="" class="img-responsive" style="height: 170px;"></a>
+          <a href="#"><img src="../images/xmad_1.jpg" alt="" class="img-responsive" style="height: 170px;"></a>
         </div>
       </div>
     </div>
     <div class="col-md-3 col-xs-3 mb10">
       <div style="background-color:#7FAD68;height: 170px;">
         <div class="text-3 text-center">
-          <a href="#"><img src="images/xmad_2.jpg" alt="" class="img-responsive" style="height: 170px;"></a>
+          <a href="#"><img src="../images/xmad_2.jpg" alt="" class="img-responsive" style="height: 170px;"></a>
         </div>
       </div>
     </div>
     <div class="col-md-3 col-xs-3 mb10">
       <div style="background-color:#E61262;height: 170px;">
         <div class="text-3 text-center">
-          <a href="#"><img src="images/xmad_3.jpg" alt="" class="img-responsive" style="height: 170px;"></a>
+          <a href="#"><img src="../images/xmad_3.jpg" alt="" class="img-responsive" style="height: 170px;"></a>
         </div>
       </div>
     </div>
+    <!--小米明星单品-->
     <div class="col-md-12 col-xs-12">
       <h3>小米明星单品</h3>
-      <div id="MXDP" class="row">
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid #FFAC13;">
-            <img class="" src="images/MXDP1.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
+      <div id="MXDP" class="row v_show">
+        <div class="col-md-12 col-xs-12 v_caption">
+          <div class="change_btn pull-right">
+            <button class="prev"><span class="glyphicon glyphicon-menu-left"></span></button>
+            <button class="next"><span class="glyphicon glyphicon-menu-right"></span></button>
           </div>
         </div>
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid #83C44E;">
-            <img class="" src="images/MXDP2.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid #2196F3;">
-            <img class="" src="images/MXDP3.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid #E53935;">
-            <img class="" src="images/MXDP4.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid #00C0A5;">
-            <img class="" src="images/MXDP5.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2 col-xs-2 text-center">
-          <div class="thumbnail" style="border-top: 1px solid aqua;">
-            <img class="" src="images/MXDP6.png" alt="">
-            <div class="caption">
-              <h4>小米XXX</h4>
-              <p>
-                <small>xxxxxxxxxxxxx</small>
-              </p>
-              <p><strong>¥666元</strong></p>
-            </div>
-          </div>
+        <div class="v_content">
+          <ul class="v_content_list">
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #FFAC13;">
+                <img class="" src="../images/MXDP1.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #83C44E;">
+                <img class="" src="../images/MXDP2.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #2196F3;">
+                <img class="" src="../images/MXDP3.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #E53935;">
+                <img class="" src="../images/MXDP4.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #00C0A5;">
+                <img class="" src="../images/MXDP5.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid aqua;">
+                <img class="" src="../images/MXDP6.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #00C0A5;">
+                <img class="" src="../images/MXDP5.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid aqua;">
+                <img class="" src="../images/MXDP6.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #FFAC13;">
+                <img class="" src="../images/MXDP1.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #83C44E;">
+                <img class="" src="../images/MXDP2.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #2196F3;">
+                <img class="" src="../images/MXDP3.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+            <li class="v_show_v">
+              <div class="thumbnail" style="border-top: 1px solid #E53935;">
+                <img class="" src="../images/MXDP4.png" alt="">
+                <div class="caption">
+                  <h4>小米XXX</h4>
+                  <p>
+                    <small>xxxxxxxxxxxxx</small>
+                  </p>
+                  <p><strong>¥666元</strong></p>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+  <div class="clearfix"></div>
   <div id="adShow">
+    <!--家电栏目展示-->
     <div id="showJD" class="row">
       <div class="col-md-6 col-xs-6 h3">家电</div>
       <div class="col-md-2 col-xs-2 h3"></div>
@@ -635,7 +682,7 @@
         <div id="one" class="tab-pane fade in active">
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class="" src="images/JiaDian1.jpg" alt="">
+              <img class="" src="../images/JiaDian1.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -649,7 +696,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class="" src="images/JiaDian2.jpg" alt="">
+              <img class="" src="../images/JiaDian2.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -663,7 +710,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class=" " src="images/JiaDian3.jpg" alt="">
+              <img class=" " src="../images/JiaDian3.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -677,7 +724,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class=" " src="images/JiaDian1.jpg" alt="">
+              <img class=" " src="../images/JiaDian1.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -691,7 +738,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class=" " src="images/JiaDian2.jpg" alt="">
+              <img class=" " src="../images/JiaDian2.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -705,7 +752,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class=" " src="images/JiaDian3.jpg" alt="">
+              <img class=" " src="../images/JiaDian3.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -719,7 +766,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class=" " src="images/JiaDian1.jpg" alt="">
+              <img class=" " src="../images/JiaDian1.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -737,7 +784,7 @@
                 <p>小米xxx</p>
                 <p><strong>123元</strong></p></div>
               <div class="pull-right adxiaoimg">
-                <img class="img-responsive" src="images/adXiao.jpg" alt="">
+                <img class="img-responsive" src="../images/adXiao.jpg" alt="">
               </div>
             </div>
             <div class="adXiao col-md-12 col-xs-12">
@@ -756,7 +803,7 @@
           <div class="row">
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/TV-1.jpg" alt="">
+                <img class="" src="../images/TV-1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -770,7 +817,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/JiaDian3.jpg" alt="">
+                <img class="" src="../images/JiaDian3.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -784,7 +831,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/TV-1.jpg" alt="">
+                <img class="" src="../images/TV-1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -798,7 +845,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/JiaDian1.jpg" alt="">
+                <img class="" src="../images/JiaDian1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -812,7 +859,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/JiaDian2.jpg" alt="">
+                <img class=" " src="../images/JiaDian2.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -826,7 +873,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/JiaDian3.jpg" alt="">
+                <img class=" " src="../images/JiaDian3.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -840,7 +887,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/JiaDian1.jpg" alt="">
+                <img class=" " src="../images/JiaDian1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -858,18 +905,18 @@
                   <p>小米xxx</p>
                   <p><strong>123元</strong></p></div>
                 <div class="pull-right adxiaoimg">
-                  <img class="img-responsive" src="images/adXiao.jpg" alt="">
+                  <img class="img-responsive" src="../images/adXiao.jpg" alt="">
                 </div>
               </div>
               <div class="adXiao col-md-12 col-xs-12">
                 <div class="pull-left text-left">
-                  <p><a href="shopping/TV.html">浏览更多...</a></p>
-                  <p><a href="shopping/TV.html">
+                  <p><a href="../shopping/TV.html">浏览更多...</a></p>
+                  <p><a href="../shopping/TV.html">
                     <small>热门</small>
                   </a></p>
                 </div>
                 <div class="pull-right">
-                  <a href="shopping/TV.html">
+                  <a href="../shopping/TV.html">
                     <span class="glyphicon glyphicon-circle-arrow-right"></span></a></div>
               </div>
             </div>
@@ -879,7 +926,7 @@
           <div class="row">
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/JiaDian3.jpg" alt="">
+                <img class="" src="../images/JiaDian3.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -893,7 +940,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/JiaDian2.jpg" alt="">
+                <img class="" src="../images/JiaDian2.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -907,7 +954,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/JiaDian1.jpg" alt="">
+                <img class=" " src="../images/JiaDian1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -921,7 +968,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/JiaDian3.jpg" alt="">
+                <img class=" " src="../images/JiaDian3.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -935,7 +982,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/JiaDian2.jpg" alt="">
+                <img class=" " src="../images/JiaDian2.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -949,7 +996,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/JiaDian1.jpg" alt="">
+                <img class=" " src="../images/JiaDian1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -963,7 +1010,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/JiaDian2.jpg" alt="">
+                <img class=" " src="../images/JiaDian2.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -981,7 +1028,7 @@
                   <p>小米xxx</p>
                   <p><strong>123元</strong></p></div>
                 <div class="pull-right adxiaoimg">
-                  <img class="img-responsive" src="images/adXiao.jpg" alt="">
+                  <img class="img-responsive" src="../images/adXiao.jpg" alt="">
                 </div>
               </div>
               <div class="adXiao col-md-12 col-xs-12">
@@ -1001,7 +1048,7 @@
           <div class="row">
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/JiaDian1.jpg" alt="">
+                <img class="" src="../images/JiaDian1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1015,7 +1062,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/JiaDian2.jpg" alt="">
+                <img class="" src="../images/JiaDian2.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1029,7 +1076,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/JiaDian3.jpg" alt="">
+                <img class="" src="../images/JiaDian3.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1043,7 +1090,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/JiaDian1.jpg" alt="">
+                <img class="" src="../images/JiaDian1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1057,7 +1104,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/JiaDian2.jpg" alt="">
+                <img class=" " src="../images/JiaDian2.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1071,7 +1118,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/JiaDian3.jpg" alt="">
+                <img class=" " src="../images/JiaDian3.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1085,7 +1132,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/JiaDian1.jpg" alt="">
+                <img class=" " src="../images/JiaDian1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1103,7 +1150,7 @@
                   <p>小米xxx</p>
                   <p><strong>123元</strong></p></div>
                 <div class="pull-right adxiaoimg">
-                  <img class="img-responsive" src="images/adXiao.jpg" alt="">
+                  <img class="img-responsive" src="../images/adXiao.jpg" alt="">
                 </div>
               </div>
               <div class="adXiao col-md-12 col-xs-12">
@@ -1121,6 +1168,7 @@
         </div>
       </div>
     </div>
+    <!--智能栏目展示-->
     <div id="showZN" class="row">
       <div class="col-md-6 col-xs-6 h3">智能</div>
       <div class="col-md-2 col-xs-2 h3"></div>
@@ -1137,7 +1185,7 @@
         <div id="ZNone" class="tab-pane fade in active">
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class="img-responsive" src="images/ZN1.jpg" alt="">
+              <img class="img-responsive" src="../images/ZN1.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -1151,7 +1199,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class="img-responsive" src="images/ZN2.jpg" alt="">
+              <img class="img-responsive" src="../images/ZN2.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -1165,7 +1213,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class="img-responsive" src="images/ZN3.jpg" alt="">
+              <img class="img-responsive" src="../images/ZN3.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -1179,7 +1227,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class="img-responsive" src="images/ZN4.jpg" alt="">
+              <img class="img-responsive" src="../images/ZN4.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -1193,7 +1241,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class="img-responsive" src="images/ZN5.jpg" alt="">
+              <img class="img-responsive" src="../images/ZN5.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -1207,7 +1255,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class="img-responsive" src="images/ZN6.jpg" alt="">
+              <img class="img-responsive" src="../images/ZN6.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -1221,7 +1269,7 @@
           </div>
           <div class="col-md-3 col-xs-3 text-center">
             <div class="thumbnail">
-              <img class="img-responsive" src="images/ZN7.jpg" alt="">
+              <img class="img-responsive" src="../images/ZN7.jpg" alt="">
               <div class="caption">
                 <h4>小米XXX</h4>
                 <p>
@@ -1239,18 +1287,18 @@
                 <p>小米xxx</p>
                 <p><strong>123元</strong></p></div>
               <div class="pull-right adxiaoimg">
-                <img class="img-responsive" src="images/adXiao.jpg" alt="">
+                <img class="img-responsive" src="../images/adXiao.jpg" alt="">
               </div>
             </div>
             <div class="adXiao col-md-12 col-xs-12">
               <div class="pull-left text-left">
-                <p><a href="shopping/Smart.html">浏览更多...</a></p>
-                <p><a href="shopping/Smart.html">
+                <p><a href="../shopping/Smart.html">浏览更多...</a></p>
+                <p><a href="../shopping/Smart.html">
                   <small>热门</small>
                 </a></p>
               </div>
               <div class="pull-right">
-                <a href="shopping/Smart.html">
+                <a href="../shopping/Smart.html">
                   <span class="glyphicon glyphicon-circle-arrow-right"></span>
                 </a>
               </div>
@@ -1261,7 +1309,7 @@
           <div class="row">
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN5.jpg" alt="">
+                <img class="" src="../images/ZN5.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1275,7 +1323,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN6.jpg" alt="">
+                <img class="" src="../images/ZN6.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1289,7 +1337,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN5.jpg" alt="">
+                <img class="" src="../images/ZN5.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1303,7 +1351,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN6.jpg" alt="">
+                <img class="" src="../images/ZN6.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1317,7 +1365,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/ZN5.jpg" alt="">
+                <img class=" " src="../images/ZN5.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1331,7 +1379,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/ZN6.jpg" alt="">
+                <img class=" " src="../images/ZN6.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1345,7 +1393,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/ZN5.jpg" alt="">
+                <img class=" " src="../images/ZN5.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1363,7 +1411,7 @@
                   <p>小米xxx</p>
                   <p><strong>123元</strong></p></div>
                 <div class="pull-right adxiaoimg">
-                  <img class="img-responsive" src="images/adXiao.jpg" alt="">
+                  <img class="img-responsive" src="../images/adXiao.jpg" alt="">
                 </div>
               </div>
               <div class="adXiao col-md-12 col-xs-12">
@@ -1383,7 +1431,7 @@
           <div class="row">
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN1.jpg" alt="">
+                <img class="" src="../images/ZN1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1397,7 +1445,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN3.jpg" alt="">
+                <img class="" src="../images/ZN3.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1411,7 +1459,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/ZN1.jpg" alt="">
+                <img class=" " src="../images/ZN1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1425,7 +1473,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/ZN3.jpg" alt="">
+                <img class=" " src="../images/ZN3.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1439,7 +1487,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/ZN1.jpg" alt="">
+                <img class=" " src="../images/ZN1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1453,7 +1501,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/ZN3.jpg" alt="">
+                <img class=" " src="../images/ZN3.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1467,7 +1515,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class=" " src="images/ZN1.jpg" alt="">
+                <img class=" " src="../images/ZN1.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1485,7 +1533,7 @@
                   <p>小米xxx</p>
                   <p><strong>123元</strong></p></div>
                 <div class="pull-right adxiaoimg">
-                  <img class="img-responsive" src="images/adXiao.jpg" alt="">
+                  <img class="img-responsive" src="../images/adXiao.jpg" alt="">
                 </div>
               </div>
               <div class="adXiao col-md-12 col-xs-12">
@@ -1505,7 +1553,7 @@
           <div class="row">
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN2.jpg" alt="">
+                <img class="" src="../images/ZN2.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1519,7 +1567,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN7.jpg" alt="">
+                <img class="" src="../images/ZN7.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1533,7 +1581,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN2.jpg" alt="">
+                <img class="" src="../images/ZN2.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1547,7 +1595,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN7.jpg" alt="">
+                <img class="" src="../images/ZN7.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1561,7 +1609,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN2.jpg" alt="">
+                <img class="" src="../images/ZN2.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1575,7 +1623,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN7.jpg" alt="">
+                <img class="" src="../images/ZN7.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1589,7 +1637,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN2.jpg" alt="">
+                <img class="" src="../images/ZN2.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1607,7 +1655,7 @@
                   <p>小米xxx</p>
                   <p><strong>123元</strong></p></div>
                 <div class="pull-right adxiaoimg">
-                  <img class="img-responsive" src="images/adXiao.jpg" alt="">
+                  <img class="img-responsive" src="../images/adXiao.jpg" alt="">
                 </div>
               </div>
               <div class="adXiao col-md-12 col-xs-12">
@@ -1627,7 +1675,7 @@
           <div class="row">
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN8.jpg" alt="">
+                <img class="" src="../images/ZN8.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1641,7 +1689,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN8.jpg" alt="">
+                <img class="" src="../images/ZN8.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1655,7 +1703,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN8.jpg" alt="">
+                <img class="" src="../images/ZN8.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1669,7 +1717,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN8.jpg" alt="">
+                <img class="" src="../images/ZN8.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1683,7 +1731,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN8.jpg" alt="">
+                <img class="" src="../images/ZN8.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1697,7 +1745,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN8.jpg" alt="">
+                <img class="" src="../images/ZN8.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1711,7 +1759,7 @@
             </div>
             <div class="col-md-3 col-xs-3 text-center">
               <div class="thumbnail">
-                <img class="" src="images/ZN8.jpg" alt="">
+                <img class="" src="../images/ZN8.jpg" alt="">
                 <div class="caption">
                   <h4>小米XXX</h4>
                   <p>
@@ -1729,17 +1777,17 @@
                   <p>小米xxx</p>
                   <p><strong>123元</strong></p></div>
                 <div class="pull-right adxiaoimg">
-                  <img class="img-responsive" src="images/adXiao.jpg" alt="">
+                  <img class="img-responsive" src="../images/adXiao.jpg" alt="">
                 </div>
               </div>
               <div class="adXiao col-md-12 col-xs-12">
                 <div class="pull-left text-left">
-                  <p><a href="shopping/Smart.html">浏览更多...</a></p>
-                  <p><a href="shopping/Smart.html">
+                  <p><a href="../shopping/Smart.html">浏览更多...</a></p>
+                  <p><a href="../shopping/Smart.html">
                     <small>热门</small>
                   </a></p>
                 </div>
-                <div class="pull-right"><a href="shopping/Smart.html"><span
+                <div class="pull-right"><a href="../shopping/Smart.html"><span
                   class="glyphicon glyphicon-circle-arrow-right"></span></a></div>
               </div>
             </div>
@@ -1747,11 +1795,12 @@
         </div>
       </div>
     </div>
+    <!--热评栏目展示-->
     <div id="rePing" class="row">
       <div class="col-md-12 col-xs-12 h3">热评产品</div>
       <div class="col-md-3 col-xs-3 ">
         <div class="thumbnail">
-          <img class="img-responsive" src="images/RP1.jpg" alt="">
+          <img class="img-responsive" src="../images/RP1.jpg" alt="">
           <div class="caption">
             <p>样子好可爱，特别是转来转去时很有趣。让它休眠时它就会把头转过去背对着你了，唤醒它又会自动转回来。</p>
             <p>
@@ -1765,7 +1814,7 @@
       </div>
       <div class="col-md-3 col-xs-3">
         <div class="thumbnail">
-          <img class="img-responsive" src="images/RP2.jpg" alt="">
+          <img class="img-responsive" src="../images/RP2.jpg" alt="">
           <div class="caption">
             <p>非常可爱，一拿到小宝宝还没享受，一帮大宝宝先high了一把，同事也想买，希望早点大卖,良心产品，平民价格</p>
             <p>
@@ -1779,7 +1828,7 @@
       </div>
       <div class="col-md-3 col-xs-3">
         <div class="thumbnail">
-          <img class="img-responsive" src="images/RP3.jpg" alt="">
+          <img class="img-responsive" src="../images/RP3.jpg" alt="">
           <div class="caption">
             <p style="font-size: xx-small">很小巧 像不喜欢戴活塞的人可以试试这种~很舒服包装还是一如既往的简洁 要是有盒子就好了=￣ω￣=</p>
             <p>
@@ -1793,7 +1842,7 @@
       </div>
       <div class="col-md-3 col-xs-3">
         <div class="thumbnail">
-          <img class="img-responsive" src="images/RP4.jpg" alt="">
+          <img class="img-responsive" src="../images/RP4.jpg" alt="">
           <div class="caption">
             <p>有了它，妈妈再也不用担心我喝不到健康的水了。呵呵，良心产品，平民价格，对现在的水质起到了很好的改善</p>
             <p>
@@ -1807,6 +1856,7 @@
         </div>
       </div>
     </div>
+    <!--内容栏目展示-->
     <div id="neiRong" class="row">
       <div class="col-md-12 col-xs-12 h3">内容</div>
       <div class="col-md-3 col-xs-3 text-center">
@@ -1822,26 +1872,26 @@
               <h4>MIUI 主题</h4>
               <p>众多个性主题、百变锁屏与自由桌面
                 让你的手机与众不同！</p>
-              <img class="img-responsive center-block" src="images/NR1.jpg" alt="">
+              <img class="img-responsive center-block" src="../images/NR1.jpg" alt="">
             </div>
             <div class="item center-block">
               <h4>游戏</h4>
               <h3>米柚手游模拟器</h3>
               <p>在电脑上玩遍小米所有手游</p>
-              <img class="img-responsive center-block" src="images/NR2.png" alt="">
+              <img class="img-responsive center-block" src="../images/NR2.png" alt="">
             </div>
             <div class="item center-block">
               <h4>应用</h4>
               <h3>2017金米奖</h3>
               <p>最优秀的应用和游戏</p>
-              <img class="img-responsive center-block" src="images/NR3.png" alt="">
+              <img class="img-responsive center-block" src="../images/NR3.png" alt="">
             </div>
             <div class="item center-block">
               <h4>图书</h4>
               <p>海量好书，享受精品阅读时光
                 漂亮的中文排版，千万读者选择！</p>
               <button>前往多看阅读</button>
-              <img class="img-responsive center-block" src="images/NR4.jpg" alt="">
+              <img class="img-responsive center-block" src="../images/NR4.jpg" alt="">
             </div>
           </div>
           <a class="left carousel-control" href="#carousel-NR1" role="button" data-slide="prev">
@@ -1867,26 +1917,26 @@
               <h4>游戏</h4>
               <h3>米柚手游模拟器</h3>
               <p>在电脑上玩遍小米所有手游</p>
-              <img class="img-responsive center-block" src="images/NR2.png" alt="">
+              <img class="img-responsive center-block" src="../images/NR2.png" alt="">
             </div>
             <div class="item center-block">
               <h4>应用</h4>
               <h3>2017金米奖</h3>
               <p>最优秀的应用和游戏</p>
-              <img class="img-responsive center-block" src="images/NR3.png" alt="">
+              <img class="img-responsive center-block" src="../images/NR3.png" alt="">
             </div>
             <div class="item center-block">
               <h4>图书</h4>
               <p>海量好书，享受精品阅读时光
                 漂亮的中文排版，千万读者选择！</p>
               <button>前往多看阅读</button>
-              <img class="img-responsive center-block" src="images/NR4.jpg" alt="">
+              <img class="img-responsive center-block" src="../images/NR4.jpg" alt="">
             </div>
             <div class="item center-block">
               <h4>MIUI 主题</h4>
               <p>众多个性主题、百变锁屏与自由桌面
                 让你的手机与众不同！</p>
-              <img class="img-responsive center-block" src="images/NR1.jpg" alt="">
+              <img class="img-responsive center-block" src="../images/NR1.jpg" alt="">
             </div>
           </div>
           <a class="left carousel-control" href="#carousel-NR2" role="button" data-slide="prev">
@@ -1912,26 +1962,26 @@
               <h4>应用</h4>
               <h3>2017金米奖</h3>
               <p>最优秀的应用和游戏</p>
-              <img class="img-responsive center-block" src="images/NR3.png" alt="">
+              <img class="img-responsive center-block" src="../images/NR3.png" alt="">
             </div>
             <div class="item center-block">
               <h4>图书</h4>
               <p>海量好书，享受精品阅读时光
                 漂亮的中文排版，千万读者选择！</p>
               <button>前往多看阅读</button>
-              <img class="img-responsive center-block" src="images/NR4.jpg" alt="">
+              <img class="img-responsive center-block" src="../images/NR4.jpg" alt="">
             </div>
             <div class="item center-block">
               <h4>MIUI 主题</h4>
               <p>众多个性主题、百变锁屏与自由桌面
                 让你的手机与众不同！</p>
-              <img class="img-responsive center-block" src="images/NR1.jpg" alt="">
+              <img class="img-responsive center-block" src="../images/NR1.jpg" alt="">
             </div>
             <div class="item center-block">
               <h4>游戏</h4>
               <h3>米柚手游模拟器</h3>
               <p>在电脑上玩遍小米所有手游</p>
-              <img class="img-responsive center-block" src="images/NR2.png" alt="">
+              <img class="img-responsive center-block" src="../images/NR2.png" alt="">
             </div>
           </div>
           <a class="left carousel-control" href="#carousel-NR3" role="button" data-slide="prev">
@@ -1958,25 +2008,25 @@
               <p>海量好书，享受精品阅读时光
                 漂亮的中文排版，千万读者选择！</p>
               <button>前往多看阅读</button>
-              <img class="img-responsive center-block" src="images/NR4.jpg" alt="">
+              <img class="img-responsive center-block" src="../images/NR4.jpg" alt="">
             </div>
             <div class="item center-block">
               <h4>MIUI 主题</h4>
               <p>众多个性主题、百变锁屏与自由桌面
                 让你的手机与众不同！</p>
-              <img class="img-responsive center-block" src="images/NR1.jpg" alt="">
+              <img class="img-responsive center-block" src="../images/NR1.jpg" alt="">
             </div>
             <div class="item center-block">
               <h4>游戏</h4>
               <h3>米柚手游模拟器</h3>
               <p>在电脑上玩遍小米所有手游</p>
-              <img class="img-responsive center-block" src="images/NR2.png" alt="">
+              <img class="img-responsive center-block" src="../images/NR2.png" alt="">
             </div>
             <div class="item center-block">
               <h4>应用</h4>
               <h3>2017金米奖</h3>
               <p>最优秀的应用和游戏</p>
-              <img class="img-responsive center-block" src="images/NR3.png" alt="">
+              <img class="img-responsive center-block" src="../images/NR3.png" alt="">
             </div>
           </div>
           <a class="left carousel-control" href="#carousel-NR4" role="button" data-slide="prev">
@@ -1993,101 +2043,53 @@
   </div>
 </content>
 <footer>
-  <div class="container-fluid">
-    <div id="content-2" class="row">
-      <ul class="col-md-12 col-xs-12 nav nav-pills">
-        <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
-          class="glyphicon glyphicon-wrench"></i>
-          预约维修服务</a></li>
-        <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
-          class="glyphicon glyphicon-repeat"></i> 7天无理由退换货</a></li>
-        <!--          <li class="col-md-2 col-xs-2 text-center" role="presentation"><a href="#"><i class="glyphicon glyphicon-refresh"></i>
-                    15天免费换货</a></li>-->
-        <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
-          class="glyphicon glyphicon-gift"></i>
-          满150元包邮</a></li>
-        <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
-          class="glyphicon glyphicon-map-marker"></i> 520余家售后网点</a></li>
-      </ul>
-      <div class="col-md-9 col-xs-9">
-        <div id="help-nav" class="row text-center">
-          <ul class="col-md-2">帮助中心
-            <li><a href="#">账户管理</a></li>
-            <li><a href="#">购物指南</a></li>
-            <li><a href="#">订单操作</a></li>
-          </ul>
-          <ul class="col-md-2">服务支持
-            <li><a href="#">售后政策</a></li>
-            <li><a href="#">订单操作</a></li>
-            <li><a href="#">订单操作</a></li>
-          </ul>
-          <ul class="col-md-2">线下门店
-            <li><a href="#">售后政策</a></li>
-            <li><a href="#">订单操作</a></li>
-            <li><a href="#">订单操作</a></li>
-          </ul>
-          <ul class="col-md-2">关于小米
-            <li><a href="#">售后政策</a></li>
-            <li><a href="#">订单操作</a></li>
-            <li><a href="#">订单操作</a></li>
-          </ul>
-          <ul class="col-md-2">关注我们
-            <li><a href="#">售后政策</a></li>
-            <li><a href="#">订单操作</a></li>
-            <li><a href="#">订单操作</a></li>
-          </ul>
-          <ul class="col-md-2">特色服务
-            <li><a href="#">售后政策</a></li>
-            <li><a href="#">订单操作</a></li>
-            <li><a href="#">订单操作</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-3 col-xs-3 text-center">
-        <h4>400-100-5678</h4>
-        <p>周一至周日 8：00-18:00</p>
-        <p>（仅收市话费）</p>
-        <button><span class="glyphicon glyphicon-bell"></span>24小时在线客服</button>
-      </div>
-    </div>
-  </div>
-  <div id="foot" class="container-fluid">
-    <div id="content-3" class="row">
-      <div class="col-xs-12 col-md-12">
-        <img src="images/logo-XM.png" alt="">
-        <small>
-          <ul id="nav-foot">
-            <li>小米旗下网站</li>
-            <li><a href="#">小米商城</a></li>
-            <li><a href="#">MIUI</a></li>
-            <li><a href="#">米聊</a></li>
-            <li><a href="#">多看书城</a></li>
-            <li><a href="#">小米路由器</a></li>
-            <li><a href="#">视频电话</a></li>
-            <li><a href="#">小米天猫店</a></li>
-            <li><a href="#">小米淘宝直营店</a></li>
-            <li><a href="#">小米网盟</a></li>
-            <li><a href="#">小米移动</a></li>
-            <li><a href="#">隐私政策</a></li>
-            <li><a href="#">Select Region</a></li>
-          </ul>
-        </small>
-        <br>
-        <small>©mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2014]0059-0009号</small>
-        <br>
-        <small>违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</small>
-      </div>
-      <div id="vlogo" class="col-xs-12 col-md-12 text-right">
-        <img style="width: 85px;height: 28px" src="images/Foot1.png" alt="">
-        <img src="images/Foot2.png" alt="">
-        <img src="images/Foot3.png" alt="">
-        <img src="images/Foot4.png" alt="">
-      </div>
-      <div id="Mtext" class="col-xs-12 col-md-12 text-center">
-        探索黑科技,小米为发烧而生!
-      </div>
-    </div>
-  </div>
+  @@include('/XMSC/app/include/footer.html')
 </footer>
+<script>
+  $(function () {
+    var page = 1;
+    var i=6;  //每版放4张图片
+    $("button.next").click(function (){
+      var $parent = $(this).parents("div.v_show");
+      var $v_show = $parent.find("ul.v_content_list");
+      var $v_content = $parent.find("div.v_content");
+      console.log($v_show);
+      var v_width = $v_content.width();
+      console.log(v_width);
+      var len = $v_show.find("li").length;
+      console.log(len);
+      var page_count = Math.ceil(len/i);
+      if(!$v_show.is(":animated")) {
+        if (page == page_count) {
+          $v_show.animate({left: '0px'}, "slow");
+          page = 1;
+        }
+        else {
+          $v_show.animate({left: '-=' + v_width}, "slow");
+          page++;
+        }
+      }
+    });
+    $("button.prev").click(function () { //绑定上一页click事件
+      var $parent = $(this).parents("div.v_show");  //根据当前单击的元素获取到父元素
+      var $v_show = $parent.find("ul.v_content_list");  //找到内容展示区域
+      var $v_content = $parent.find("div.v_content");  //找到内容展示区域的外围div
+
+      var v_width = $v_content.width();  //内容展示区域容器宽度
+      var len = $v_show.find("li").length;  //内容宗长度，图片总张数
+      var page_count = Math.ceil(len/i);  //数学方法取整数，只要不是整数就往大的方向取最小整数
+      if(!$v_show.is(":animated")){ //判断展示内容是否处于动画状态
+        if(page == 1){  //第一个版面往则跳到最后一个面版
+          $v_show.animate({left:'-='+v_width*(page_count-1)},"slow");  //left减去除最后一个版面的宽度，跳到最后一个版面
+          page = page_count;
+        }
+        else{
+          $v_show.animate({left:'+='+v_width},"slow");  //left加上一个容器宽度，回到上一个版面
+          page--;
+        }
+      }
+    });
+  })
+</script>
 </body>
 </html>

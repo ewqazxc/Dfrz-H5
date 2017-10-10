@@ -243,7 +243,7 @@ a:hover {
   padding: 0;
   min-height: 80px;
   max-height: 400px;
-  /* overflow-y: scroll;*/
+   overflow-y: scroll;
 }
 
 #shop-car div.row {
@@ -660,16 +660,9 @@ tfoot > tr > td:nth-child(2) {
   color: white
 }
 
-tfoot > tr > td:nth-child(2):hover {
+#shop-car tfoot > tr > td:nth-child(2):hover {
   background-color: white;
   color: #FF6B00;
   border: 1px solid #FF6B00;
 }
 
-tfoot > tr > td:nth-child(2) > a:link {
-  color: white;
-}
-
-tfoot {
-  display: none;
-}

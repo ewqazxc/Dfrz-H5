@@ -22,10 +22,12 @@
       if (login == 'true') {
         $('#isLogin').show();
         $('#noLogin').hide();
+        $('#adTop').hide();
       }
       else {
         $('#noLogin').show();
         $('#isLogin').hide();
+        $('#adTop').show();
       }
     });
 
@@ -83,9 +85,9 @@
     /**
      * 获取购物车数据，暂不使用
      * */
-    /*  $.getJSON('0/XMSC/app/JSON/shopping.json',function (data) {
+      $.getJSON('/XMSC/app/JSON/shopping.json',function (data) {
      products=data;
-     console.log(products)
+     console.log(products);
      if(products!=''){
      $('#noneShop').remove();
      $('tfoot').show();
@@ -105,12 +107,12 @@
      }
      $('#shop-car tbody').html(html);
      updateFoot(products);
-     });*/
+     });
 
     /**
      * 更新购物车底部数据，暂不使用
      * */
-    /*    function updateFoot(array) {
+        function updateFoot(array) {
       var total1 = $.xc.sum(array, function (item, index) {
         return item.quantity;
       });
@@ -119,7 +121,10 @@
       });
       $('tfoot tr td strong:nth-child(1)').text(total1);
       $('#tota2').text($.xc.toCurrency(total2));
-    }*/
+    }
+    $("#goToCart").on("click",function () {
+      window.location.href='/XMSC/app/shopping/cart.html';
+    })
   });
 })();
 
