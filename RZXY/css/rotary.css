@@ -1,0 +1,101 @@
+body {
+  background-color: #EEEEEE;
+  font-size: .28rem;
+}
+
+
+/*头部*/
+
+header {
+  width: 7.5rem;
+  height: .9rem;
+  background-color: white;
+  font-size: .32rem;
+  line-height: .9rem;
+  padding-left: .1rem;
+  margin: 0 auto;
+}
+
+header span {
+  display: block;
+  float: left;
+}
+
+header span.glyphicon {
+  margin-top: .3rem;
+}
+
+#shu-img {
+  width: .28rem;
+  height: .28rem;
+  background: url(../img/shu_img.png);
+  background-size: .28rem .28rem;
+  margin-top: .32rem;
+}
+
+
+/*内容*/
+
+content {
+  display: block;
+  width: 7.5rem;
+  margin: 0 auto 1.4rem;
+  position: relative;
+}
+
+
+/*轮盘*/
+
+#rotary {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+
+/*获取*/
+
+#start {
+  width: 2.2rem;
+  height: .6rem;
+  line-height: .6rem;
+  text-align: center;
+  border: 1px solid #FF0000;
+  border-radius: .2rem;
+  position: absolute;
+  background-color: white;
+  font-size: 14px;
+  top: 50%;
+  margin-top: -.15rem;
+}
+
+
+/*底部*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3.75rem;
+  width: 7.5rem;
+  height: 1.4rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  font-size: .28rem;
+  border-top: 1px solid grey;
+}
+
+footer div {
+  margin-top: .1rem;
+}
+
+footer img {
+  width: .6rem;
+  height: .6rem;
+}
+
+footer p.active {
+  color: #69EFE4;
+}

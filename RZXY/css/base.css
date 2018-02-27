@@ -1,0 +1,69 @@
+/*reset.css*/
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body {
+	font-size: 14px;
+	font-family: "微软雅黑", "microsoft yahei", sans-serif;
+	color: #333;
+}
+
+a {
+	color: #333;
+}
+
+a:hover {
+	color: #333;
+	text-decoration: none;
+}
+
+a:-webkit-any-link {
+	text-decoration: none;
+}
+
+input {
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	height: 0;
+	line-height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}

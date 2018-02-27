@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Linkage</title>
+		<link rel="stylesheet" href="../css/linkage.css" />
+		<script src="../bowers/jquery/dist/jquery.js">
+		</script>
+		<script src="linkage.js"></script>
+		<script>
+			window.onload = function() {
+				var box = $("#box");
+				var btn = $("#btn");
+				var html = $("html");
+				btn.on("click", function() {
+					$.fn.linkage();
+					console.log("1");
+				});
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="box">
+			<button id="btn">创建</button>
+		</div>
+	</body>
+
+</html>

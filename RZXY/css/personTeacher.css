@@ -1,0 +1,143 @@
+body {
+  background-color: #EEEEEE;
+  font-size: .28rem;
+}
+/*头部*/
+header {
+  width: 7.5rem;
+  height: .9rem;
+  background-color: white;
+  font-size: .32rem;
+  line-height: .9rem;
+  padding-left: .1rem;
+  margin: 0 auto;
+}
+header span {
+  display: block;
+  float: left;
+}
+#back-img {
+  width: .28rem;
+  height: .32rem;
+  background: url(../img/back_img.png);
+  background-size: .28rem .32rem;
+  margin-top: .30rem;
+}
+#shu-img {
+  width: .28rem;
+  height: .28rem;
+  background: url(../img/shu_img.png);
+  background-size: .28rem .28rem;
+  margin-top: .32rem;
+}
+/*内容*/
+content{
+  display: block;
+  width: 7.5rem;
+  margin: 0 auto;
+}
+/*导师展示*/
+#perShow{
+  height: 3.1rem;
+  margin-top: .1rem;
+  background-color: white;
+  text-align: center;
+  padding-top: .5rem;
+  font-size: .3rem;
+}
+#perShow img{
+  display: block;
+  margin: 0 auto .1rem;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+/*标题分隔*/
+.title-bar{
+  height: .86rem;
+  background-color: #EEEEEE;
+  border-bottom: 1px solid #DEDEDE;
+  line-height: .86rem;
+  font-size: .3rem;
+}
+.title-bar span{
+  margin-right: .2rem;
+  border-left: .06rem solid #FF0000;
+}
+/*个人介绍*/
+#perIntrol{
+  height: 2.4rem;
+  padding: .3rem .2rem;
+  font-size: .26rem;
+  color: #757373;
+  background-color: white;
+  border-bottom: 1px solid #DEDEDE;
+}
+/*学术文章*/
+section{
+  background-color: white;
+  padding: .3rem;
+}
+section+section{
+  border-top: 1px solid #F6F6F6;
+  border-bottom: 1px solid #DEDEDE;
+}
+section h4{
+  font-size: .3rem;
+}
+section p{
+  font-size: .28rem;
+}
+/*指导课程*/
+.courses{
+  width: 7.5rem;
+  height: 5.5rem;
+  background-color: white;
+  margin-bottom: .2rem;
+}
+.courses h4{
+  font-size: .32rem;
+}
+.courses p{
+  font-size: .28rem;
+}
+.courses img{
+  width: 3.1rem;
+  height: 3.1rem;
+}
+.courses div:nth-child(2){
+  float: right;
+  width: 4.4rem;
+  height: 3.1rem;
+  padding: .2rem .3rem;
+}
+.courses div:nth-child(2) p:last-child{
+  color: #FFFF00;
+  position: relative;
+  top: 1rem;
+}
+.courses>p{
+  padding-left: .4rem;
+  margin: .3rem 0;
+}
+.courses>div:last-child p{
+  margin: .2rem 0;
+  padding-left: .2rem;
+}
+.courses>div:last-child p:first-child span{
+  color: #FFFF00;
+  margin-right: .3rem;
+}
+ .courses>div:last-child p:last-child span{
+   color: #FFAA25;
+   margin-right: .3rem;
+ }
+.courses .bixiu-img{
+  width: 1.22rem;
+  height: .37rem;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top:.04rem;
+  background: url("../img/bixiu_img.png");
+  background-size: 1.22rem .37rem;
+}

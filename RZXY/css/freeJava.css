@@ -1,0 +1,249 @@
+body {
+  background-color: #EEEEEE;
+  font-size: .28rem;
+}
+
+
+/*头部*/
+
+header {
+  width: 7.5rem;
+  height: .9rem;
+  background-color: white;
+  font-size: .32rem;
+  line-height: .9rem;
+  padding-left: .1rem;
+  margin: 0 auto;
+}
+
+header span {
+  display: block;
+  float: left;
+}
+
+#back-img {
+  width: .28rem;
+  height: .32rem;
+  background: url(../img/back_img.png);
+  background-size: .28rem .32rem;
+  margin-top: .30rem;
+}
+
+#shu-img {
+  width: .28rem;
+  height: .28rem;
+  background: url(../img/shu_img.png);
+  background-size: .28rem .28rem;
+  margin-top: .32rem;
+}
+
+
+/*内容*/
+
+content {
+  display: block;
+  width: 7.5rem;
+  margin: 0 auto;
+}
+
+
+/*视频*/
+
+#videoJava {
+  width: 7.5rem;
+  height: 4.4rem;
+}
+
+
+/*控制栏*/
+
+#ctrlBar {
+  width: 7.5rem;
+  height: .5rem;
+  background-color: #333333;
+  position: relative;
+  top: -.2rem;
+}
+
+#play {
+  float: left;
+  margin-top: .14rem;
+  margin-left: .1rem;
+  cursor: pointer;
+}
+
+.play {
+  width: 0;
+  height: 0;
+  border-left: .16rem solid white;
+  border-top: .1rem solid rgba(255, 255, 255, 0);
+  border-bottom: .1rem solid rgba(255, 255, 255, 0);
+}
+
+.pause {
+  width: .16rem;
+  height: .2rem;
+  border-left: .05rem solid white;
+  border-right: .05rem solid white;
+}
+
+#progress {
+  width: 3.7rem;
+  height: .08rem;
+  float: left;
+  margin-top: .2rem;
+  margin-left: .08rem;
+  background-color: white;
+  border-radius: .04rem;
+  position: relative;
+}
+
+#proBar {
+  width: 0%;
+  height: .08rem;
+  display: inline-block;
+  background-color: aqua;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#sound {
+  width: .3rem;
+  height: .3rem;
+  color: white;
+  float: left;
+  margin-top: .06rem;
+  margin-left: .2rem;
+  cursor: pointer;
+}
+
+#volume {
+  width: .8rem;
+  height: .04rem;
+  float: left;
+  margin-top: .22rem;
+  margin-left: .06rem;
+  background-color: white;
+  border-radius: .04rem;
+  position: relative;
+  cursor: pointer;
+}
+
+#volBar {
+  width: 100%;
+  height: .04rem;
+  display: inline-block;
+  background-color: aqua;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#volPot {
+  width: .12rem;
+  height: .12rem;
+  border-radius: 100%;
+  background-color: aqua;
+  display: inline-block;
+  position: absolute;
+  top: -.04rem;
+  left: .8rem;
+  margin-left: -.06rem;
+}
+
+#fullScreen {
+  width: .3rem;
+  height: .3rem;
+  float: left;
+  margin-top: .13rem;
+  margin-left: .2rem;
+  font-size: .18rem;
+  color: white;
+  cursor: pointer;
+}
+#timeTxt {
+  padding: 0 .1rem;
+  height: .5rem;
+  float: left;
+  text-align: center;
+  line-height: .5rem;
+  font-size: .14rem;
+  color: white;
+}
+
+
+/*简介*/
+
+#abstract {
+  background-color: white;
+  width: 7.5rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#abstract h4 {
+  height: .64rem;
+  line-height: .64rem;
+  padding-left: .2rem;
+  font-size: .32rem;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+#abstract h5 {
+  height: .64rem;
+  line-height: .64rem;
+  padding-left: .2rem;
+  font-size: .3rem;
+}
+
+#abstract p {
+  height: 1.1rem;
+  padding-left: .2rem;
+  font-size: .3rem;
+  color: #777777;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+#partShow {
+  width: 10000px;
+  height: 2.5rem;
+}
+
+#abstract .part {
+  font-size: .2rem;
+  display: table;
+  padding-left: .1rem;
+  margin-left: .2rem;
+  margin-bottom: .1rem;
+  float: left;
+  width: 2.6rem;
+  height: 1rem;
+  border: 1px solid #D6D6D6;
+  color: #D6D6D6;
+  border-radius: .1rem;
+  word-break: break-all;
+}
+
+#abstract .part span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+/*查看全部*/
+
+#allBtn {
+  width: .7rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  top: 2.78rem;
+  background-color: white;
+  cursor: pointer;
+}

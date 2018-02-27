@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>课程专题</title>
+    <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/subjectCourses.css" />
+    <script src="../js/rem.js"></script>
+    <script src="../bowers/jquery/dist/jquery.js"></script>
+    <scrip src="../js/main.js"></scrip>
+    <script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../js/subjectCourses.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <a id="comeback" href="#" onClick="javascript :history.go(-1);"><span id="backTo" class="glyphicon glyphicon-menu-left"></span></a>
+      <span id="shu-img"></span>
+      <span class="header-title">课程专题页</span>
+    </header>
+    <content>
+      <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="../images/lunbo_01.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="../images/lunbo_01.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="../images/lunbo_01.png" alt="" />
+          </div>
+        </div>
+        <!--<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>-->
+      </div>
+      <div id="proCourses">
+        <h3>JAVAJ精品课程专题</h3>
+        <p>讲师：张老师 邱老师 杨老师</p>
+        <p>即将开始<span class="bixiu-img"></span></p>
+        <p>举办方： 东方锐智科技有限公司</p>
+        <hr/>
+        <p>预售费用/全额费用：<span class="jinbi-img"></span><span>30000</span><span class="jinbi-img"></span><del>40000</del></p>
+        <p>完成课程专题赠1000奖学分</p>
+        <button id="btn-pay" data-toggle="modal" data-target="#payModal">缴纳学费</button>
+      </div>
+      <div id="payModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div id="payModalBody" class="modal-body payModalBody">
+              <h4>学费</h4>
+              <p><span class="jinbi-img"></span>3000.00</p>
+              <p>请根据你的需要，挑选学习周期</p>
+              <p>下单后，不可更改哦！</p>
+              <ol id="optDays">
+                <li class="active checked">90天</li>
+                <li>180天</li>
+                <li>270天</li>
+              </ol>
+              <div id="sortNumber" class="sortNumber">购买数量：
+                <span id="sortNumberCut" class="btn-buy sortNumberCut"><span class="glyphicon glyphicon-minus"></span></span>
+                <input value="1" type="number">
+                <span id="sortNumberAdd" class="btn-buy sortNumberAdd"><span class="glyphicon glyphicon-plus"></span></span>
+              </div>
+              <div id="payNow" class="payNow" data-toggle="modal" data-target="#payModal">立即约课</div>
+              <div id="sortNumberTip" class="sortNumberTip">
+                购买数量不能小于1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="signIn1" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div id="signIn1-Body" class="modal-body payModalBody">
+              <h4>我要报名：<small>单节课学费</small></h4>
+              <p><span class="jinbi-img"></span>300.00</p>
+              <div id="signIn1-sortNumber" class="sortNumber">购买数量（参与人数）：
+                <span id="signIn1-sortNumberCut" class="btn-buy sortNumberCut"><span class="glyphicon glyphicon-minus"></span></span>
+                <input value="1" type="number">
+                <span id="signIn1-sortNumberAdd" class="btn-buy sortNumberAdd"><span class="glyphicon glyphicon-plus"></span></span>
+              </div>
+              <div id="signIn1-payNow" class="payNow" data-toggle="modal" data-target="#signIn1">立即约课</div>
+              <div id="signIn1-sortNumberTip" class="sortNumberTip">
+                购买数量不能小于1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="signIn2" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div id="signIn2-Body" class="modal-body payModalBody">
+              <h4>我要报名：<small>单节课学费</small></h4>
+              <p><span class="jinbi-img"></span>300.00</p>
+              <div id="signIn2-sortNumber" class="sortNumber">购买数量（参与人数）：
+                <span id="signIn2-sortNumberCut" class="btn-buy sortNumberCut"><span class="glyphicon glyphicon-minus"></span></span>
+                <input value="1" type="number">
+                <span id="signIn2-sortNumberAdd" class="btn-buy sortNumberAdd"><span class="glyphicon glyphicon-plus"></span></span>
+              </div>
+              <div id="signIn2-payNow" class="payNow" data-toggle="modal" data-target="#signIn2">立即约课</div>
+              <div id="signIn2-sortNumberTip" class="sortNumberTip">
+                购买数量不能小于1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="introCourses">
+        <h3>第一节、使用SimpleJdbcTemplate和泛型技术简化代码</h3>
+        <p>讲师：杨老师</p>
+        <p>开课时间：2017.02.14~2017.02.20</p>
+        <p>开课地点：福建省福州市高新区万福中心6楼601</p>
+        <p>单节课程费用：<span class="jinbi-img"></span><span>300</span><span>赠10学分</span></p>
+        <p>已占席位30人/限40人参加</p>
+        <p class="text-orange">即将开始<span class="btnBM" data-toggle="modal" data-target="#signIn1">我要报名</span></p>
+        <hr/>
+        <div class="btn-md">
+          <a href="hasSignUp.html">已报名人员名单（30人）<span class="next-img"></span></a>
+        </div>
+      </div>
+      <div class="introCourses">
+        <h3>第二节、启动子线程的三种方式</h3>
+        <p>讲师：张老师</p>
+        <p>开课时间：2017.02.14~2017.02.20</p>
+        <p>开课地点：福建省福州市高新区万福中心6楼601</p>
+        <p>单节课程费用：<span class="jinbi-img"></span><span>300</span><span>赠10学分</span></p>
+        <p>已占席位30人/限40人参加</p>
+        <p class="text-orange">即将开始<span class="btnBM" data-toggle="modal" data-target="#signIn2">我要报名</span></p>
+        <hr/>
+        <div class="btn-md">
+          <a href="hasSignUp.html">已报名人员名单（30人）<span class="next-img"></span></a>
+        </div>
+      </div>
+    </content>
+  </body>
+
+</html>

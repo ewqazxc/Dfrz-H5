@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>添加新地址</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/linkage.css" />
+    <link rel="stylesheet" href="../css/newAddress.css">
+    <script src="../js/rem.js"></script>
+    <script src="../bowers/jquery/dist/jquery.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/linkage.js"></script>
+    <script src="../js/newAddress.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <div id="tipName" class="tips">请输入联系人姓名！</div>
+      <div id="tipTel" class="tips">请输入联系人电话！</div>
+      <div id="tipFull" class="tips">请填写详细地址！</div>
+      <div id="tipClear" class="tips">删除成功</div>
+    </div>
+    
+    <header>
+      <a id="comeback" href="#" onClick="javascript :history.go(-1);"><span id="back-img"></span></a>
+      <span id="shu-img"></span>
+      <span class="header-title">地址管理</span>
+      <a href="#" id="saveBtn">保存</a>
+    </header>
+    <content>
+      <div class="editCard">
+        <label for="contacts">联系人</label>
+        <input id="contacts" type="text"/>
+      </div>
+      <div class="editCard">
+        <label for="contactsTel">联系电话</label>
+        <input id="contactsTel" type="text" maxlength="11"/>
+      </div>
+      <div class="editCard box">
+        <p class="linkage_el">
+          <a href="">所在地区<span id="address"></span><span class="glyphicon glyphicon-menu-right"></span></a>
+          <select name="s" id="prov">
+            <option value="1">安徽省</option>
+            <option value="2">福建省</option>
+            <option value="3">江西省</option>
+          </select>
+          <select name="c" id="city">
+            <option value="1">福州市</option>
+            <option value="2" selected>厦门市</option>
+            <option value="3">泉州市</option>
+          </select>
+          <select name="a" id="district">
+            <option value="1">鼓楼区</option>
+            <option value="2">仓山区</option>
+            <option value="3">台江区</option>
+            <option value="4" selected>晋安区</option>
+            <option value="5">马尾区</option>
+          </select>
+        </p>
+      </div>
+      <div class="editCard">
+        <p class="linkage_el">
+          <a href="#">街道<span id="streetOn"></span><span class="glyphicon glyphicon-menu-right"></span></a>
+          <select name="j" id="street">
+            <option value="1">温泉街道</option>
+            <option value="2">东街街道</option>
+            <option value="3">南街街道</option>
+            <option value="4" selected>西街街道</option>
+            <option value="5">北街街道</option>
+          </select>
+        </p>
+      </div>
+      <div class="editCard">
+        <textarea id="fullAddress" placeholder="请填写详细地址。。。"></textarea>
+      </div>
+      <div class="editCard">
+        <p>设为默认地址<span id="checkBox" class="checkbox"><span class="glyphicon glyphicon-ok"></span></span>
+        </p>
+      </div>
+      <div class="editCard">
+        <p>
+          <a id="delBtn" href="">删除地址</a>
+        </p>
+      </div>
+    </content>
+  </body>
+
+</html>

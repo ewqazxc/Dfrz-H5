@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>我的圈子</title>
+		<link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/myCircle.css">
+		<script src="../js/rem.js"></script>
+		<script src="../bowers/jquery/dist/jquery.js"></script>
+		<script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="../js/main.js"></script>
+		<script src="../js/myCircle.js"></script>
+	</head>
+
+	<body>
+		<div class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-labelledby="cameraModal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p>用手机拍照</p>
+						<a href="editContent.html"><p>从相册里选择</p></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<header>
+			<a id="comeback" href="#" onClick="javascript :history.go(-1);"><span id="back-img"></span></a>
+			<span id="shu-img"></span>
+			<span class="header-title">我的圈子</span>
+		</header>
+		<content>
+			<div id="backShow">
+				<img src="../images/backShow.jpg" alt="">
+				<a href="perInformation.html"><div id="headShow"></div></a>
+			</div>
+			<div class="show clearfix">
+				<div class="showDate">
+					<h4>今天</h4>
+				</div>
+				<div class="showData">
+					<div class="showImg"  data-toggle="modal" data-target="#cameraModal">
+						<img src="../images/camera-images.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="show clearfix">
+				<div class="showDate">
+					<h4>08<small>6月</small></h4>
+				</div>
+				<div class="showData">
+					<div class="showImg">
+						<img src="../images/photo.jpg" alt="" />
+					</div>
+					<div class="showText">
+						<p>发布内容显示在这里，发 布内容显示在这里，发布 内容显示在这里，发布内
+						</p>
+						<p>共 8 张</p>
+					</div>
+				</div>
+			</div>
+			<div class="show clearfix">
+				<div class="showDate">
+					<h4>06<small>6月</small></h4>
+				</div>
+				<div class="showData">
+					<div class="showImg">
+						<img src="../images/photo.jpg" alt="" />
+						<img src="../images/photo.jpg" alt="" />
+						<img src="../images/photo.jpg" alt="" />
+						<img src="../images/photo.jpg" alt="" />
+					</div>
+					<div class="showText">
+						<p>发布内容显示在这里，发 布内容显示在这里，发布 内容显示在这里，发布内
+						</p>
+						<p>共 8 张</p>
+					</div>
+				</div>
+			</div>
+			<div class="show clearfix">
+				<div class="showDate">
+					<h4>05<small>6月</small></h4>
+				</div>
+				<div class="showData">
+					<div class="showImg">
+						<img src="../images/photo.jpg" alt="" />
+						<img src="../images/photo.jpg" alt="" />
+						<img src="../images/photo.jpg" alt="" />
+					</div>
+					<div class="showText">
+						<p>发布内容显示在这里，发 布内容显示在这里，发布 内容显示在这里，发布内
+						</p>
+						<p>共 8 张</p>
+					</div>
+				</div>
+			</div>
+			<div class="show clearfix">
+				<div class="showDate">
+					<h4>25<small>5月</small></h4>
+				</div>
+				<div class="showData">
+					<div class="showImg">
+						<img src="../images/photo.jpg" alt="" />
+						<img src="../images/photo.jpg" alt="" />
+					</div>
+					<div class="showText">
+						<p>发布内容显示在这里，发 布内容显示在这里，发布 内容显示在这里，发布内
+						</p>
+						<p>共 8 张</p>
+					</div>
+				</div>
+			</div>
+			<div class="show clearfix">
+				<div class="showDate">
+					<h4>22<small>5月</small></h4>
+				</div>
+				<div class="showData">
+					<div class="showEssay">
+						<p>发布内容显示在这里，发 布内容显示在这里，发布 内容显示在这里...
+						</p>
+					</div>
+				</div>
+			</div>
+		</content>
+	</body>
+
+</html>

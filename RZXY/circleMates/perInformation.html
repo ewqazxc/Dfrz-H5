@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>个人信息</title>
+		<link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/perInformation.css">
+		<script src="../js/rem.js"></script>
+		<script src="../bowers/jquery/dist/jquery.js"></script>
+		<script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="../js/main.js"></script>
+		<script src="../js/myCircle.js"></script>
+		<script>
+		  $(function() {
+		    $("#circle").on("click",function() {
+		      self.location.href = "myCircle.html";
+		    })
+		  })
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<a id="comeback" href="#" onClick="javascript :history.go(-1);"><span id="back-img"></span></a>
+			<span id="shu-img"></span>
+			<span class="header-title">个人信息</span>
+		</header>
+		<content>
+			<div id="information">
+				<div>
+					<p>用户头像<span class="head-img"></span></p>
+				</div>
+				<div>
+					<p>账户<span>13625030880</span></p>
+				</div>
+				<div>
+					<p>昵称<span>周大平</span></p>
+				</div>
+			</div>
+			<div id="circle" class="clearfix">
+				<div>
+					<p>圈子信息</p>
+				</div>
+				<div class="showImg">
+					<img src="../images/backShow.jpg" alt="">
+					<img src="../images/backShow.jpg" alt="">
+				</div>
+				<div class="showImg">
+					<img src="../images/backShow.jpg" alt="">
+					<img src="../images/backShow.jpg" alt="">
+					<img src="../images/backShow.jpg" alt="">
+					<img src="../images/backShow.jpg" alt="">
+				</div>
+				<div class="showImg">
+					<img src="../images/backShow.jpg" alt="">
+					<img src="../images/backShow.jpg" alt="">
+					<img src="../images/backShow.jpg" alt="">
+				</div>
+			</div>
+			<div id="help">
+				<div>
+					<p>帮助与反馈</p>
+				</div>
+			</div>
+		</content>
+	</body>
+
+</html>

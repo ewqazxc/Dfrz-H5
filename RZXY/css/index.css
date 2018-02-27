@@ -1,0 +1,299 @@
+body {
+  background-color: #EEEEEE;
+  font-size: .28rem;
+}
+
+
+/*头部*/
+
+header {
+  width: 7.5rem;
+  height: .9rem;
+  background-color: #FE7A2F;
+  font-size: .32rem;
+  line-height: .9rem;
+  padding-left: .2rem;
+  margin: 0 auto;
+}
+
+header span {
+  display: block;
+  float: left;
+}
+
+header span.glyphicon {
+  margin-top: .3rem;
+}
+
+#logo {
+  width: 2.42rem;
+  height: .4rem;
+  background: url(../img/logo.png);
+  background-size: 2.42rem .4rem;
+  margin-top: .22rem;
+}
+
+
+/*内容*/
+
+content {
+  display: block;
+  width: 7.5rem;
+  margin: 0 auto 1.4rem;
+}
+
+
+/*轮播*/
+
+#carousel {
+  width: 7.5rem;
+  height: 3.5rem;
+  margin: 0 auto;
+}
+
+#carousel img {
+  width: 7.5rem;
+  height: 3.5rem;
+}
+
+.carousel-indicators .active {
+  background-color: #F3F81F;
+}
+
+.carousel-indicators {
+  bottom: -10px;
+}
+
+
+/*课程导航*/
+
+#courses-nav {
+  width: 7.5rem;
+  height: 2rem;
+  background-color: white;
+  margin-top: .2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#courses-nav div {
+  width: 1.38rem;
+  height: 1.84rem;
+  background: url("../img/nav-01.png");
+  background-position-x: .1rem;
+  background-size: 1.38rem 1.84rem;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+#courses-nav>a:nth-child(2)>div {
+  background: url("../img/nav-02.png");
+  background-size: 1.38rem 1.84rem;
+  background-position-x: .1rem;
+}
+
+#courses-nav>a:nth-child(3)>div {
+  background: url("../img/nav-03.png");
+  background-size: 1.38rem 1.84rem;
+  background-position-x: .1rem;
+}
+
+#courses-nav>a:nth-child(4)>div {
+  background: url("../img/nav-04.png");
+  background-size: 1.38rem 1.84rem;
+  background-position-x: .1rem;
+}
+
+
+/*标题nav*/
+
+.title-bar {
+  font-size: .3rem;
+  text-align: center;
+  height: .96rem;
+  line-height: .96rem;
+  background-color: #EEEEEE;
+  position: relative;
+}
+
+.title-bar i {
+  position: absolute;
+  top: .34rem;
+  right: .2rem;
+  color: #FF0000;
+}
+
+.borderBar {
+  width: .9rem;
+  height: .02rem;
+  background-color: #FF0000;
+  display: block;
+  position: absolute;
+  top: .48rem;
+}
+
+.borderLeft {
+  left: 2.1rem;
+}
+
+.borderRight {
+  right: 2.1rem
+}
+
+
+/*名师大咖*/
+
+#teacher {
+  width: 7.5rem;
+  height: 4.56rem;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.teacherCard {
+  width: 3.75rem;
+  height: 2.28rem;
+  padding-top: .1rem;
+}
+
+.teacherCard>a>img {
+  width: 1.52rem;
+  height: 1.52rem;
+  float: left;
+}
+
+.teacherCard h4 {
+  font-size: .3rem;
+}
+
+.teacherCard p {
+  width: 2.23rem;
+  float: left;
+  font-size: .2rem;
+}
+
+
+/*展示*/
+
+.showCard {
+  width: 7.5rem;
+  min-height: 2.6rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.showCard .thumbnail {
+  width: 3.4rem;
+  height: 2.4rem;
+  margin-bottom: 0;
+}
+
+.showCard .thumbnail img {
+  height: 1.5rem;
+}
+
+.showCard .thumbnail h3 {
+  font-size: .24rem;
+  margin: .1rem 0 0;
+}
+
+.showCard .thumbnail p {
+  font-size: .2rem;
+  color: #777777;
+}
+
+.showCard .caption {
+  height: 1rem;
+  padding: 0 .1rem;
+}
+
+.showCard .stuWork {
+  width: 3.42rem;
+  font-size: .24rem;
+  text-align: center;
+}
+
+.showCard .stuWork img {
+  width: 3.42rem;
+  border-radius: .2rem;
+}
+
+
+/*倒计时*/
+
+#cutDown {
+  width: 7.5rem;
+  height: 3rem;
+  background: url("../images/cutDown.png") no-repeat center;
+  background-size: 7.2rem 2.6rem;
+  position: relative;
+}
+
+#cutDown div {
+  height: .86rem;
+  color: #FBC405;
+  position: relative;
+}
+
+#cutDown span {
+  position: absolute;
+  top: .36rem;
+  font-size: .28rem;
+}
+#days{
+  left: 2.06rem;
+}
+
+#hours{
+  left: 3.24rem;
+}
+#mins{
+  right: 2.78rem;
+}
+#secs {
+  right: 1.6rem;
+}
+
+#cutDown>a {
+  width: 7.2rem;
+  height: 1.96rem;
+  display: block;
+  position: absolute;
+  bottom: .2rem;
+  right: .16rem;
+}
+
+
+/*底部*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3.75rem;
+  width: 7.5rem;
+  height: 1.4rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  font-size: .28rem;
+  border-top: 1px solid grey;
+}
+
+footer div {
+  margin-top: .1rem;
+}
+
+footer img {
+  width: .6rem;
+  height: .6rem;
+}
+
+footer p.active {
+  color: #69EFE4;
+}

@@ -1,0 +1,104 @@
+body {
+  background-color: #EEEEEE;
+  font-size: .28rem;
+}
+
+
+/*头部*/
+
+header {
+  width: 7.5rem;
+  height: .9rem;
+  background-color: white;
+  font-size: .32rem;
+  line-height: .9rem;
+  padding-left: .1rem;
+  margin: 0 auto;
+}
+
+header span {
+  display: block;
+  float: left;
+}
+
+#back-img {
+  width: .28rem;
+  height: .32rem;
+  background: url(../img/back_img.png);
+  background-size: .28rem .32rem;
+  margin-top: .30rem;
+}
+
+#shu-img {
+  width: .28rem;
+  height: .28rem;
+  background: url(../img/shu_img.png);
+  background-size: .28rem .28rem;
+  margin-top: .32rem;
+}
+
+header a:last-child {
+  float: right;
+  margin-right: .2rem;
+  color: #FFAA25;
+}
+
+header a:last-child:hover {
+  text-decoration: none;
+}
+
+
+/*内容*/
+
+content {
+  display: block;
+  width: 7.5rem;
+  margin: 0 auto;
+}
+
+.changeTel {
+  width: 7.5rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  background-color: white;
+  margin-top: .2rem;
+  position: relative;
+}
+
+.changeTel input {
+  width: 7.5rem;
+  padding: 0 .2rem;
+}
+
+.changeTel span {
+  color: #EEEEEE;
+  position: absolute;
+  right: .2rem;
+  top: .4rem;
+  font-size: .4rem;
+  display: none;
+}
+
+.changeTel.active span {
+  display: block;
+}
+
+
+/*提示*/
+
+.tips {
+  display: none;
+  width: 5.3rem;
+  height: 1rem;
+  border-radius: .5rem;
+  background-color: #FFAA25;
+  color: white;
+  text-align: center;
+  line-height: 1rem;
+  font-size: .48rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -.7rem;
+  margin-left: -2.65rem;
+}

@@ -1,0 +1,388 @@
+body {
+  background-color: #EEEEEE;
+  font-size: .28rem;
+}
+
+
+/*头部*/
+
+header {
+  width: 7.5rem;
+  height: .9rem;
+  background-color: white;
+  font-size: .32rem;
+  line-height: .9rem;
+  padding-left: .1rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+header span {
+  display: block;
+  float: left;
+}
+
+#back-img {
+  width: .28rem;
+  height: .32rem;
+  background: url(../img/back_img.png);
+  background-size: .28rem .32rem;
+  margin-top: .30rem;
+}
+
+#shu-img {
+  width: .28rem;
+  height: .28rem;
+  background: url(../img/shu_img.png);
+  background-size: .28rem .28rem;
+  margin-top: .32rem;
+}
+
+#camera {
+  width: .4rem;
+  height: .4rem;
+  background: url("../img/camera-img.png");
+  background-size: .4rem .4rem;
+  position: absolute;
+  right: .2rem;
+  top: .26rem;
+}
+
+
+/*内容*/
+
+content {
+  display: block;
+  width: 7.5rem;
+  margin: 0 auto 1.4rem;
+}
+
+
+/*背景展示*/
+
+#backShow {
+  height: 6rem;
+  background-color: white;
+  margin-top: .2rem;
+  position: relative;
+}
+
+#backShow img {
+  width: 7.5rem;
+  height: 5.2rem;
+}
+
+#headShow {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 100%;
+  background: url("../images/backShow.jpg") no-repeat center;
+  position: absolute;
+  right: .3rem;
+  bottom: .2rem;
+}
+
+
+/*动态*/
+
+.show {
+  background-color: white;
+  margin-bottom: .1rem;
+}
+
+.show>div:first-child {
+  width: 1.4rem;
+  height: 100px;
+  float: left;
+  position: relative;
+}
+
+.show>div:nth-child(2) {
+  width: 6.1rem;
+  float: right;
+  padding-bottom: .3rem;
+}
+
+.head-img {
+  width: .92rem;
+  height: .92rem;
+  border-radius: 100%;
+  display: block;
+  background: url("../images/backShow.jpg") no-repeat center;
+  background-size: .92rem .92rem;
+  position: absolute;
+  left: .36rem;
+  top: .4rem;
+}
+
+.show h4 {
+  font-size: .32rem;
+  color: #69EFE4;
+}
+
+.show h5 {
+  font-size: .28rem;
+  font-weight: normal;
+}
+
+
+/*照片展示*/
+
+.photoShow {
+  width: 5.2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.photoShow img {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-bottom: .2rem;
+}
+
+
+/*msg*/
+
+.position {
+  color: #777777;
+  margin: .1rem 0;
+}
+
+.timeShare {
+  margin: .1rem 0;
+  position: relative;
+  color: #777777;
+}
+
+.msg-img {
+  display: block;
+  width: .7rem;
+  height: .7rem;
+  background: url("../img/msg-img.png");
+  background-size: .7rem .7rem;
+  position: absolute;
+  right: .36rem;
+  top: -.12rem;
+}
+
+.photoShow.forthWidth {
+  width: 3.4rem;
+}
+
+
+/*点赞*/
+
+.laud {
+  width: 5.7rem;
+  height: .54rem;
+  line-height: .54rem;
+  margin-top: .3rem;
+  margin-bottom: .1rem;
+  background-color: #EEEEEE;
+  position: relative;
+  color: #3762CF;
+}
+
+.laud span:nth-child(3) {
+  margin-left: .7rem;
+}
+
+.tip-img {
+  width: .5rem;
+  height: .2rem;
+  display: block;
+  background: url("../img/tip-img.png");
+  background-size: .5rem .2rem;
+  position: absolute;
+  top: -.2rem;
+  left: .1rem;
+}
+
+.heart-img {
+  width: .7rem;
+  height: .7rem;
+  display: block;
+  background: url("../img/heart-img.png");
+  background-size: .7rem .7rem;
+  position: absolute;
+  top: -.06rem;
+  left: 0;
+}
+
+
+/*弹出*/
+
+.disOrhand {
+  width: 1.8rem;
+  height: .6rem;
+  border-radius: .04rem;
+  line-height: .6rem;
+  text-align: center;
+  background-color: aqua;
+  font-size: .24rem;
+  color: white;
+  position: absolute;
+  top: -.04rem;
+  right: 1.1rem;
+}
+
+.noBlock {
+  display: none;
+}
+
+.yesBlock {
+  display: block;
+}
+
+.disOrhand>span {
+  display: inline-block;
+  height: .6rem;
+}
+
+.disOrhand>span>span {
+  margin-right: .1rem;
+}
+
+.disOrhand>span:last-child>span {
+  border-left: 1px solid white;
+  padding-left: .04rem;
+}
+
+
+/*评论*/
+
+.discuss {
+  width: 5.7rem;
+  background-color: #EEEEEE;
+}
+
+a {
+  color: #3762CF;
+}
+
+
+/*底部*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3.75rem;
+  width: 7.5rem;
+  height: 1.4rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  font-size: .28rem;
+  border-top: 1px solid grey;
+}
+
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+footer div {
+  margin-top: .1rem;
+}
+
+footer img {
+  width: .6rem;
+  height: .6rem;
+}
+
+footer p.active {
+  color: #69EFE4;
+}
+
+
+/*模态框*/
+
+.modal-body {
+  position: relative;
+  padding: 0;
+}
+
+#cameraModal .modal-dialog {
+  width: 4.7rem;
+  height: 1.6rem;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -.8rem;
+  margin-left: -2.35rem;
+}
+
+#cameraModal p {
+  margin: 0;
+  height: .8rem;
+  line-height: .8rem;
+  font-size: .3rem;
+}
+
+#cameraModal p:hover {
+  background-color: aqua;
+}
+
+#cameraModal p+p {
+  border-top: 1px solid #757575;
+}
+
+#cameraModal a:-webkit-any-link {
+  color: black;
+}
+
+
+/*输入评论*/
+
+#disZhao {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  opacity: 0.3;
+  display: none;
+}
+
+#discussModal {
+  width: 7.5rem;
+  height: 1.4rem;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  border-top: 1px solid #EEEEEE;
+}
+
+#discussModal input {
+  height: 1.2rem;
+  width: 6rem;
+  font-size: .28rem;
+  margin: .1rem;
+  border-radius: .2rem;
+  background-color: #EEEEEE;
+}
+
+#discussModal button {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: none;
+  font-size: .32rem;
+  border-radius: .2rem;
+  color: white;
+  background-color: #69EFE4;
+  position: absolute;
+  top: .1rem;
+  right: .1rem;
+}

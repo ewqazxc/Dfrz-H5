@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>修改用户名</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/changeName.css">
+    <script src="../js/rem.js"></script>
+    <script src="../bowers/jquery/dist/jquery.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/changeName.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <div id="tipName" class="tips">请输入用户名！</div>
+      <div id="tipOk" class="tips">保存成功！跳转中...</div>
+    </div>
+    <header>
+      <a id="comeback" href="#" onClick="javascript :history.go(-1);"><span id="back-img"></span></a>
+      <span id="shu-img"></span>
+      <span class="header-title">用户名</span>
+      <a id="save">保存</a>
+    </header>
+    <content>
+      <div class="changeName">
+        <input type="text" placeholder="请输入您的用户名" value="王大雷" />
+        <span class="glyphicon glyphicon-remove-circle"></span>
+      </div>
+    </content>
+  </body>
+
+</html>

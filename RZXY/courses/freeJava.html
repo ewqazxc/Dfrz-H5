@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>免费试听</title>
+    <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/freeJava.css" />
+    <script src="../js/rem.js"></script>
+    <script src="../bowers/jquery/dist/jquery.js"></script>
+    <script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/freeJava.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <a id="comeback" href="#" onClick="javascript :history.go(-1);"><span id="back-img"></span></a>
+      <span id="shu-img"></span>
+      <span class="header-title">Java开发教程</span>
+    </header>
+    <content>
+      <video id="videoJava" poster="../images/video.png">
+        <source src="../video/HBuilder840.mp4" type="video/mp4"></source>
+        <object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+      		<param name="movie" value="myvideo.swf" />
+      		<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+      	</object> 当前浏览器不支持 video直接播放，点击这里下载视频：
+        <a href="myvideo.webm">下载视频</a>
+      </video>
+      <div id="ctrlBar">
+        <!--播放-->
+        <span id="play" class="play"></span>
+        <!--时间-->
+        <div id="timeTxt">00:00/00:00</div>
+        <!--进度条-->
+        <div id="progress">
+          <span id="proBar"></span>
+        </div>
+        <!--声音-->
+        <div id="sound" class="sound">
+          <span class="glyphicon glyphicon-volume-up"></span>
+        </div>
+        <!--音量-->
+        <div id="volume">
+          <span id="volBar"></span>
+          <span id="volPot"></span>
+        </div>
+
+        <!--全屏-->
+        <div id="fullScreen">
+          <span class="glyphicon glyphicon-fullscreen">
+            
+          </span>
+        </div>
+      </div>
+      <div id="abstract">
+        <div id="allBtn">
+          <span class="glyphicon glyphicon-menu-down"></span>
+        </div>
+        <h4>简介</h4>
+        <div>
+          <h5>使用SimpleJdbcTemplate和泛型技术简化代码</h5>
+          <p><span class="glyphicon glyphicon-expand"></span>9837&nbsp;&nbsp;2017-12-01<br/> 自录...
+          </p>
+        </div>
+        <div id="partShow">
+          <div class="part"><span>使用SimpleJdbcTemplate和泛型技术简化代码</span></div>
+          <div class="part"><span>css的基础样式 盒模型</span></div>
+          <div class="part"><span>JavaScript入门篇</span></div>
+          <div class="part"><span>使用SimpleJdbcTemplate和泛型技术简化代码</span></div>
+          <div class="part"><span>css的基础样式 盒模型</span></div>
+          <div class="part"><span>JavaScript入门篇</span></div>
+          <div class="part"><span>使用SimpleJdbcTemplate和泛型技术简化代码</span></div>
+          <div class="part"><span>css的基础样式 盒模型</span></div>
+          <div class="part"><span>JavaScript入门篇</span></div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </content>
+  </body>
+
+</html>
