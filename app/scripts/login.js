@@ -4,25 +4,35 @@
 (function () {
   'use strict';
   $(function () {
+    /**
+     * 用户名，密码
+     * 验证函数
+     * */
     function zuserID(userID,password) {
       var x=$('#userID').val();
       var y=$('#password').val();
-      if(x==''){
+      if(x==''||x==null){
         $("#shouJiK").show();
         setTimeout('$("#shouJiK").hide()',3000);
+        return false;
+      }
+      else if(y==''||y==null){
+        $("#passwordK").show();
+        setTimeout('$("#passwordK").hide()',3000);
         return false;
       }
       else if(x!=userID){
         $("#shouJiF").show();
         setTimeout('$("#shouJiF").hide()',3000);
-        return false;
-      }
-        else if(y==''){
-        $("#passwordK").show();
-        setTimeout('$("#passwordK").hide()',3000);
+        $("#tip5").show();
+        setTimeout('$("#tip5").hide()',5000);
+        $('#userID').removeClass('borderGreen');
+        $('#userID').addClass('borderRed');
         return false;
       }
       else if(y!=password){
+        $('#password').removeClass('borderGreen');
+        $('#password').addClass('borderRed');
         $("#passwordF").show();
         setTimeout('$("#passwordF").hide()',3000);
         return false;
@@ -30,29 +40,51 @@
       else
         $("#logSuccess").show();
       setTimeout('$("#logSuccess").hide()',3000);
-        return true;
+      return true;
     }
+
+    /**
+     * 获取本地存储信息，验证用户名，密码
+     * 登录成功时，保存登录状态、登录用户至本地存储
+     * */
     $('#btnLogin').on('click',function () {
-      var t=localStorage.getItem('account');
-      console.log(localStorage.getItem('account'));
-      var jsonObj=eval('('+t+')');
-      console.log(jsonObj);
-      var userID=jsonObj.userID;
-      console.log(userID);
-      var password=jsonObj.password;
-      console.log(password);
-      if(!zuserID(userID,password)){
+      var ACCOUNT_KEY='accounts';
+      var accounts=store.get(ACCOUNT_KEY,[]);
+      if(accounts==''){
+        $("#shouJiF").show();
+        $('#userID').removeClass('borderGreen');
+        $('#userID').addClass('borderRed');
+        setTimeout('$("#shouJiF").hide()',3000);
         return false;
       }
-      var ACCOUNT_KEY = 'login';
-      var login=true;
-      store.update(ACCOUNT_KEY,login);
-      $('#logSuccess').show();
-      setTimeout('$("#logSuccess").hide()',3000);
-      window.location.href="../account/XMSC.html";
-     // return false;
+      for(var i=0,len=accounts.length;i<len;i++){
+        var userID=accounts[i].userID;
+        var password=accounts[i].password;
+        if(!zuserID(userID,password)){
+         continue;
+        }
+        else {
+          var ACCOUNT_KEY2 = 'login';
+          var login=true;
+          store.update(ACCOUNT_KEY2,login);
+          var ACCOUNT_KEY3 = 'loginUser';
+          var loginUser=userID;
+          store.update(ACCOUNT_KEY3,loginUser);
+          console.log(loginUser);
+          $('#logSuccess').show();
+          setTimeout('$("#logSuccess").hide()',3000);
+          window.location.href="../account/XMSC.html";
+        }
+      }
+      return false;
     });
+
+    /**
+     * 用户名、密码
+     * 焦点验证
+     * */
     $('#userID').blur(function () {
+      $("#tip5").hide();
       var x=$('#userID').val();
       var phone=/^1[3578]\d{9}$/;
       if(x==null||x=="") {
@@ -78,7 +110,7 @@
     });
     $('#password').blur(function () {
       var x=$('#password').val();
-      var patrn=/^(\w){6,16}$/;
+      var patrn=/^(\w){6,18}$/;
       if(x==null||x=="") {
         $('#tip3').show();
         $('#tip4').hide();
@@ -100,5 +132,6 @@
         return true;
       }
     });
+
   })
 })();

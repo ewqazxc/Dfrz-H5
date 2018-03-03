@@ -50,25 +50,41 @@
       var x=$('#password').val();
       var patrn=/^(\w){6,16}$/;
       if(x==''||x==null){
-        alert('密码为空');
+        $('#password').removeClass('borderGreen');
+        $('#password').addClass('borderRed');
+        $('#mimaK').show();
+        setTimeout('$("#mimaK").hide()',3000);
         return false
       }
       else if(!patrn.exec(x)){
-        alert('密码格式错误！');
+        $('#password').removeClass('borderGreen');
+        $('#password').addClass('borderRed');
+        $('#mimaF').show();
+        setTimeout('$("#mimaF").hide()',3000);
         return false;
       }
+      $('#password').removeClass('borderRed');
+      $('#password').addClass('borderGreen');
       return true;
     },
     zPasswordS:function () {
       var x=$('#passwordS').val();
       if(x==''||x==null){
-        alert('确认密码为空');
+        $('#passwordS').removeClass('borderGreen');
+        $('#passwordS').addClass('borderRed');
+        $('#mimaSK').show();
+        setTimeout('$("#mimaSK").hide()',3000);
         return false
       }
       else if(x!=$('#password').val()){
-        alert('密码不一致');
+        $('#passwordS').removeClass('borderGreen');
+        $('#passwordS').addClass('borderRed');
+        $('#mimaSF').show();
+        setTimeout('$("#mimaSF").hide()',3000);
         return false
       }
+      $('#passwordS').removeClass('borderRed');
+      $('#passwordS').addClass('borderGreen');
       return true;
     },
     cutTel:function (value) {

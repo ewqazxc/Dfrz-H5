@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>收货地址</title>
+  <link rel="stylesheet" href="../bowers/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/personal.css">
+  <link rel="stylesheet" href="../styles/address.css">
+  <script src="../bowers/jquery/dist/jquery.js"></script>
+  <script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/xc.js"></script>
+  <script src="../scripts/dfrz-store.js"></script>
+  <script src="../scripts/JSaddress.js"></script>
+  <script src="../scripts/address.js"></script>
+  <script type="text/javascript">
+    //省市区三级联动，JS数据
+    $(function () {
+      addressInit('changeProvince', 'changeCity', 'changeArea');
+    });
+  </script>
+  <script>
+    //省市区三级联动，本地JSON数据
+    $(function () {
+      var Area = [];
+
+      /**
+       * 获取地区数据
+       * */
+      $.getJSON('../JSON/area.json', function (data) {
+        //console.log(data);
+        Area = data;
+        var html = '';
+        var html2 = '';
+        var html3 = '';
+        for (var i = 0, len = Area.length; i < len; i++) {
+          html += '<option value="' + i + '">' + Area[i].name + '</option>';
+        }
+        $('#cmbProvince').html(html);
+        var val = $('#cmbProvince')[0].value;
+        for (var i = 0, len = Area[val].cityList.length; i < len; i++) {
+          html2 += '<option value="' + i + '">' + Area[val].cityList[i].name + '</option>';
+        }
+        $('#cmbCity').html(html2);
+        var val2 = $('#cmbCity')[0].value;
+        for (var i = 0, len = Area[val].cityList[val2].areaList.length; i < len; i++) {
+          html3 += '<option value="' + i + '">' + Area[val].cityList[val2].areaList[i] + '</option>';
+        }
+        $('#cmbArea').html(html3);
+      });
+
+      /**
+       * 改变省份时，后续联动
+       * */
+      $('#cmbProvince').on('change', function () {
+        var x = $('#cmbProvince')[0].value;
+        var html = '';
+        for (var i = 0, len = Area[x].cityList.length; i < len; i++) {
+          html += '<option value="' + i + '">' + Area[x].cityList[i].name + '</option>';
+        }
+        $('#cmbCity').html(html);
+        var y = $('#cmbCity')[0].value;
+        var html2 = '';
+        for (var i = 0, len = Area[x].cityList[y].areaList.length; i < len; i++) {
+          html2 += '<option value="' + i + '">' + Area[x].cityList[y].areaList[i] + '</option>';
+        }
+        $('#cmbArea').html(html2);
+      });
+
+      /**
+       * 改变城市时，后续联动
+       * */
+      $('#cmbCity').on('change', function () {
+        var x = $('#cmbProvince')[0].value;
+        var y = $('#cmbCity')[0].value;
+        var html = '';
+        for (var i = 0, len = Area[x].cityList[y].areaList.length; i < len; i++) {
+          html += '<option value="' + i + '">' + Area[x].cityList[y].areaList[i] + '</option>';
+        }
+        $('#cmbArea').html(html);
+      })
+    });
+  </script>
+</head>
+<body>
+<!--弹出框-->
+<div>
+  <div id="delSure" class="sureK">
+    <h3>是否删除当前地址信息？</h3>
+    <div class="text-center">
+      <button id="sureDel">删除</button>
+      <button id="sureCel">取消</button>
+    </div>
+  </div>
+</div>
+<header>
+  @@include('/XMSC/app/include/header.html')
+</header>
+<content>
+  <div id="content" class="row">
+    <!--Logo-->
+    <div id="logo-1" class="text-left col-md-1 col-xs-1">
+      <a href="https://www.mi.com/index.html" target="_blank">
+        <img src="../images/logo-XM.png" alt=""></a></div>
+    <!--商品类别导航-->
+    <div id="header" class="col-md-8 col-xs-8">
+      <ul class="nav nav-pills pull-right">
+        <li id="dropD1" class="dropdown">
+          <a class=" dropdown-toggle" data-toggle="hover"
+             aria-haspopup="true" aria-expanded="true" href="#">全部商品分类</a>
+          <div style="width: 236px;left: -135px;top: 70px;" class="dropdown-menu" aria-labelledby="dropD1">
+            <p><a href="">手机 电话卡</a></p>
+            <p><a href="">笔记本 平板</a></p>
+            <p><a href="../shopping/TV.html">电视盒子</a></p>
+            <p><a href="../shopping/Smart.html">路由器 智能硬件</a></p>
+            <p><a href="">移动电源 电池 插线板</a></p>
+            <p><a href="">耳机</a></p>
+            <p><a href="">音箱</a></p>
+            <p><a href="">保护套 贴膜</a></p>
+            <p><a href="">线材 支架 存储卡</a></p>
+            <p><a href="">箱包 服饰 鞋 眼镜</a></p>
+            <p><a href="">米兔 生活周边</a></p>
+          </div>
+        </li>
+        <li id="collD1">
+          <a href="#collM1" data-id="0" data-target="#collM1" data-collapse-trigger="hover"
+             aria-expanded="true" aria-controls="collM1">小米手机</a>
+        </li>
+        <li id="dropD2" class="dropdown">
+          <a class=" dropdown-toggle" data-toggle="hover"
+             aria-haspopup="true" aria-expanded="true" href="#">红米</a>
+          <div style="width: 1200px;left: -350px" class="dropdown-menu" aria-labelledby="dropD2">
+            <div class="row text-center">
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">平板·笔记本</a></li>
+        <li><a href="../shopping/TV.html">电视</a></li>
+        <li><a href="../shopping/TV.html">盒子·影音</a></li>
+        <li><a href="../shopping/Smart.html">路由器</a></li>
+        <li><a href="../shopping/Smart.html">硬件</a></li>
+        <li><a href="#">服务</a></li>
+        <li><a href="#">社区</a></li>
+      </ul>
+    </div>
+    <!--搜索框-->
+    <div class="col-md-3 col-xs-3 header-search">
+      <div class="input-group" style="width: 250px;height: 50px;left:30px;top:20px;">
+        <input type="text" class="form-control" placeholder="查找商品..."
+               style="width: 200px;height: 50px">
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-default-x" type="button"
+                  style="width: 50px;height: 50px">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+    <!--折叠下拉框-->
+    <div class="collapse col-md-12 col-xs-12 " id="collM1">
+      <div class="row text-center">
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contanier" class="container-fluid">
+    <div id="content-1" class="row">
+      <!--路径导航-->
+      <ul id="nav-1" class="breadcrumb col-md-12 col-xs-12">
+        <li role="presentation"><a href="#">首页</a></li>
+        <li role="presentation"><a href="#">收货地址</a></li>
+      </ul>
+      <!--左侧导航-->
+      <div id="per-aside" class="col-xs-3 col-md-3">
+        <div class="col-md-12 col-xs-12">
+          <ul class="col-md-12 col-xs-12">订单中心
+            <li><a href="../shopping/order.html">我的订单</a></li>
+            <li><a href="#">意外保</a></li>
+            <li><a href="#">团购订单</a></li>
+            <li><a href="../shopping/orderPing.html">评价晒单</a></li>
+            <li><a href="#">话费充值订单</a></li>
+            <li><a href="#">以旧换新订单</a></li>
+          </ul>
+          <ul class="col-md-12 col-xs-12">个人中心
+            <li><a href="../account/personal.html">我的个人中心</a></li>
+            <li><a href="#">消息通知</a></li>
+            <li><a href="#">购买资格</a></li>
+            <li><a href="#">现金账户</a></li>
+            <li><a href="#">小米礼品卡</a></li>
+            <li><a href="#">现金券</a></li>
+            <li><a href="#">喜欢的商品</a></li>
+            <li><a href="#">优惠券</a></li>
+            <li><a href="../account/address.html">收货地址</a></li>
+          </ul>
+          <ul class="col-md-12 col-xs-12">售后服务
+            <li><a href="#">服务记录</a></li>
+            <li><a href="#">申请服务</a></li>
+            <li><a href="#">领取快递报销</a></li>
+          </ul>
+          <ul class="col-md-12 col-xs-12">账户管理
+            <li><a href="../account/account.html" target="_blank">个人信息</a></li>
+            <li><a href="#">修改密码</a></li>
+            <li><a href="#">社区VIP认证</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--右侧主内容-->
+      <div id="address" class="col-xs-9 col-md-9">
+        <h2>收货地址</h2>
+        <div class="addressAdd col-xs-3 col-md-3 text-center btn " data-toggle="modal"
+             data-target="#addressModal">
+          <p><strong class="glyphicon glyphicon-plus-sign"></strong></p>
+          <p>添加新地址</p>
+        </div>
+        <!--添加地址-模态框-->
+        <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="ModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="ModalLabel">添加收货地址</h4>
+              </div>
+              <div class="modal-body row">
+                <div class="col-md-6 col-xs-6">
+                  <input id="adrName" class="" type="text" placeholder="* 姓名" maxlength="20">
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <input id="adrTel" type="text" placeholder="* 手机号" minlength="11" maxlength="11" required>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-4 col-xs-4 text-center">
+                  <select id="cmbProvince" name="cmbProvince">
+                  </select>
+
+                </div>
+                <div class="col-md-4 col-xs-4 text-center">
+                  <select id="cmbCity" name="cmbCity">
+
+                  </select></div>
+                <div class="col-md-4 col-xs-4 text-center">
+                  <select id="cmbArea" name="cmbArea">
+
+                  </select>
+                </div>
+                <div class="col-md-12 col-xs-12">
+                  <textarea name="" id="adrAddress" rows="6" placeholder="* 详细地址"></textarea>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <input id="adrCode" type="text" placeholder="邮政编码" maxlength="6">
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <input id="adrTip" type="text" placeholder="地址标签" maxlength="20">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <div class="col-md-6 col-xs-6 text-right">
+                  <button id="adrBtnSave">保存</button>
+                </div>
+                <div class="col-md-6 col-xs-6 text-left">
+                  <button data-dismiss="modal" aria-label="close">取消</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--修改地址-模态框-->
+        <div class="modal fade" id="addressChange" tabindex="-1" aria-labelledby="ModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="ModalLabe2">修改收货地址</h4>
+              </div>
+              <div class="modal-body row">
+                <div class="col-md-6 col-xs-6">
+                  <input id="changeName" class="" type="text" placeholder="* 姓名" maxlength="20">
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <input id="changeTel" type="text" placeholder="* 手机号" minlength="11" maxlength="11" required>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-4 col-xs-4 text-center">
+                  <select id="changeProvince" name="changeProvince"></select></div>
+                <div class="col-md-4 col-xs-4 text-center">
+                  <select id="changeCity" name="changeCity"></select></div>
+                <div class="col-md-4 col-xs-4 text-center">
+                  <select id="changeArea" name="changeArea"></select>
+                </div>
+                <div class="col-md-12 col-xs-12">
+                  <textarea name="" id="changeAddress" rows="6" placeholder="详细地址"></textarea>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <input id="changeCode" type="text" placeholder="邮政编码" maxlength="6">
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <input id="changeTip" type="text" placeholder="地址标签" maxlength="20">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <div class="col-md-6 col-xs-6 text-right">
+                  <button id="changeBtnSave">保存</button>
+                </div>
+                <div class="col-md-6 col-xs-6 text-left">
+                  <button data-dismiss="modal" aria-label="close">取消</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<footer>
+  @@include('/XMSC/app/include/footer.html')
+</footer>
+</body>
+</html>

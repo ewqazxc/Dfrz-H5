@@ -1,85 +1,202 @@
-.bgf5{
+.bgf5 {
   width: 100%;
   min-height: 30px;
   background-color: #F5F5F5;
 }
-#moreSmart,#allSmart{
+
+#moreSmart, #allSmart {
   width: 1225px;
   height: 40px;
   background-color: #F5F5F5;
   margin: 0 auto;
 }
-#moreSmart>div>div{
+
+#moreSmart > div > div {
   margin-bottom: 20px;
 }
-#moreSmart .breadcrumb a{
+
+#moreSmart .breadcrumb a {
   font-size: small;
 }
-#moreSmart .breadcrumb li+li:before{
+
+#moreSmart .breadcrumb li + li:before {
   content: ">";
 }
-#allSmart .breadcrumb li+li:before{
+
+#allSmart .breadcrumb li + li:before {
   padding: 0 20px;
   content: "|";
 }
-#allSmart .breadcrumb{
+
+#allSmart .breadcrumb {
   margin-bottom: 0;
 }
-#sortSmart,#paiSmart,#allSmartAd{
+
+#sortSmart, #paiSmart, #allSmartAd {
   width: 1225px;
   margin: 0 auto;
   background-color: white;
   min-height: 45px;
 }
 
-#sortSmart{
+#sortSmart {
   padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
   margin-bottom: 10px;
 }
-#paiSmart p{
+
+#paiSmart p {
   color: #FF6700;
 }
-#sortSmart a,#paiSmart a{
+
+#sortSmart a, #paiSmart a {
   color: black;
 }
-#sortSmart a:hover,#paiSmart a:hover{
+
+#sortSmart a:hover, #paiSmart a:hover {
   color: #FF6700;
 }
-#sortSmart div.well,#paiSmart div.well{
+
+#sortSmart div.well, #paiSmart div.well {
   width: 1225px;
   border: none;
   padding: 0;
-  box-shadow:none;
+  box-shadow: none;
 }
-.well{background-color: transparent}
-.well>div{
+
+.well {
+  background-color: transparent
+}
+
+.well > div {
   margin-bottom: 10px;
 }
-.well>div:first-child{margin-top: 10px}
-.typeNav{
+
+.well > div:first-child {
+  margin-top: 10px
+}
+
+.typeNav {
   height: 40px;
   line-height: 40px;
   list-style: none;
 }
-.typeNav li{
+
+.typeNav li {
   display: inline-block;
 }
-.imgMini{width: 34px;height: 34px;margin: 0 auto;border: 1px solid #ccc}
-.imgMini:hover{border: 1px solid #FF6700;}
-#allSmartAd{background-color: #F5F5F5;}
-#allSmartAd strong{color: #FF6700;}
-#allSmartAd del{color: #CCCCCC;}
-#pageNav a{display: block;width: 48px;height: 30px;line-height:30px;font-size: 24px;}
-#pageNav a:hover{color: white;background-color: #CCCCCC}
-#pageNav a.active{color: white;background-color: #CCCCCC}
-#pageNav .glyphicon{top:4px;}
-#alsoSee{width: 1225px;margin: 20px auto;border-top: 1px solid darkgray}
-#alsoSeeWord{
-  width: 420px;height: 48px;background-color: #F5F5F5;
-  line-height: 48px;font-size: 44px;;
-  font-family: 黑体;position: relative;top: -25px;left: 50%;margin-left: -210px}
-#alsoSee .thumbnail{min-height: 300px}
-#alsoSee .thumbnail button{width: 120px;height: 30px;border: 1px solid #FF6700;color: #FF6700;
-  line-height: 30px;background-color: white}
-#alsoSee .thumbnail button:hover{border: 1px solid #FF6700;color: white;background-color: #FF6700;}
+
+.imgMini {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto;
+  border: 1px solid #ccc
+}
+
+.imgMini:hover {
+  border: 1px solid #FF6700;
+}
+
+#allSmartAd {
+  background-color: #F5F5F5;
+}
+
+#allSmartAd strong {
+  color: #FF6700;
+}
+
+#allSmartAd del {
+  color: #CCCCCC;
+}
+
+#pageNav a {
+  display: block;
+  width: 48px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 24px;
+}
+
+#pageNav a:hover {
+  color: white;
+  background-color: #CCCCCC
+}
+
+#pageNav a.active {
+  color: white;
+  background-color: #CCCCCC
+}
+
+#pageNav .glyphicon {
+  top: 4px;
+}
+
+#alsoSee {
+  width: 1225px;
+  margin: 20px auto;
+  border-top: 1px solid darkgray
+}
+
+#alsoSeeWord {
+  width: 420px;
+  height: 48px;
+  background-color: #F5F5F5;
+  line-height: 48px;
+  font-size: 44px;;
+  font-family: 黑体;
+  position: relative;
+  top: -25px;
+  left: 50%;
+  margin-left: -210px
+}
+
+#alsoSee .thumbnail {
+  min-height: 300px
+}
+
+#alsoSee .thumbnail button {
+  width: 120px;
+  height: 30px;
+  border: 1px solid #FF6700;
+  color: #FF6700;
+  line-height: 30px;
+  background-color: white
+}
+
+#alsoSee .thumbnail button:hover {
+  border: 1px solid #FF6700;
+  color: white;
+  background-color: #FF6700;
+}
+
+.bottomT {
+  width: 100%;
+  height: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+  background: white;
+}
+
+.bottomT.bgRed {
+  background-color: red;
+}
+
+.bottomT.bgGreen {
+  background-color: green;
+}
+
+.bottomT.bgYellow {
+  background-color: #FFAC13;
+}
+
+.radioZ {
+  width: 18px;
+  height: 18px;
+  border: 1px solid black;
+  color: transparent
+}
+
+.radioZ:hover {
+  color: #FF6700;
+}

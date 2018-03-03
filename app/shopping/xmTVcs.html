@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>小米电视4A 32英寸</title>
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/xmTVcs.css">
+  <script src="../bowers/jquery/dist/jquery.js"></script>
+  <script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/xc.js"></script>
+  <script src="../scripts/dfrz-store.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      var nav = $("#xmTvNav"); //得到导航对象
+      var win = $(window); //得到窗口对象
+      var sc = $(document);//得到document文档对象。
+      win.scroll(function () {
+        if (sc.scrollTop() >= 220) {
+          nav.addClass("fixednav");
+          $("#xmTvNav").fadeIn();
+        } else {
+          nav.removeClass("fixednav");
+          //$("#xmTvNav").fadeOut();
+        }
+      })
+    })
+  </script>
+</head>
+<body>
+<header>
+  <div id="adTop" class="site-ad-bar container-fluid"></div>
+<div class="site-nav-bar container-fluid">
+  <div id="nav" class="row">
+    <div class="col-md-6 col-xs-6">
+      <ul style="margin-bottom: 0">
+        <li><a href="/XMSC/app/account/XMSC.html" target="_blank">小米商城</a></li>
+        <li><a href="#">MIUI</a></li>
+        <li><a href="#">米聊</a></li>
+        <li><a href="#">游戏</a></li>
+        <li><a href="#">多看阅读</a></li>
+        <li><a href="#">云服务</a></li>
+        <li><a href="#">金融</a></li>
+        <li><a href="#">小米商城手机版</a></li>
+        <li><a href="#">问题反馈</a></li>
+        <li><a href="#">Select Region</a></li>
+      </ul>
+    </div>
+    <div id="isLogin" class="col-md-5 col-xs-5 text-right">
+      <div id="loginNav">
+        <div class="dropdown pull-right">
+          <div id="dropdownMenuPer" class="dropdown-toggle" data-toggle="hover"
+               aria-haspopup="true" aria-expanded="true">
+            <a id="navTel" href="">XM <span class="glyphicon glyphicon-triangle-bottom"></span></a></div>
+          <div id="dropPer" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuPer">
+            <p><a href="/XMSC/app/account/personal.html">个人中心</a></p>
+            <p><a href="/XMSC/app/shopping/orderPing.html">评价晒单</a></p>
+            <p><a href="#">我的喜欢</a></p>
+            <p><a href="/XMSC/app/account/account.html" target="_blank">小米账户</a></p>
+            <p><a id="logout" href="#">退出登录</a></p>
+          </div>
+        </div>
+        <a href="">消息通知</a>
+        <a href="/XMSC/app/shopping/order.html">我的订单</a>
+      </div>
+    </div>
+    <div id="noLogin" class="col-md-5 col-xs-5 text-right">
+      <a href="/XMSC/app/account/login.html" target="_blank">登陆</a>
+      <a href="/XMSC/app/account/register.html" target="_blank">注册</a>
+    </div>
+    <div class="dropdown col-md-1 col-xs-1 text-right">
+      <div class="dropdown-toggle" id="dropdownMenu1" data-toggle="hover"
+           aria-haspopup="true" aria-expanded="true">
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        购物车<span class="caret"></span>
+      </div>
+      <div id="shop-car" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+        <div class="row">
+          <table>
+            <tbody>
+            </tbody>
+            <tfoot>
+            <tr>
+              <td colspan="2" class="text-center">
+                <small>共有<strong>6</strong>件商品</small>
+                <strong id="tota2">1</strong></td>
+              <td id="goToCart" class="text-center">马上结算</td>
+            </tr>
+            </tfoot>
+          </table>
+          <div id="noneShop" class="text-center">购物车中还没有商品，赶紧选购吧！</div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+</header>
+<content>
+  <div id="content" class="row">
+    <!--Logo-->
+    <div id="logo-1" class="text-left col-md-1 col-xs-1">
+      <a href="https://www.mi.com/index.html" target="_blank">
+        <img src="../images/logo-XM.png" alt=""></a></div>
+    <!--商品导航-->
+    <div id="header" class="col-md-8 col-xs-8">
+      <ul class="nav nav-pills pull-right">
+        <li id="dropD1" class="dropdown">
+          <a class=" dropdown-toggle" data-toggle="hover"
+             aria-haspopup="true" aria-expanded="true" href="#">全部商品分类</a>
+          <div style="width: 236px;left: -135px;top: 70px;" class="dropdown-menu" aria-labelledby="dropD1">
+            <p><a href="">手机 电话卡</a></p>
+            <p><a href="">笔记本 平板</a></p>
+            <p><a href="../shopping/TV.html">电视盒子</a></p>
+            <p><a href="../shopping/Smart.html">路由器 智能硬件</a></p>
+            <p><a href="">移动电源 电池 插线板</a></p>
+            <p><a href="">耳机</a></p>
+            <p><a href="">音箱</a></p>
+            <p><a href="">保护套 贴膜</a></p>
+            <p><a href="">线材 支架 存储卡</a></p>
+            <p><a href="">箱包 服饰 鞋 眼镜</a></p>
+            <p><a href="">米兔 生活周边</a></p>
+          </div>
+        </li>
+        <li id="collD1">
+          <a href="#collM1" data-id="0" data-target="#collM1" data-collapse-trigger="hover"
+             aria-expanded="true" aria-controls="collM1">小米手机</a>
+        </li>
+        <li id="dropD2" class="dropdown">
+          <a class=" dropdown-toggle" data-toggle="hover"
+             aria-haspopup="true" aria-expanded="true" href="#">红米</a>
+          <div style="width: 1200px;left: -350px" class="dropdown-menu" aria-labelledby="dropD2">
+            <div class="row text-center">
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">平板·笔记本</a></li>
+        <li><a href="../shopping/TV.html">电视</a></li>
+        <li><a href="../shopping/TV.html">盒子·影音</a></li>
+        <li><a href="../shopping/Smart.html">路由器</a></li>
+        <li><a href="../shopping/Smart.html">硬件</a></li>
+        <li><a href="#">服务</a></li>
+        <li><a href="#">社区</a></li>
+      </ul>
+    </div>
+    <!--搜素框-->
+    <div class="col-md-3 col-xs-3 header-search">
+      <div class="input-group" style="width: 250px;height: 50px;left:30px;top:20px;">
+        <input type="text" class="form-control" placeholder="查找商品..."
+               style="width: 200px;height: 50px">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-default-x" type="button"
+                                    style="width: 50px;height: 50px">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+      </div>
+    </div>
+    <!--折叠下拉框-->
+    <div class="collapse col-md-12 col-xs-12 " id="collM1">
+      <div class="row text-center">
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--附加导航-->
+  <div id="xmTvNav" class="row">
+    <div class="col-md-6 col-xs-6">
+      <h3>小米电视4A 32英寸
+        <small><a href="">小米电视4A 32英寸</a></small>
+      </h3>
+    </div>
+    <div class="col-md-6 col-xs-6 text-right">
+      <ul class="breadcrumb">
+        <li><a href="../shopping/xmTV.html">概述</a></li>
+        <li><a class="active" href="../shopping/xmTVcs.html">参数</a></li>
+        <li><a href="../shopping/xmTVFma.html">F码通道</a></li>
+        <li><a href="../shopping/xmTVfixServe.html">安装服务</a></li>
+        <li><a href="../shopping/xmTVuserPing.html">用户评价</a></li>
+        <button>立即购买</button>
+      </ul>
+    </div>
+  </div>
+  <!--参数介绍-->
+  <div id="tvCsTop" class="row">
+    <div class="col-md-6 col-xs-6">
+      <img class="img-responsive pull-right" src="images/xmTVcs1.jpg" alt="">
+    </div>
+    <div class="col-md-3 col-xs-3">
+      <p>64位四核处理器</p>
+      <p>高清液晶屏</p>
+      <p>人工智能系统</p>
+      <p>立体声扬声器</p>
+    </div>
+    <div class="col-md-3 col-xs-3">
+      <p>1GB+4GB大内存</p>
+      <p>第6代画质引擎</p>
+      <p>海量影视资源</p>
+      <p>仅重4kg</p>
+    </div>
+  </div>
+  <div id="tvCsContent">
+    <div class="tvcs row">
+        <div class="col-md-3 col-xs-3">
+          <h3>显示参数</h3>
+        </div>
+      <div class="col-md-3 col-xs-3">
+        <h4>分辨率：<small>1366x768</small></h4>
+        <h4>背光：<small>直下式</small></h4>
+        <h4>可视角度：<small>178°</small></h4>
+      </div>
+      <div class="col-md-6 col-xs-6">
+        <h4>动态响应：<small>6.5毫秒</small></h4>
+        <h4>静态对比度：<small>3000:1</small></h4>
+        <h4>刷新率：<small>60Hz</small></h4>
+      </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>处理器和存储</h3>
+      </div>
+      <div class="col-md-2 col-xs-2">
+        <div class="imgCpu">
+          <p>Amlogic<br>
+            962-SX</p>
+        </div>
+      </div>
+      <div class="col-md-7 col-xs-7">
+        <h4>CPU：<small>64位 Cortex A53 四核 1.5GHz</small></h4>
+        <h4>GPU：<small>Mali-450 MP3 up to 750MHz</small></h4>
+        <h4>内存：<small>1GB</small></h4>
+        <h4>闪存：<small>4GB</small></h4>
+      </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>无线配置</h3>
+      </div>
+      <div class="col-md-9 col-xs-9">
+        <h4>WiFi：<small>支持 802.11 b/g/n</small></h4>
+        </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>接口及数量</h3>
+      </div>
+      <div class="col-md-9 col-xs-9">
+        <h4>HDMI：<small>2个（含一个ARC）</small></h4>
+        <h4>音频输出：<small>S/PDIF x 1个</small></h4>
+        <h4>AV：<small>1个</small></h4>
+        <h4>模拟信号DTMB：<small>1个</small></h4>
+        <h4>USB：<small>1个</small></h4>
+        <h4>以太网：<small>1个</small></h4>
+      </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>影音播放性能</h3>
+      </div>
+      <div class="col-md-9 col-xs-9">
+        <h4>内置播放器：<small>内置 Mi-Player 全格式播放器</small></h4>
+                        <p>支持 RM、FLV、MOV、AVI、MKV、TS、MP4 等全部主流格式</p>
+        <h4>视频解码：<small>支持H.263、H.264、H.265、MPEG1/2/4、WMV3、VC-1</small></h4>
+        <h4>音频解码：<small>立体声</small></h4>
+      </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>扬声器</h3>
+      </div>
+      <div class="col-md-9 col-xs-9">
+        <h4><small>跑道型高灵敏度立体声扬声器 2X5W</small></h4>
+      </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>电视尺寸重量</h3>
+      </div>
+      <div class="col-md-5 col-xs-5 text-center">
+      <img class="img-responsive center-block" src="../shopping/images/xmTVchicun1.jpg" alt="">
+        <h4><small>裸机不含底座重 3.9kg </small></h4>
+        <h4><small>裸机含底座重 3.94kg</small></h4>
+      </div>
+      <div class="col-md-4 col-xs-4 text-center">
+        <img class="img-responsive center-block" src="../shopping/images/xmTVchicun2.jpg" alt="">
+        <h4><small>底座宽度 180mm</small></h4>
+      </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>壁挂尺寸</h3>
+      </div>
+      <div class="col-md-5 col-xs-5">
+        <h4>支持壁挂，如有需要请拨打4001005678<small></small></h4>
+        <h4><small>注：螺丝直径、长度视产品型号而异，为了避</small></h4>
+        <h4><small>免产品内部损伤，建议您使用专用壁挂架。</small></h4>
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <img class="img-responsive" src="../shopping/images/xmTVbigua.png" alt="">
+      </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>电源和操作环境</h3>
+      </div>
+      <div class="col-md-3 col-xs-3">
+        <h4>电压：<small>220V~ 50/60Hz</small></h4>
+        <h4>待机：<small>≤0.50W</small></h4>
+        <h4>能效：<small>3级</small></h4>
+        <h4>工作温度：<small>0℃～45℃</small></h4>
+      </div>
+      <div class="col-md-3 col-xs-3">
+        <h4>湿度：<small>20%～80%</small></h4>
+        <h4>存储温度：<small>-15℃～45℃</small></h4>
+        <h4>相对湿度：<small><80%</small></h4>
+      </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>操作系统</h3>
+      </div>
+      <div class="col-md-1 col-xs-1">
+        <img class="img-responsive" src="../shopping/images/xmTVos.png" alt="">
+        <h4>PatchWall<small></small></h4>
+      </div>
+      <div class="col-md-8 col-xs-8">
+        <h4><small>更多内容，更短的看片路径。让您更快速找到自己想看的片子。</small></h4>
+        <h4><small>保持了MIUI一贯简洁实用的设计风格，并变得更加聪明。</small></h4>
+      </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>内置APP</h3>
+      </div>
+      <div class="col-md-9 col-xs-9">
+        <dl class="imgApp">
+          <dd class="dd1"></dd>
+          <dt>在线视频</dt>
+        </dl>
+        <dl class="imgApp">
+          <dd class="dd2"></dd>
+          <dt>日历</dt>
+        </dl>
+        <dl class="imgApp">
+          <dd class="dd3"></dd>
+          <dt>游戏中心</dt>
+        </dl>
+        <dl class="imgApp">
+          <dd class="dd4"></dd>
+          <dt>高清播放器</dt>
+        </dl>
+        <dl class="imgApp">
+          <dd class="dd5"></dd>
+          <dt>时尚画报</dt>
+        </dl>
+        <dl class="imgApp">
+          <dd class="dd6"></dd>
+          <dt>米果音乐</dt>
+        </dl>
+        <dl class="imgApp">
+          <dd class="dd7"></dd>
+          <dt>天气</dt>
+        </dl>
+        <dl class="imgApp">
+          <dd class="dd8"></dd>
+          <dt>应用商店</dt>
+        </dl>
+        <dl class="imgApp">
+        <dd class="dd9"></dd>
+        <dt>电视管家</dt>
+      </dl>
+
+
+      </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>智能互联功能</h3>
+      </div>
+        <div class="col-md-9 col-xs-9">
+          <dl class="imgApp">
+            <dd class="dd10"></dd>
+            <dt>投屏神器</dt>
+            <dt>手机应用</dt>
+          </dl>
+          <dl class="imgApp">
+            <dd class="dd11"></dd>
+            <dt>小米路由器</dt>
+          </dl>
+          <dl class="imgApp">
+            <dd class="dd12"></dd>
+            <dt>米家摄像头</dt>
+          </dl>
+          <dl class="imgApp">
+            <dd class="dd13"></dd>
+            <dt>小米空气净化器</dt>
+          </dl>
+          <dl class="imgApp">
+            <dd class="dd14"></dd>
+            <dt>小米智能插座</dt>
+          </dl>
+          <dl class="imgApp">
+            <dd class="dd15"></dd>
+            <dt>小米手环</dt>
+          </dl>
+          <dl class="imgApp">
+            <dd class="dd16"></dd>
+            <dt>小米净水器</dt>
+          </dl>
+        </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-3 col-xs-3">
+        <h3>包装内容</h3>
+      </div>
+      <div class="col-md-9 col-xs-9">
+        <h4>屏幕：<small>1个</small></h4>
+        <h4>支架：<small>2个</small></h4>
+        <h4>安装说明：<small>1份</small></h4>
+        <h4>遥控器：<small>红外遥控器</small></h4>
+        <h4>螺丝：<small>4颗</small></h4>
+        <h4><small>该电视不支持蓝牙语音遥控器</small></h4>
+      </div>
+    </div>
+    <div class="tvcs row">
+      <div class="col-md-12 col-xs-12">
+       <span>数据说明：*该电视含开关机等形式的广告，开关机时的广告视频不能删除、更改，
+         且第三方内容的广告视频无法控制；千元新旗舰：仅限小米旗舰店商品；
+         1GB RAM+4GB ROM 大内存：1GB RAM：由于安装操作系统占据了部分空间，实际可用空间小于1GB，
+         4GB ROM：由于安装操作系统和预装的程序占据了部分存储空间，实际可用存储空间小于4GB；
+         轻至4kg：整机重量（含脚架，不含其它物料）重3.94kg，约等于4kg；
+         34万分钟全球30个国家和地区优质动画：小米电视的动画库最新数量为34万；
+         该电视不支持蓝牙及蓝牙语音遥控器。</span>
+      </div>
+    </div>
+  </div>
+</content>
+<footer style="background-color: white">
+  <div class="container-fluid">
+  <div id="content-2" class="row">
+    <ul class="col-md-12 col-xs-12 nav nav-pills">
+      <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
+        class="glyphicon glyphicon-wrench"></i>
+        预约维修服务</a></li>
+      <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
+        class="glyphicon glyphicon-repeat"></i> 7天无理由退换货</a></li>
+      <!--<li class="col-md-2 col-xs-2 text-center" role="presentation">
+      <a href="#"><i class="glyphicon glyphicon-refresh"></i>15天免费换货</a></li>-->
+      <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
+        class="glyphicon glyphicon-gift"></i>
+        满150元包邮</a></li>
+      <li class="col-md-3 col-xs-3 text-center" role="presentation"><a href="#"><i
+        class="glyphicon glyphicon-map-marker"></i> 520余家售后网点</a></li>
+    </ul>
+    <div class="col-md-9 col-xs-9">
+      <div id="help-nav" class="row text-center">
+        <ul class="col-md-2">帮助中心
+          <li><a href="#">账户管理</a></li>
+          <li><a href="#">购物指南</a></li>
+          <li><a href="#">订单操作</a></li>
+        </ul>
+        <ul class="col-md-2">服务支持
+          <li><a href="#">售后政策</a></li>
+          <li><a href="#">订单操作</a></li>
+          <li><a href="#">订单操作</a></li>
+        </ul>
+        <ul class="col-md-2">线下门店
+          <li><a href="#">售后政策</a></li>
+          <li><a href="#">订单操作</a></li>
+          <li><a href="#">订单操作</a></li>
+        </ul>
+        <ul class="col-md-2">关于小米
+          <li><a href="#">售后政策</a></li>
+          <li><a href="#">订单操作</a></li>
+          <li><a href="#">订单操作</a></li>
+        </ul>
+        <ul class="col-md-2">关注我们
+          <li><a href="#">售后政策</a></li>
+          <li><a href="#">订单操作</a></li>
+          <li><a href="#">订单操作</a></li>
+        </ul>
+        <ul class="col-md-2">特色服务
+          <li><a href="#">售后政策</a></li>
+          <li><a href="#">订单操作</a></li>
+          <li><a href="#">订单操作</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-3 col-xs-3 text-center">
+      <h4>400-100-5678</h4>
+      <p>周一至周日 8：00-18:00</p>
+      <p>（仅收市话费）</p>
+      <button><span class="glyphicon glyphicon-bell"></span>24小时在线客服</button>
+    </div>
+  </div>
+</div>
+<div id="foot" class="container-fluid">
+  <div id="content-3" class="row">
+    <div class="col-xs-12 col-md-12">
+      <img src="/XMSC/app/images/logo-XM.png" alt="">
+      <small>
+        <ul id="nav-foot">
+          <li>小米旗下网站</li>
+          <li><a href="#">小米商城</a></li>
+          <li><a href="#">MIUI</a></li>
+          <li><a href="#">米聊</a></li>
+          <li><a href="#">多看书城</a></li>
+          <li><a href="#">小米路由器</a></li>
+          <li><a href="#">视频电话</a></li>
+          <li><a href="#">小米天猫店</a></li>
+          <li><a href="#">小米淘宝直营店</a></li>
+          <li><a href="#">小米网盟</a></li>
+          <li><a href="#">小米移动</a></li>
+          <li><a href="#">隐私政策</a></li>
+          <li><a href="#">Select Region</a></li>
+        </ul>
+      </small>
+      <br>
+      <small>©mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2014]0059-0009号</small>
+      <br>
+      <small>违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</small>
+    </div>
+    <div id="vlogo" class="col-xs-12 col-md-12 text-right">
+      <img style="width: 85px;height: 28px" src="/XMSC/app/images/Foot1.png" alt="">
+      <img src="/XMSC/app/images/Foot2.png" alt="">
+      <img src="/XMSC/app/images/Foot3.png" alt="">
+      <img src="/XMSC/app/images/Foot4.png" alt="">
+    </div>
+    <div id="Mtext" class="col-xs-12 col-md-12 text-center">
+      探索黑科技,小米为发烧而生!
+    </div>
+  </div>
+</div>
+
+</footer>
+</body>
+</html>

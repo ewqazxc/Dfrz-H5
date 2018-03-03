@@ -1,20 +1,33 @@
-#address{
+#address {
   background-color: white;
   padding-top: 20px;
 }
-.borderRed{border: 2px solid red}
-.borderGreen{border: 2px solid green}
-#addressModal p,#addressChange p{color: red;margin-right: 20px}
-.addressAdd{
+
+.borderRed {
+  border: 2px solid red
+}
+
+.borderGreen {
+  border: 2px solid green
+}
+
+#addressModal p, #addressChange p {
+  color: red;
+  margin-right: 20px
+}
+
+.addressAdd {
   width: 270px;
   height: 180px;
   padding-top: 80px;
   border: 1px solid #ccc;
   margin-top: 50px;
   margin-bottom: 30px;
+  margin-left: 20px;
   color: #ccc;
 }
-.address{
+
+.address {
   width: 270px;
   height: 180px;
   padding-top: 10px;
@@ -24,38 +37,91 @@
   color: #ccc;
   margin-left: 20px;
 }
-.address h3{margin-top: 0}
-.address p{margin-bottom: 5px}
-.address a:hover{color: #FF6700;}
-.addressAdd:hover{
+
+.address h3 {
+  margin-top: 0
+}
+
+.address p {
+  margin-bottom: 5px
+}
+
+.address a:hover {
+  color: #FF6700;
+}
+
+.addressAdd:hover {
   border: 1px solid #757575;
   color: #757575;
 }
-.addressAdd strong{
+
+.addressAdd strong {
   font-size: x-large;
 }
+
 #addressModal div.modal-footer button,
-#addressChange div.modal-footer button{
+#addressChange div.modal-footer button {
   width: 100px;
   height: 34px;
   background-color: #FF6700;
   color: white;
-  font-weight: bold;border: none;
+  font-weight: bold;
+  border: none;
 }
-#addressModal div.modal-body>div,
-#addressChange div.modal-body>div{
+
+#addressModal div.modal-body > div,
+#addressChange div.modal-body > div {
   margin-top: 20px;
 }
+
 #addressModal div.modal-body input[type=text],
-#addressChange div.modal-body input[type=text]{
-  width: 100%;height: 34px;
+#addressChange div.modal-body input[type=text] {
+  width: 100%;
+  height: 34px;
 }
+
 #addressModal textarea,
-#addressChange textarea{
-width: 100%;
+#addressChange textarea {
+  width: 100%;
 }
-#cmbProvince,#cmbCity,#cmbArea,
-#changeProvince,#changeCity,#changeArea{
+
+#cmbProvince, #cmbCity, #cmbArea,
+#changeProvince, #changeCity, #changeArea {
   width: 100%;
   height: 30px;
+}
+
+.sureK {
+  width: 330px;
+  height: 130px;
+  border: 1px solid silver;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  margin-top: -65px;
+  left: 50%;
+  margin-left: -165px;
+  z-index: 999;
+  display: none;
+  border-radius: 5px;
+}
+
+.sureK h3 {
+  padding-left: 10px;
+  font-family: 黑体;
+  margin-bottom: 30px;
+}
+
+.sureK button {
+  width: 80px;
+  height: 30px;
+  background-color: #FF6700;
+  color: white;
+  border: none;
+}
+
+.sureK button:hover {
+  background-color: white;
+  color: #FF6700;
+  border: 1px solid #FF6700;
 }

@@ -1,26 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <title>小米账号-账号安全</title>
-  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
-  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="../bowers/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="../styles/account.css">
-  <script src="../../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="../scripts/drrz-store.js"></script>
+  <script src="../bowers/jquery/dist/jquery.js"></script>
+  <script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../scripts/dfrz-store.js"></script>
   <script src="../scripts/account.js"></script>
-<!--  <script>
-    $(function () {
-      $('#signOut').on('click', function () {
-        console.log(localStorage);
-        var ACCOUNT_KEY = 'accountInfo';
-        store.remove(ACCOUNT_KEY);
-      });
-    })
-  </script>-->
+  <script src="../scripts/xc.js"></script>
+
 </head>
 <body>
+<!--头部Logo和退出-->
 <header>
   <div id="header" class="container">
     <div class="row">
@@ -33,8 +27,15 @@
     </div>
   </div>
 </header>
+<!--弹出的提示框-->
+<div>
+  <div class="noLoginK">
+    跳转至登录页中。。。
+  </div>
+</div>
 <content>
   <div id="content" class="container">
+    <!--修改信息模态框-->
     <div id="editInfo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editInfoMoal">
       <div id="editInfoMoal" class="modal-dialog" role="document">
         <div class="modal-header">
@@ -55,7 +56,18 @@
               <span>生日：</span>
             </div>
             <div class="col-md-7 col-xs-7">
-              <input id="changeDate" class="" type="date">
+              <div id="box">
+                <select name="sel1" id="sel1">
+                  <option value="year">年</option>
+                </select>
+                <select name="sel2" id="sel2">
+                  <option value="month">月</option>
+                </select>
+                <select name="sel3" id="sel3">
+                  <option value="day">日</option>
+                </select>
+                <span id="result"></span>
+              </div>
             </div>
             <div class="col-md-5 col-xs-5 text-right">
               <span>性别：</span>
@@ -75,16 +87,22 @@
       </div>
     </div>
     <div class="row">
+      <!--标签页标题-->
       <div id="nav" class="col-md-8 col-xs-8">
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#accSecurity" aria-controls="home" role="tab"
-                                                    data-toggle="tab">账号安全</a></li>
-          <li role="presentation"><a href="#perInfo" aria-controls="profile" role="tab" data-toggle="tab">个人信息</a></li>
-          <li role="presentation"><a href="#accBind" aria-controls="messages" role="tab" data-toggle="tab">绑定授权</a></li>
-          <li role="presentation"><a href="#xmServe" aria-controls="settings" role="tab" data-toggle="tab">小米服务</a></li>
+          <li role="presentation" class="active">
+            <a href="#accSecurity" aria-controls="home" role="tab" data-toggle="tab">账号安全</a></li>
+          <li role="presentation">
+            <a href="#perInfo" aria-controls="profile" role="tab" data-toggle="tab">个人信息</a></li>
+          <li role="presentation">
+            <a href="#accBind" aria-controls="messages" role="tab" data-toggle="tab">绑定授权</a></li>
+          <li role="presentation">
+            <a href="#xmServe" aria-controls="settings" role="tab" data-toggle="tab">小米服务</a></li>
         </ul>
       </div>
+      <!--标签页内容-->
       <div class="tab-content col-md-12 col-xs-12">
+        <!--安全等级-->
         <div role="tabpanel" class="tab-pane active" id="accSecurity">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -94,9 +112,8 @@
               </div>
               <div class="col-xs-4 col-md-4">
                 <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                       style="width: 40%;">
-                    40%
+                  <div class="progress-bar" role="progressbar" aria-valuenow="40"
+                       aria-valuemin="0" aria-valuemax="100" style="width: 40%;"> 40%
                   </div>
                 </div>
               </div>
@@ -134,7 +151,7 @@
                   <i class="fa fa-mobile"></i>
                 </div>
                 <div class="col-md-7 col-xs-7">
-                  <h4>安全手机 158******35</h4>
+                  <h4 id="safeTel">安全手机 ***********</h4>
                   <small>用于保护账户信息和登录安全</small>
                 </div>
                 <div class="col-md-4 col-xs-4 text-right">
@@ -179,6 +196,7 @@
             </div>
           </div>
         </div>
+        <!--个人信息-->
         <div role="tabpanel" class="tab-pane" id="perInfo">
           <div class="panel panel-default">
             <div class="panel-body">
@@ -194,7 +212,7 @@
                 <div class="col-md-12 col-xs-12">
                   <div class="col-md-8 col-xs-8"><h4>基础资料</h4></div>
                   <div class="col-md-4 col-xs-4 text-right">
-                    <a class="fa fa-pencil" href="#" data-toggle="modal" data-target="#editInfo"> 编辑</a>
+                    <a id="edit" class="fa fa-pencil" href="#" data-toggle="modal" data-target="#editInfo"> 编辑</a>
                   </div>
                 </div>
                 <div class="col-md-12 col-xs-12">
@@ -230,6 +248,7 @@
             </div>
           </div>
         </div>
+        <!--绑定授权-->
         <div role="tabpanel" class="tab-pane" id="accBind">
           <div class="panel panel-default">
             <div class="panel-body">
@@ -277,6 +296,7 @@
             </div>
           </div>
         </div>
+        <!--小米服务-->
         <div role="tabpanel" class="tab-pane" id="xmServe">
           <div class="panel panel-default">
             <div class="panel-body">
@@ -374,6 +394,7 @@
   </div>
 </content>
 <footer>
+  <!--底部导航和版权信息-->
   <div id="footer" class="row">
     <div class="col-md-12 col-xs-12 text-center">
       <ol class="breadcrumb">
@@ -390,5 +411,121 @@
     </div>
   </div>
 </footer>
+<script>
+  var sel1 = document.getElementById('sel1');
+  var sel2 = document.getElementById('sel2');
+  var sel3 = document.getElementById('sel3');
+
+  function creatDate()
+  {
+    //生成1900年-2100年
+    for(var i = 2016; i >= 1950; i--)
+    {
+      //创建select项
+      var option = document.createElement('option');
+      option.setAttribute('value',i);
+      option.innerHTML = i;
+      sel1.appendChild(option);
+    }
+    //生成1月-12月
+    for(var i = 1; i <=12; i++){
+      var option1 = document.createElement('option');
+      option1.setAttribute('value',i);
+      option1.innerHTML = i;
+      sel2.appendChild(option1);
+    }
+    //生成1日—31日
+    for(var i = 1; i <=31; i++){
+      var option2 = document.createElement('option');
+      option2.setAttribute('value',i);
+      option2.innerHTML = i;
+      sel3.appendChild(option2);
+    }
+  }
+  creatDate();
+  //保存某年某月的天数
+  var days;
+
+  //年份点击 绑定函数
+  sel1.onclick = function()
+  {
+    //月份显示默认值
+    sel2.options[0].selected = true;
+    //天数显示默认值
+    sel3.options[0].selected = true;
+  };
+  //月份点击 绑定函数
+  sel2.onclick = function()
+  {
+    //天数显示默认值
+    sel3.options[0].selected = true;
+    //计算天数的显示范围
+    //如果是2月
+    if(sel2.value == 2)
+    {
+      //判断闰年
+      if((sel1.value % 4 === 0 && sel1.value % 100 !== 0) || sel1.value % 400 === 0)
+      {
+        days = 29;
+      }
+      else
+      {
+        days = 28;
+      }
+      //判断小月
+    }else if(sel2.value == 4 || sel2.value == 6 ||sel2.value == 9 ||sel2.value == 11){
+      days = 30;
+    }else{
+      days = 31;
+    }
+
+    //增加或删除天数
+    //如果是28天，则删除29、30、31天(即使他们不存在也不报错)
+    if(days == 28){
+      sel3.remove(31);
+      sel3.remove(30);
+      sel3.remove(29);
+    }
+    //如果是29天
+    if(days == 29){
+      sel3.remove(31);
+      sel3.remove(30);
+      //如果第29天不存在，则添加第29天
+      if(!sel3.options[29]){
+        sel3.add(new Option('29','29'),null)
+      }
+    }
+    //如果是30天
+    if(days == 30){
+      sel3.remove(31);
+      //如果第29天不存在，则添加第29天
+      if(!sel3.options[29]){
+        sel3.add(new Option('29','29'),null)
+      }
+      //如果第30天不存在，则添加第30天
+      if(!sel3.options[30]){
+        sel3.add(new Option('30','30'),null)
+      }
+    }
+    //如果是31天
+    if(days == 31){
+      //如果第29天不存在，则添加第29天
+      if(!sel3.options[29])
+      {
+        sel3.add(new Option('29','29'),null)
+      }
+      //如果第30天不存在，则添加第30天
+      if(!sel3.options[30])
+      {
+        sel3.add(new Option('30','30'),null)
+      }
+      //如果第31天不存在，则添加第31天
+      if(!sel3.options[31])
+      {
+        sel3.add(new Option('31','31'),null)
+      }
+    }
+  }
+</script>
 </body>
 </html>

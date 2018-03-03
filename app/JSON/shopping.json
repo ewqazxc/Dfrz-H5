@@ -1,7 +1,7 @@
 [
   {
     "id":"1",
-    "image":"images/1.jpg",
+    "image":"/XMSC/app/images/1.jpg",
     "name":"小米6",
     "quantity":12,
     "price":2899.00,
@@ -10,7 +10,7 @@
   },
   {
     "id":"2",
-    "image":"images/2.jpg",
+    "image":"/XMSC/app/images/2.jpg",
     "name":"小米5",
     "quantity":12,
     "price":2399.00,
@@ -19,7 +19,7 @@
   },
   {
     "id":"3",
-    "image":"images/3.jpg",
+    "image":"/XMSC/app/images/3.jpg",
     "name":"小米4",
     "quantity":12,
     "price":1869.00,
@@ -28,7 +28,7 @@
   },
   {
     "id":"4",
-    "image":"images/4.jpg",
+    "image":"/XMSC/app/images/4.jpg",
     "name":"小米3",
     "quantity":12,
     "price":1699.00,
@@ -37,7 +37,7 @@
   },
   {
     "id":"5",
-    "image":"images/5.jpg",
+    "image":"/XMSC/app/images/5.jpg",
     "name":"小米2",
     "quantity":12,
     "price":1499.00,
@@ -47,7 +47,7 @@
 ,
   {
     "id":"6",
-    "image":"images/6.jpg",
+    "image":"/XMSC/app/images/6.jpg",
     "name":"小米1",
     "quantity":12,
     "price":3499.00,

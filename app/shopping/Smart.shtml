@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>小米智能硬件</title>
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/Smart.css">
+  <script src="../bowers/jquery/dist/jquery.js"></script>
+  <script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/xc.js"></script>
+  <script src="../scripts/dfrz-store.js"></script>
+</head>
+<body>
+<header>
+  @@include('/XMSC/app/include/header.html')
+</header>
+<content>
+  <div id="content" class="row">
+    <!--Logo-->
+    <div id="logo-1" class="text-left col-md-1 col-xs-1">
+      <a href="https://www.mi.com/index.html" target="_blank">
+        <img src="../images/logo-XM.png" alt=""></a></div>
+    <!--商品类别导航-->
+    <div id="header" class="col-md-8 col-xs-8">
+      <ul class="nav nav-pills pull-right">
+        <li id="dropD1" class="dropdown">
+          <a class=" dropdown-toggle" data-toggle="hover"
+             aria-haspopup="true" aria-expanded="true" href="#">全部商品分类</a>
+          <div style="width: 236px;left: -135px;top: 70px;" class="dropdown-menu" aria-labelledby="dropD1">
+            <p><a href="">手机 电话卡</a></p>
+            <p><a href="">笔记本 平板</a></p>
+            <p><a href="../shopping/TV.html">电视盒子</a></p>
+            <p><a href="../shopping/Smart.html">路由器 智能硬件</a></p>
+            <p><a href="">移动电源 电池 插线板</a></p>
+            <p><a href="">耳机</a></p>
+            <p><a href="">音箱</a></p>
+            <p><a href="">保护套 贴膜</a></p>
+            <p><a href="">线材 支架 存储卡</a></p>
+            <p><a href="">箱包 服饰 鞋 眼镜</a></p>
+            <p><a href="">米兔 生活周边</a></p>
+          </div>
+        </li>
+        <li id="collD1">
+          <a href="#collM1" data-id="0" data-target="#collM1" data-collapse-trigger="hover"
+             aria-expanded="true" aria-controls="collM1">小米手机</a>
+        </li>
+        <li id="dropD2" class="dropdown">
+          <a class=" dropdown-toggle" data-toggle="hover"
+             aria-haspopup="true" aria-expanded="true" href="#">红米</a>
+          <div style="width: 1200px;left: -350px" class="dropdown-menu" aria-labelledby="dropD2">
+            <div class="row text-center">
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">平板·笔记本</a></li>
+        <li><a href="../shopping/TV.html">电视</a></li>
+        <li><a href="../shopping/TV.html">盒子·影音</a></li>
+        <li><a href="../shopping/Smart.html">路由器</a></li>
+        <li><a href="../shopping/Smart.html">硬件</a></li>
+        <li><a href="#">服务</a></li>
+        <li><a href="#">社区</a></li>
+      </ul>
+    </div>
+    <!--搜索框-->
+    <div class="col-md-3 col-xs-3 header-search">
+      <div class="input-group" style="width: 250px;height: 50px;left:30px;top:20px;">
+        <input type="text" class="form-control" placeholder="查找商品..."
+               style="width: 200px;height: 50px">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-default-x" type="button"
+                                    style="width: 50px;height: 50px">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+      </div>
+    </div>
+    <!--折叠下拉框-->
+    <div class="collapse col-md-12 col-xs-12 " id="collM1">
+      <div class="row text-center">
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<div id="bgf5">
+  <div id="moreSmart">
+    <div class="row">
+      <!--路径导航-->
+      <div class=" col-md-12 col-xs-12">
+        <ul class="breadcrumb">
+          <li><a href="#">首页</a></li>
+          <li><a href="#">选购路由器 · 智能硬件</a></li>
+        </ul>
+      </div>
+      <!--商品导航-->
+      <div class="xgNav col-md-12 col-xs-12 text-center">
+        <div class=" col-md-6 col-xs-6">
+          <div class="col-md-4 col-xs-4">选购路由器 · 智能硬件</div>
+          <div class="col-md-2 col-xs-2"><a href="">小米净水器</a></div>
+          <div class="col-md-3 col-xs-3"><a href="">小米空气净化器2</a></div>
+          <div class="col-md-3 col-xs-3"><a href="">九号平衡车</a></div>
+        </div>
+        <div class=" col-md-6 col-xs-6">
+          <div class="col-md-3 col-xs-3"><a href="">米家压力IH电饭煲</a></div>
+          <div class="col-md-3 col-xs-3"><a href="">小米路由器HD</a></div>
+          <div class="col-md-3 col-xs-3"><a href="">小米路由器Pro</a></div>
+          <div class="col-md-3 col-xs-3"><a href="../shopping/moreSmart.html">查看全部<span
+            class="glyphicon glyphicon-menu-right"></span></a></div>
+        </div>
+      </div>
+      <!--商品展示-->
+      <div class="col-md-12 col-xs-12">
+        <img class="img-responsive" src="../shopping/images/xgLY11.jpg" alt="">
+      </div>
+      <div class="smShow col-md-12 col-xs-12">
+        <div class="thumbnail pull-left">
+          <img class="img-responsive" src="../shopping/images/xgLY26.jpg" alt="">
+          <div class="caption">
+            <h2>米家小白智能摄像机 <strong>399元</strong></h2>
+            <p>
+              <small>360° 全景拍摄，1080P 高清摄像，红外夜视</small>
+            </p>
+            <button class="pull-right">立即购买</button>
+          </div>
+        </div>
+        <div class="thumbnail  pull-right">
+          <img class="img-responsive" src="../shopping/images/xgLY25.jpg" alt="">
+          <div class="caption">
+            <h2>小米路由器 3 <strong>145元</strong></h2>
+            <p>
+              <small>四天线设计，128MB超大闪存配置</small>
+            </p>
+            <button class="pull-right">立即购买</button>
+          </div>
+        </div>
+        <div class="thumbnail pull-left">
+          <img class="img-responsive" src="../shopping/images/xgLY24.jpg" alt="">
+          <div class="caption">
+            <h2>4A 49英寸语音版 <strong>2299元</strong></h2>
+            <p>
+              <small>64位四核处理器／人工智能系统PatchWall</small>
+            </p>
+            <button class="pull-right">立即购买</button>
+          </div>
+        </div>
+        <div class="thumbnail pull-right">
+          <img class="img-responsive" src="../shopping/images/xgLY23.jpg" alt="">
+          <div class="caption">
+            <h2>九号平衡车 <strong>1999元</strong></h2>
+            <p>
+              <small>年轻人的酷玩具，骑行/遥控两种玩法</small>
+            </p>
+            <button class="pull-right">立即购买</button>
+          </div>
+        </div>
+      </div>
+      <div class="smShow col-md-12 col-xs-12">
+        <div class="thumbnail pull-left">
+          <img class="img-responsive" src="../shopping/images/xgLY12.jpg" alt="">
+          <div class="caption">
+            <h2>米家PM2.5检测仪 <strong>399元</strong></h2>
+            <p>
+              <small>高精度激光传感器，一体黑 OLED 屏</small>
+            </p>
+            <button class="pull-right">立即购买</button>
+          </div>
+        </div>
+        <div class="thumbnail  pull-right">
+          <img class="img-responsive" src="../shopping/images/xgLY23.jpg" alt="">
+          <div class="caption">
+            <h2>小米电视4A 49英寸 <strong>2299元</strong></h2>
+            <p>
+              <small>1080p全高清屏，四核64位高性能处理器</small>
+            </p>
+            <button class="pull-right">立即购买</button>
+          </div>
+        </div>
+        <div class="thumbnail pull-left">
+          <img class="img-responsive" src="../shopping/images/xgLY24.jpg" alt="">
+          <div class="caption">
+            <h2>4A 49英寸语音版 <strong>2299元</strong></h2>
+            <p>
+              <small>64位四核处理器／人工智能系统PatchWall</small>
+            </p>
+            <button class="pull-right">立即购买</button>
+          </div>
+        </div>
+        <div class="thumbnail pull-right">
+          <img class="img-responsive" src="../shopping/images/xgLY25.jpg" alt="">
+          <div class="caption">
+            <h2>小米电视4A 32英寸 <strong>1099元</strong></h2>
+            <p>
+              <small>64位四核处理器／人工智能系统PatchWall</small>
+            </p>
+            <button class="pull-right">立即购买</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer style="background-color: white">
+  <!--更多商品导航-->
+  <div id="footSmart">
+    <div class="text-center"><img src="../shopping/images/xgLY12.jpg" alt=""></div>
+    <div class="text-center">
+      <h2>搭配更多智能硬件产品</h2>
+      <p>以小米手机为中心，控制智能硬件产品，轻松享受智能生活带来的方便和舒适。</p>
+      <p><a href="moreSmart.html">查看更多智能硬件产品<span class="glyphicon glyphicon-menu-right"></span></a></p>
+    </div>
+    <div id="footShow" class="row text-center">
+      <div class="thumbnail col-md-4 col-xs-4">
+        <img class="img-responsive" src="../shopping/images/footSmart1.jpg" alt="">
+        <div class="caption">
+          <a href=""><h4>小米水质TDS检测笔</h4></a>
+          <a href=""><p>准确检测家中水质纯度</p></a>
+          <p><strong>39元</strong></p>
+        </div>
+      </div>
+      <div class="thumbnail col-md-4 col-xs-4">
+        <img class="img-responsive" src="../shopping/images/footSmart2.jpg" alt="">
+        <div class="caption">
+          <a href=""><h4>小米万能遥控器</h4></a>
+          <a href=""><p>让手机变身遥控器</p></a>
+          <p><strong>79元</strong></p>
+        </div>
+      </div>
+      <div class="thumbnail col-md-4 col-xs-4">
+        <img class="img-responsive" src="../shopping/images/footSmart3.jpg" alt="">
+        <div class="caption">
+          <a href=""><h4>空气净化器滤芯</h4></a>
+          <a href=""><p>小米空气净化器1代、2代通用</p></a>
+          <p><strong>149元</strong></p>
+        </div>
+      </div>
+      <div class="thumbnail col-md-4 col-xs-4">
+        <img class="img-responsive" src="../shopping/images/footSmart4.jpg" alt="">
+        <div class="caption">
+          <a href=""><h4>小米净水器滤芯 PP棉</h4></a>
+          <a href=""><p>按时更换滤芯 保证饮水品质</p></a>
+          <p><strong>59元</strong></p>
+        </div>
+      </div>
+      <div class="thumbnail col-md-4 col-xs-4">
+        <img class="img-responsive" src="../shopping/images/footSmart5.jpg" alt="">
+        <div class="caption">
+          <a href=""><h4>米家空气净化器滤芯 抗菌版</h4></a>
+          <a href=""><p>小米空气净化器、小米空气净化器 2、米家空气净化器 Pro 通用</p></a>
+          <p><strong>159元</strong></p>
+        </div>
+      </div>
+      <div class="thumbnail col-md-4 col-xs-4">
+        <img class="img-responsive" src="../shopping/images/footSmart6.jpg" alt="">
+        <div class="caption">
+          <a href=""><h4>小米WiFi放大器 2</h4></a>
+          <a href=""><p>速率翻倍覆盖无忧 ,适配市面主流路由器</p></a>
+          <p><strong>45元</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--底部服务信息、导航和版权信息-->
+  @@include('/XMSC/app/include/footer.html')
+</footer>
+</body>
+</html>

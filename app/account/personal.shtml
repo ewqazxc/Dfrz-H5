@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>个人中心</title>
+  <link rel="stylesheet" href="../bowers/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../bowers/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/personal.css">
+  <script src="../bowers/jquery/dist/jquery.js"></script>
+  <script src="../bowers/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/xc.js"></script>
+  <script src="../scripts/dfrz-store.js"></script>
+  <script>
+    ((function () {
+      /**
+       * 载入本地存储的信息
+       * */
+      $(document).ready(function() {
+        var ACCOUNT_KEY2 = 'loginUser';
+        var userTel=store.get(ACCOUNT_KEY2,[]);
+        console.log(userTel);
+        if(userTel==''){
+          return;
+        }
+        else{
+          $('#userTel').html('绑定手机：'+$.xc.cutTel(userTel));
+          $('#userName').html($.xc.cutTel(userTel));
+        }
+        var t=localStorage.getItem('accountInfo');
+        if(t==null){
+          return;
+        }
+        else{
+          var jsonObj=eval('('+t+')');
+          var userName=jsonObj.name;
+          $('#userName').html(userName);
+        }
+      });
+      /**
+       * 根据不同时间显示不同问候语
+       * */
+      $(function () {
+        now = new Date(),hour = now.getHours();
+        if(hour < 6){$('#hello').text("凌晨好!")}
+        else if (hour < 9){$('#hello').text("早上好!")}
+        else if (hour < 12){$('#hello').text("上午好!")}
+        else if (hour < 14){$('#hello').text("中午好!")}
+        else if (hour < 17){$('#hello').text("下午好!")}
+        else if (hour < 19){$('#hello').text("傍晚好!")}
+        else if (hour < 22){$('#hello').text("晚上好!")}
+        else {$('#hello').text("夜里好!")}
+      });
+    }))();
+  </script>
+</head>
+<body>
+<header>
+  @@include('/XMSC/app/include/header.html')
+</header>
+<content>
+  <div id="content" class="row">
+    <!--Logo-->
+    <div id="logo-1" class="text-left col-md-1 col-xs-1">
+      <a href="https://www.mi.com/index.html" target="_blank">
+        <img src="../images/logo-XM.png" alt=""></a></div>
+    <!--商品类别导航-->
+    <div id="header" class="col-md-8 col-xs-8">
+      <ul class="nav nav-pills pull-right">
+        <li id="dropD1" class="dropdown">
+          <a class=" dropdown-toggle" data-toggle="hover"
+             aria-haspopup="true" aria-expanded="true" href="#">全部商品分类</a>
+          <div style="width: 236px;left: -135px;top: 70px;" class="dropdown-menu" aria-labelledby="dropD1">
+            <p><a href="">手机 电话卡</a></p>
+            <p><a href="">笔记本 平板</a></p>
+            <p><a href="../shopping/TV.html">电视盒子</a></p>
+            <p><a href="../shopping/Smart.html">路由器 智能硬件</a></p>
+            <p><a href="">移动电源 电池 插线板</a></p>
+            <p><a href="">耳机</a></p>
+            <p><a href="">音箱</a></p>
+            <p><a href="">保护套 贴膜</a></p>
+            <p><a href="">线材 支架 存储卡</a></p>
+            <p><a href="">箱包 服饰 鞋 眼镜</a></p>
+            <p><a href="">米兔 生活周边</a></p>
+          </div>
+        </li>
+        <li id="collD1">
+          <a href="#collM1" data-id="0" data-target="#collM1" data-collapse-trigger="hover"
+             aria-expanded="true" aria-controls="collM1">小米手机</a>
+        </li>
+        <li id="dropD2" class="dropdown">
+          <a class=" dropdown-toggle" data-toggle="hover"
+             aria-haspopup="true" aria-expanded="true" href="#">红米</a>
+          <div style="width: 1200px;left: -350px" class="dropdown-menu" aria-labelledby="dropD2">
+            <div class="row text-center">
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <div class="thumbnail">
+                  <img src="../images/HM4.jpg" alt="">
+                  <div class="caption">
+                    <p>红米4</p>
+                    <p>
+                      <small>999元起</small>
+                    </p>
+                    <button class="btn-danger">立即选购</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">平板·笔记本</a></li>
+        <li><a href="../shopping/TV.html">电视</a></li>
+        <li><a href="../shopping/TV.html">盒子·影音</a></li>
+        <li><a href="../shopping/Smart.html">路由器</a></li>
+        <li><a href="../shopping/Smart.html">硬件</a></li>
+        <li><a href="#">服务</a></li>
+        <li><a href="#">社区</a></li>
+      </ul>
+    </div>
+    <!--搜索框-->
+    <div class="col-md-3 col-xs-3 header-search">
+      <div class="input-group" style="width: 250px;height: 50px;left:30px;top:20px;">
+        <input type="text" class="form-control" placeholder="查找商品..."
+               style="width: 200px;height: 50px">
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-default-x" type="button"
+                          style="width: 50px;height: 50px">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
+      </div>
+    </div>
+    <!--折叠下拉框-->
+    <div class="collapse col-md-12 col-xs-12 " id="collM1">
+      <div class="row text-center">
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <div class="thumbnail">
+            <img src="../images/XM6.png" alt="">
+            <div class="caption">
+              <p>小米6</p>
+              <p>
+                <small>2499元起</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contanier" class="container-fluid">
+    <div id="content-1" class="row">
+      <!--路径导航-->
+      <ul id="nav-1" class="breadcrumb col-md-12 col-xs-12">
+        <li role="presentation"><a href="#">首页</a></li>
+        <li role="presentation"><a href="#">个人中心</a></li>
+      </ul>
+      <!--左侧导航-->
+      <div id="per-aside" class="col-xs-3 col-md-3">
+        <div class="col-md-12 col-xs-12">
+          <ul class="col-md-12 col-xs-12">订单中心
+            <li><a href="../shopping/order.html">我的订单</a></li>
+            <li><a href="#">意外保</a></li>
+            <li><a href="#">团购订单</a></li>
+            <li><a href="../shopping/orderPing.html">评价晒单</a></li>
+            <li><a href="#">话费充值订单</a></li>
+            <li><a href="#">以旧换新订单</a></li>
+          </ul>
+          <ul class="col-md-12 col-xs-12">个人中心
+            <li><a href="../account/personal.html">我的个人中心</a></li>
+            <li><a href="#">消息通知</a></li>
+            <li><a href="#">购买资格</a></li>
+            <li><a href="#">现金账户</a></li>
+            <li><a href="#">小米礼品卡</a></li>
+            <li><a href="#">现金券</a></li>
+            <li><a href="#">喜欢的商品</a></li>
+            <li><a href="#">优惠券</a></li>
+            <li><a href="../account/address.html">收货地址</a></li>
+          </ul>
+          <ul class="col-md-12 col-xs-12">售后服务
+            <li><a href="#">服务记录</a></li>
+            <li><a href="#">申请服务</a></li>
+            <li><a href="#">领取快递报销</a></li>
+          </ul>
+          <ul class="col-md-12 col-xs-12">账户管理
+            <li><a href="../account/account.html" target="_blank">个人信息</a></li>
+            <li><a href="#">修改密码</a></li>
+            <li><a href="#">社区VIP认证</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--右侧内容-->
+      <div id="per-main" class="col-xs-9 col-md-9">
+        <div class="col-md-12 col-xs-12">
+          <!--个人信息-->
+          <div id="person" class="col-md-12 col-xs-12">
+            <div class="col-md-6 col-xs-6 text-left">
+              <img class="img-responsive img-circle" src="../images/per-photo.jpg" alt="">
+              <h3 id="userName">XXX</h3>
+              <p id="hello"></p>
+              <a href="../account/account.html"><strong>修改个人信息></strong></a>
+            </div>
+            <div id="zhanghu" class="col-md-6 col-xs-6 text-left">
+              <p>账户安全：<strong>普通</strong></p>
+              <p id="userTel">绑定手机：</p>
+              <p>绑定邮箱：</p>
+              <button id="btn-bd">绑定</button>
+            </div>
+          </div>
+          <!--订单、收货信息-->
+          <div id="dingdan" class="row">
+            <div class="col-md-5 col-xs-5">
+              <img class="pull-left" src="../images/portal-icon-1.png" alt="">
+              <p><strong>待支付的订单：<span>0</span></strong></p>
+              <p><a href="#">
+                <small>查看待支付的订单 <i class="glyphicon glyphicon-chevron-right"></i></small>
+              </a></p>
+            </div>
+            <div class="col-md-5 col-xs-5">
+              <img class="pull-left" src="../images/portal-icon-2.png" alt="">
+              <p><strong>待收货的订单：<span>0</span></strong></p>
+              <p><a href="#">
+                <small>查看待收货的订单<i class="glyphicon glyphicon-chevron-right"></i></small>
+              </a></p>
+            </div>
+            <div class="col-md-5 col-xs-5">
+              <img class="pull-left" src="../images/portal-icon-3.png" alt="">
+              <p><strong>待评价商品数：<span>0</span></strong></p>
+              <p><a href="#">
+                <small>查看待评价商品
+                  <i class="glyphicon glyphicon-chevron-right"></i></small>
+              </a></p>
+            </div>
+            <div class="col-md-5 col-xs-5">
+              <img class="pull-left" src="../images/portal-icon-4.png" alt="">
+              <p><strong>喜欢的商品：<span>0</span></strong></p>
+              <p><a href="#">
+                <small>查看喜欢的商品
+                  <i class="glyphicon glyphicon-chevron-right"></i></small>
+              </a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<footer>
+  @@include('/XMSC/app/include/footer.html')
+</footer>
+</body>
+</html>
