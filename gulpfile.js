@@ -1,5 +1,6 @@
 // generated on 2017-09-05 using generator-webapp 3.0.1
 const gulp = require('gulp');
+const SMSClient = require('@alicloud/sms-sdk');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync').create();
 const del = require('del');
@@ -10,8 +11,6 @@ const rename = require('gulp-rename');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
-
-let dev = true;
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')

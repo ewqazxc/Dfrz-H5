@@ -42,6 +42,7 @@
     }
   },
   "dependencies": {
+    "@alicloud/sms-sdk": "^1.0.8",
     "gulp-file-include": "^1.2.0"
   }
 }

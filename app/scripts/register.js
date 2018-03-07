@@ -2,6 +2,7 @@
  * Created by Administrator on 2017/8/28.
  *  account {"userID":"15860525235","password":"123456"}
  */
+
 (function () {
   'use strict';
   var products = [];
@@ -134,33 +135,68 @@
         for (var i = 0; i < n; i++) {
           t += Math.floor(Math.random() * 10);
         }
-        console.log('yzm:'+t);
+        //console.log('yzm:'+t);
         return t;
       }
       var randomNum=randomNum(4);
       var MD5=hex_md5(randomNum);
-      var ParamString = '{"yzm":"' + randomNum + '"}';
-      $.ajax({
-        url: 'http://sms.market.alicloudapi.com/singleSendSms',
+      var ParamString = "{'yzm':" + randomNum+"}"
+      console.log(ParamString);
+      var data = {
+						phone:$('#shouJi').val(),
+						param:ParamString
+					}
+      /**
+	 * 云通信基础能力业务短信发送、查询详情以及消费消息示例，供参考。
+	 * Created on 2017-31
+	 */
+/*	const SMSClient = require('@alicloud/sms-sdk');
+	// ACCESS_KEY_ID/ACCESS_KEY_SECRET 根据实际申请的账号信息进行替换
+	const accessKeyId = ' '
+	const secretAccessKey = ' '
+	//初始化sms_client
+	let smsClient = new SMSClient({accessKeyId,secretAccessKey})
+	//发送短信
+	smsClient.sendSMS({
+	    PhoneNumbers: $('#shouJi').val(),
+	    SignName: name,
+	    TemplateCode: 'SMS_94495041',
+	    TemplateParam: {"yzm":"1234"}
+	}).then(function (res) {
+	    let {Code}=res
+	    if (Code === 'OK') {
+	        //处理返回参数
+	        console.log(res);
+	        $("#sendT").show();
+          setTimeout('$("#sendT").hide()',3000);
+	    }
+	}, function (err) {
+	    console.log(err);
+	     $("#sendF").show();
+          setTimeout('$("#sendF").hide()',3000);
+	})*/
+      /*$.ajax({
+        url: 'http://sms.market.alicloudapi.com/singleSendSms',//'http://dysmsapi.aliyuncs.com',//
         type: 'GET',
         dataType: 'json',
         data: {
+        	
           ParamString: ParamString,
           //ParamString:'{"yzm":"1234"}',
           RecNum: $('#shouJi').val(),
-          RecNum:'15860525235',
+//        RecNum:'15860525235',
+
+//		  PhoneNumbers :$('#shouJi').val(),
           SignName: name,
           TemplateCode: 'SMS_94495041',
-          AccessKeyId : 'LTAINZi6AUOaC3sD',
-          AccessKeySecret : 'IhUmzKV7hmxgySNZoprFm4pUIR9teD'
+
+         
         }
         ,
         headers: {
-          /*↓**↓**↓**↓**↓**↓**↓**↓**↓**↓**↓**↓**↓**↓**↓*/
-          //Authorization: 'APPCODE ea5ec4c3b9b146959bcefa3ba3f2c122'
-          // AccessKeyId : 'LTAINZi6AUOaC3sD',
-          // AccessKeySecret : 'IhUmzKV7hmxgySNZoprFm4pUIR9teD'
-        }
+             Authorization: 'APPCODE  ',
+             
+      }
       }).done(function (data) {
         console.log(data);
         if(data.success==false){
@@ -173,7 +209,28 @@
         }
         console.log('randomNum:'+randomNum);
         console.log('MD5:'+MD5);
-      });
+      }); */ 
+     $.ajax({
+        url: 'http://127.0.0.1:8888',//''localhost:8888',
+		type:"POST",
+//      dataType: 'json',
+        data: data ,
+     	success:function (data){
+						console.log(data)
+						if(data=="success"){
+							$("#sendT").show();
+          					setTimeout('$("#sendT").hide()',3000);
+						}else{
+							$("#sendF").show();
+          					setTimeout('$("#sendF").hide()',3000);
+						}
+					},
+		error:function (data){
+			 	$("#sendF").show();
+          		setTimeout('$("#sendF").hide()',3000);
+				console.log(data)						
+		}
+         });
     });
 
     /**
